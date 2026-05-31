@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TravizPeru – Luxury Custom Peru Experiences</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --black: #0A0A0A;
+    --dark: #111111;
+    --dark2: #1A1A1A;
+    --dark3: #222222;
+    --white: #FAF8F4;
+    --gray: #888880;
+    --font-display: 'Cinzel', serif;
+    --font-body: 'Cormorant Garamond', serif;
+    --font-ui: 'Jost', sans-serif;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--white); font-family: var(--font-body); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--dark); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 4rem; transition: all 0.4s; }
+  nav.scrolled { background: rgba(10,10,10,0.96); backdrop-filter: blur(12px); padding: 0.8rem 4rem; border-bottom: 1px solid rgba(201,168,76,0.15); }
+  .logo { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.12em; color: var(--gold); text-decoration: none; }
+  .logo span { color: var(--white); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; font-family: var(--font-ui); font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; }
+  .nav-links a { color: rgba(250,248,244,0.7); text-decoration: none; transition: color 0.3s; }
+  .nav-links a:hover { color: var(--gold); }
+  .lang-btn { font-family: var(--font-ui); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; background: none; border: 1px solid rgba(201,168,76,0.4); color: var(--gold); padding: 0.4rem 1rem; cursor: pointer; transition: all 0.3s; }
+  .lang-btn:hover { background: var(--gold); color: var(--black); }
+
+  /* HERO */
+  #hero { position: relative; height: 100vh; min-height: 700px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.65) 100%), url('https://images.unsplash.com/photo-1526392060635-9d6019884377?w=1800&q=80') center/cover no-repeat; animation: heroZoom 20s ease-in-out infinite alternate; }
+  @keyframes heroZoom { from { transform: scale(1); } to { transform: scale(1.06); } }
+  .hero-content { position: relative; text-align: center; padding: 0 2rem; animation: fadeUp 1.2s ease both; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-eyebrow { font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; animation: fadeUp 1.2s 0.2s ease both; display: block; }
+  .hero-title { font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 7rem); font-weight: 600; letter-spacing: 0.06em; line-height: 1; color: var(--white); text-shadow: 0 4px 40px rgba(0,0,0,0.6); animation: fadeUp 1.2s 0.35s ease both; }
+  .hero-title em { color: var(--gold); font-style: italic; }
+  .hero-sub { font-family: var(--font-body); font-size: 1.35rem; font-weight: 300; color: rgba(250,248,244,0.8); margin: 1.4rem 0 2.8rem; letter-spacing: 0.04em; animation: fadeUp 1.2s 0.5s ease both; }
+  .hero-ctas { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; animation: fadeUp 1.2s 0.65s ease both; }
+  .btn-primary { font-family: var(--font-ui); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; background: var(--gold); color: var(--black); padding: 1rem 2.4rem; text-decoration: none; transition: all 0.3s; border: none; cursor: pointer; display: inline-block; }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline { font-family: var(--font-ui); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; background: transparent; color: var(--white); padding: 1rem 2.4rem; text-decoration: none; border: 1px solid rgba(250,248,244,0.4); transition: all 0.3s; display: inline-block; }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+  .hero-scroll { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(250,248,244,0.5); }
+  .scroll-line { width: 1px; height: 50px; background: linear-gradient(var(--gold), transparent); animation: scrollPulse 2s ease-in-out infinite; }
+  @keyframes scrollPulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+  /* STATS */
+  #stats { background: var(--dark2); border-top: 1px solid rgba(201,168,76,0.2); border-bottom: 1px solid rgba(201,168,76,0.2); padding: 3rem 4rem; }
+  .stats-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
+  .stat-number { font-family: var(--font-display); font-size: 2.8rem; font-weight: 600; color: var(--gold); display: block; letter-spacing: 0.05em; }
+  .stat-label { font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray); margin-top: 0.3rem; display: block; }
+
+  /* SECTIONS */
+  section { padding: 7rem 4rem; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .section-eyebrow { font-family: var(--font-ui); font-size: 0.7rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; display: block; }
+  .section-title { font-family: var(--font-display); font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 600; line-height: 1.1; letter-spacing: 0.03em; }
+  .section-title em { font-style: italic; color: var(--gold); }
+  .section-divider { width: 60px; height: 1px; background: var(--gold); margin: 1.5rem 0 2rem; }
+  .section-intro { font-size: 1.15rem; color: rgba(250,248,244,0.7); max-width: 560px; font-weight: 300; letter-spacing: 0.02em; }
+
+  /* ABOUT */
+  #about { background: var(--dark); }
+  .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+  .about-credential { display: flex; align-items: center; gap: 1rem; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25); padding: 1.2rem 1.5rem; margin-bottom: 1rem; }
+  .credential-icon { font-size: 1.5rem; }
+  .credential-text { font-family: var(--font-ui); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+  .credential-sub { font-size: 0.85rem; color: var(--gray); margin-top: 0.2rem; font-family: var(--font-ui); }
+  .companies-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; }
+  .company-tag { font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; border: 1px solid rgba(201,168,76,0.3); color: rgba(250,248,244,0.7); padding: 0.4rem 0.9rem; transition: all 0.3s; }
+  .company-tag:hover { border-color: var(--gold); color: var(--gold); }
+  .about-image { position: relative; }
+  .about-img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+  .about-badge { position: absolute; bottom: -1.5rem; right: -1.5rem; background: var(--gold); color: var(--black); padding: 1.5rem; text-align: center; font-family: var(--font-display); }
+  .badge-number { font-size: 2.5rem; font-weight: 600; display: block; line-height: 1; }
+  .badge-text { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; }
+
+  /* DESTINATIONS */
+  #destinations { background: var(--black); }
+  .dest-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 1.5px; margin-top: 4rem; }
+  .dest-card { position: relative; overflow: hidden; cursor: pointer; aspect-ratio: 3/4; }
+  .dest-card:first-child { aspect-ratio: auto; grid-row: span 2; }
+  .dest-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94); }
+  .dest-card:hover .dest-img { transform: scale(1.07); }
+  .dest-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(10,10,10,0.9) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem; }
+  .dest-name { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; letter-spacing: 0.04em; margin-bottom: 0.3rem; }
+  .dest-card:first-child .dest-name { font-size: 2.2rem; }
+  .dest-tag { font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+
+  /* EXPERIENCES (no prices) */
+  #experiences { background: var(--dark2); }
+  .exp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 4rem; }
+  .exp-card { background: var(--dark3); padding: 3rem 2.5rem; border: 1px solid rgba(201,168,76,0.08); transition: all 0.4s; position: relative; overflow: hidden; }
+  .exp-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); transform: scaleX(0); transition: transform 0.5s; }
+  .exp-card:hover { background: rgba(201,168,76,0.05); }
+  .exp-card:hover::before { transform: scaleX(1); }
+  .exp-card.featured { border-color: rgba(201,168,76,0.3); }
+  .exp-card.featured::before { transform: scaleX(1); }
+  .exp-badge { font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; background: var(--gold); color: var(--black); display: inline-block; padding: 0.25rem 0.75rem; margin-bottom: 1.5rem; }
+  .exp-name { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; letter-spacing: 0.03em; margin-bottom: 0.5rem; }
+  .exp-duration { font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray); margin-bottom: 2rem; }
+  .exp-features { list-style: none; margin: 0 0 2.5rem; display: flex; flex-direction: column; gap: 0.8rem; }
+  .exp-features li { display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem; color: rgba(250,248,244,0.8); }
+  .exp-features li::before { content: ''; width: 20px; height: 1px; background: var(--gold); flex-shrink: 0; }
+  .exp-cta { font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,168,76,0.4); padding: 0.8rem 1.6rem; text-decoration: none; display: inline-block; transition: all 0.3s; }
+  .exp-cta:hover { background: var(--gold); color: var(--black); }
+
+  /* TESTIMONIALS */
+  #testimonials { background: var(--dark); }
+  .testi-wrap { position: relative; max-width: 780px; margin: 4rem auto 0; text-align: center; min-height: 220px; }
+  .testi-item { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; opacity: 0; transition: opacity 0.7s ease; }
+  .testi-item.active { opacity: 1; position: relative; }
+  .testi-quote { font-family: var(--font-body); font-size: 1.4rem; font-style: italic; font-weight: 300; color: rgba(250,248,244,0.9); line-height: 1.6; margin-bottom: 1.8rem; }
+  .testi-author { font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+  .testi-country { color: var(--gray); margin-left: 0.5rem; }
+  .testi-stars { color: var(--gold); margin-bottom: 1.2rem; font-size: 0.85rem; }
+  .testi-dots { display: flex; gap: 0.6rem; justify-content: center; margin-top: 2.5rem; }
+  .dot { width: 28px; height: 2px; background: rgba(201,168,76,0.25); cursor: pointer; transition: background 0.3s; border: none; }
+  .dot.active { background: var(--gold); }
+
+  /* CONTACT */
+  #contact { background: var(--black); }
+  .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+  .contact-item { display: flex; gap: 1.2rem; align-items: flex-start; margin-bottom: 2rem; }
+  .contact-icon { width: 44px; height: 44px; flex-shrink: 0; border: 1px solid rgba(201,168,76,0.3); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1rem; }
+  .contact-label { font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray); margin-bottom: 0.3rem; }
+  .contact-value { font-size: 1rem; color: var(--white); }
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-field { display: flex; flex-direction: column; gap: 0.4rem; }
+  label { font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gray); }
+  input, select, textarea { background: var(--dark2); border: 1px solid rgba(201,168,76,0.15); color: var(--white); font-family: var(--font-body); font-size: 1rem; padding: 0.9rem 1.1rem; outline: none; transition: border-color 0.3s; width: 100%; }
+  input:focus, select:focus, textarea:focus { border-color: rgba(201,168,76,0.5); }
+  textarea { resize: vertical; min-height: 120px; }
+  select option { background: var(--dark2); }
+  .whatsapp-btn { display: inline-flex; align-items: center; gap: 0.8rem; background: #25D366; color: #fff; font-family: var(--font-ui); font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 1rem 2rem; text-decoration: none; transition: all 0.3s; margin-top: 0.5rem; border: none; cursor: pointer; }
+  .whatsapp-btn:hover { background: #20b858; transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer { background: var(--dark2); border-top: 1px solid rgba(201,168,76,0.15); padding: 4rem 4rem 2rem; }
+  .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 4rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(201,168,76,0.1); }
+  .footer-logo { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 1rem; display: block; }
+  .footer-logo span { color: var(--white); }
+  .footer-desc { font-size: 0.95rem; color: var(--gray); line-height: 1.7; font-weight: 300; }
+  .footer-heading { font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .footer-links a { color: var(--gray); text-decoration: none; font-size: 0.95rem; font-weight: 300; transition: color 0.3s; }
+  .footer-links a:hover { color: var(--gold); }
+  .social-row { display: flex; gap: 0.8rem; margin-top: 1.5rem; }
+  .social-btn { width: 36px; height: 36px; border: 1px solid rgba(201,168,76,0.25); display: flex; align-items: center; justify-content: center; color: var(--gray); text-decoration: none; font-size: 0.85rem; transition: all 0.3s; }
+  .social-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .footer-bottom { max-width: 1200px; margin: 2rem auto 0; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-ui); font-size: 0.7rem; letter-spacing: 0.1em; color: rgba(136,136,128,0.5); }
+  .apotur-bar { background: var(--dark3); border: 1px solid rgba(201,168,76,0.2); padding: 1rem 1.5rem; display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem; }
+  .apotur-text { font-family: var(--font-ui); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+  .apotur-sub { font-size: 0.75rem; color: var(--gray); font-family: var(--font-ui); }
+
+  /* REVEAL */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.15s; }
+  .reveal-delay-2 { transition-delay: 0.3s; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    nav.scrolled { padding: 0.7rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 5rem 1.5rem; }
+    #stats { padding: 2.5rem 1.5rem; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .dest-grid { grid-template-columns: 1fr 1fr; }
+    .dest-card:first-child { grid-column: 1/-1; grid-row: auto; aspect-ratio: 16/7; }
+    .exp-grid { grid-template-columns: 1fr; }
+    .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo">Traviz<span>Peru</span></a>
+  <ul class="nav-links">
+    <li><a href="#about" data-es="Nosotros" data-en="About">About</a></li>
+    <li><a href="#destinations" data-es="Destinos" data-en="Destinations">Destinations</a></li>
+    <li><a href="#experiences" data-es="Experiencias" data-en="Experiences">Experiences</a></li>
+    <li><a href="#testimonials" data-es="Testimonios" data-en="Testimonials">Testimonials</a></li>
+    <li><a href="#contact" data-es="Contacto" data-en="Contact">Contact</a></li>
+  </ul>
+  <button class="lang-btn" id="langBtn" onclick="toggleLang()">ES</button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow" data-es="Agencia de Viajes de Lujo · Perú" data-en="Luxury Travel Agency · Peru">Luxury Travel Agency · Peru</span>
+    <h1 class="hero-title">Discover <em>Eternal</em><br>Peru</h1>
+    <p class="hero-sub" data-es="Experiencias a medida en el corazón de los Andes" data-en="Tailor-made experiences in the heart of the Andes">Tailor-made experiences in the heart of the Andes</p>
+    <div class="hero-ctas">
+      <a href="#experiences" class="btn-primary" data-es="Explorar Experiencias" data-en="Explore Experiences">Explore Experiences</a>
+      <a href="#contact" class="btn-outline" data-es="Solicitar Cotización" data-en="Request a Quote">Request a Quote</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span data-es="Explorar" data-en="Scroll">Scroll</span>
+  </div>
+</section>
+
+<!-- STATS -->
+<div id="stats">
+  <div class="stats-grid">
+    <div class="reveal"><span class="stat-number">1,200+</span><span class="stat-label" data-es="Viajeros Felices" data-en="Happy Travelers">Happy Travelers</span></div>
+    <div class="reveal reveal-delay-1"><span class="stat-number">22+</span><span class="stat-label" data-es="Años de Experiencia" data-en="Years of Experience">Years of Experience</span></div>
+    <div class="reveal reveal-delay-1"><span class="stat-number">30+</span><span class="stat-label" data-es="Destinos en Perú" data-en="Destinations in Peru">Destinations in Peru</span></div>
+    <div class="reveal reveal-delay-2"><span class="stat-number">4.9★</span><span class="stat-label" data-es="Valoración Promedio" data-en="Average Rating">Average Rating</span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div>
+        <span class="section-eyebrow reveal" data-es="El Hombre Detrás de TravizPeru" data-en="The Man Behind TravizPeru">The Man Behind TravizPeru</span>
+        <h2 class="section-title reveal" data-es="Francisco <em>Arriz Barrantes</em>" data-en="Francisco <em>Arriz Barrantes</em>">Francisco <em>Arriz Barrantes</em></h2>
+        <p class="reveal" style="font-family:var(--font-ui);font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Private Tour Manager &amp; Creator of TravizPeru</p>
+        <div class="section-divider reveal"></div>
+        <p class="section-intro reveal" data-es="Nací con la hospitalidad en el corazón. Viví parte de mi adolescencia en California y al regresar a Perú me enamoré profundamente de mi país. Comencé mi carrera en 1998 en La Rosa Náutica y el Hotel Las Américas. En 2004, una prestigiosa operadora me reclutó para guiar grupos internacionales por todo Perú y Sudamérica — y nunca miré atrás. Para mí, esto no es un trabajo. Es mi pasión." data-en="I was born with hospitality in my heart. Growing up in Peru, living part of my adolescence in California, and returning to fall deeply in love with my country — that journey shaped who I am today. I began my career in 1998 at iconic Lima establishments like La Rosa Náutica restaurant and Las Américas hotel. In 2004, a prestigious Peruvian tour operator recruited me to guide international groups across Peru and South America — and I never looked back. For me, this is not a job. It is my passion. Nothing makes me happier than seeing a traveler&#39;s eyes light up discovering that Peru is not just Machu Picchu — it is a thousand wonders. Come to Peru. I promise you the experience of a lifetime.">I was born with hospitality in my heart. Growing up in Peru, living part of my adolescence in California, and returning to fall deeply in love with my country — that journey shaped who I am today. I began my career in 1998 at iconic Lima establishments like La Rosa Náutica restaurant and Las Américas hotel. In 2004, a prestigious Peruvian tour operator recruited me to guide international groups across Peru and South America — and I never looked back. For me, this is not a job. It is my passion. Nothing makes me happier than seeing a traveler&#39;s eyes light up discovering that Peru is not just Machu Picchu — it is a thousand wonders. Come to Peru. I promise you the experience of a lifetime.</p>
+
+        <div class="reveal" style="margin-top:2rem">
+          <div class="about-credential">
+            <div class="credential-icon">🏅</div>
+            <div>
+              <div class="credential-text">APOTUR Certified Member</div>
+              <div class="credential-sub">Peruvian Association of Incoming Tour Operators · Code AP030-11</div>
+            </div>
+          </div>
+
+          <div class="about-credential">
+            <div class="credential-icon">✈️</div>
+            <div>
+              <div class="credential-text">22 Years of Expertise</div>
+              <div class="credential-sub">Tour Manager · Luxury Travel Specialist · Peru Expert</div>
+            </div>
+          </div>
+          <div class="about-credential">
+            <div class="credential-icon">🌍</div>
+            <div>
+              <div class="credential-text">International Experience</div>
+              <div class="credential-sub">Working with the world's most prestigious travel companies</div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="about-image reveal">
+        <img class="about-img" src="data:image/jpeg;base64,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" alt="Francisco Arriz Barrantes - Private Tour Manager TravizPeru">
+        <div class="about-badge">
+          <span class="badge-number">22</span>
+          <span class="badge-text">Years<br>Experience</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATION -->
+<section id="certification" style="background:var(--dark2);padding:5rem 4rem;border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <span class="section-eyebrow reveal">Official Certification</span>
+      <h2 class="section-title reveal">Certified by <em>APOTUR Peru</em></h2>
+      <div class="section-divider reveal" style="margin:1.5rem auto;"></div>
+      <p class="section-intro reveal" style="margin:0 auto;text-align:center;">Member of the Peruvian Association of Incoming Tour Operators — the official governing body for professional tour operators in Peru.</p>
+    </div>
+    <div class="reveal" style="display:flex;justify-content:center;">
+      <div style="position:relative;max-width:380px;width:100%;">
+        <!-- Elegant gold corner decorations -->
+        <div style="position:absolute;top:-8px;left:-8px;width:30px;height:30px;border-top:2px solid var(--gold);border-left:2px solid var(--gold);"></div>
+        <div style="position:absolute;top:-8px;right:-8px;width:30px;height:30px;border-top:2px solid var(--gold);border-right:2px solid var(--gold);"></div>
+        <div style="position:absolute;bottom:-8px;left:-8px;width:30px;height:30px;border-bottom:2px solid var(--gold);border-left:2px solid var(--gold);"></div>
+        <div style="position:absolute;bottom:-8px;right:-8px;width:30px;height:30px;border-bottom:2px solid var(--gold);border-right:2px solid var(--gold);"></div>
+        <!-- Card content -->
+        <div style="background:linear-gradient(135deg,rgba(201,168,76,0.08) 0%,rgba(10,10,10,0.95) 100%);border:1px solid rgba(201,168,76,0.25);padding:2.5rem;text-align:center;">
+          <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;">Peruvian Association of Incoming Tour Operators</p>
+          <div style="width:70px;height:1px;background:var(--gold);margin:0 auto 1.5rem;"></div>
+          <p style="font-family:var(--font-display);font-size:1.6rem;font-weight:600;letter-spacing:0.05em;color:var(--white);margin-bottom:0.3rem;">Francisco</p>
+          <p style="font-family:var(--font-display);font-size:1.6rem;font-weight:600;letter-spacing:0.05em;color:var(--gold);margin-bottom:1.5rem;">Arriz Barrantes</p>
+          <div style="width:70px;height:1px;background:var(--gold);margin:0 auto 1.5rem;"></div>
+          <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,248,244,0.5);margin-bottom:0.4rem;">Member Code</p>
+          <p style="font-family:var(--font-display);font-size:1.8rem;font-weight:600;color:var(--gold);letter-spacing:0.1em;">AP030-11</p>
+          <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(250,248,244,0.3);margin-top:1.5rem;">SOCIO · APOTUR PERU</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section id="destinations">
+  <div class="container">
+    <span class="section-eyebrow reveal" data-es="Nuestros Destinos" data-en="Our Destinations">Our Destinations</span>
+    <h2 class="section-title reveal" data-es="Maravillas que te <em>Esperan</em>" data-en="Wonders that <em>Await</em> You">Wonders that <em>Await</em> You</h2>
+    <div class="section-divider reveal"></div>
+    <div class="dest-grid reveal">
+      <div class="dest-card">
+        <img class="dest-img" src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=900&q=80" alt="Machu Picchu">
+        <div class="dest-overlay">
+          <span class="dest-tag" data-es="Cusco · Patrimonio UNESCO" data-en="Cusco · UNESCO Heritage">Cusco · UNESCO Heritage</span>
+          <h3 class="dest-name">Machu Picchu</h3>
+        </div>
+      </div>
+      <div class="dest-card">
+        <img class="dest-img" src="https://images.unsplash.com/photo-1585464231875-d9ef1f5ad396?w=700&q=80" alt="Lima">
+        <div class="dest-overlay">
+          <span class="dest-tag" data-es="Capital Gastronómica" data-en="Gastronomic Capital">Gastronomic Capital</span>
+          <h3 class="dest-name">Lima</h3>
+        </div>
+      </div>
+      <div class="dest-card">
+        <img class="dest-img" src="https://images.unsplash.com/photo-1610649117595-01291cf7e3be?w=700&q=80" alt="Valle Sagrado">
+        <div class="dest-overlay">
+          <span class="dest-tag" data-es="Valle Sagrado · Inca" data-en="Sacred Valley · Inca">Sacred Valley · Inca</span>
+          <h3 class="dest-name">Sacred Valley</h3>
+        </div>
+      </div>
+      <div class="dest-card">
+        <img class="dest-img" src="https://images.unsplash.com/photo-1629476156701-7e9c7be47930?w=700&q=80" alt="Lago Titicaca">
+        <div class="dest-overlay">
+          <span class="dest-tag" data-es="Puno · Lago más alto" data-en="Puno · Highest Lake">Puno · Highest Lake</span>
+          <h3 class="dest-name">Titicaca</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCES -->
+<section id="experiences">
+  <div class="container">
+    <span class="section-eyebrow reveal">Escorted Tours · 10+ Passengers</span>
+    <h2 class="section-title reveal">Journeys <em>Designed</em> for You</h2>
+    <div class="section-divider reveal"></div>
+    <p class="section-intro reveal">Three extraordinary escorted journeys through the wonders of Peru. All departures from September 2026 onwards. Select your tour to view the complete itinerary and book your place.</p>
+
+    <!-- TOUR CARDS -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;" class="reveal">
+
+      <!-- CARD 1 -->
+      <div style="background:var(--dark3);border:1px solid rgba(201,168,76,0.2);overflow:hidden;cursor:pointer;transition:all 0.4s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.6)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.2)'" onclick="openTour('tour1')">
+        <div style="position:relative;height:200px;overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?w=600&q=80&auto=format&fit=crop" alt="Machu Picchu" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,10,10,0.85) 100%);"></div>
+          <div style="position:absolute;bottom:0;left:0;padding:1rem;">
+            <p style="font-family:var(--font-ui);font-size:0.55rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);">Lima · Cusco · Sacred Valley · Machu Picchu</p>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(10,10,10,0.9));padding:2rem;border-bottom:1px solid rgba(201,168,76,0.15);">
+          <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Classic · 7 Days</p>
+          <h3 style="font-family:var(--font-display);font-size:1.6rem;font-weight:600;color:var(--white);margin-bottom:0.3rem;">Classic Peru<br>& Machu Picchu</h3>
+          <p style="font-family:var(--font-display);font-size:1.4rem;color:var(--gold);font-style:italic;">From $2,190 pp</p>
+        </div>
+        <div style="padding:1.5rem;">
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.5rem;">
+            <li style="display:flex;align-items:center;gap:0.8rem;font-family:var(--font-ui);font-size:0.75rem;color:rgba(250,248,244,0.7);"><span style="color:var(--gold);">—</span> Lima · Cusco · Sacred Valley</li>
+            <li style="display:flex;align-items:center;gap:0.8rem;font-family:var(--font-ui);font-size:0.75rem;color:rgba(250,248,244,0.7);"><span style="color:var(--gold);">—</span> Machu Picchu · Vistadome Train</li>
+            <li style="display:flex;align-items:center;gap:0.8rem;font-family:var(--font-ui);font-size:0.75rem;color:rgba(250,248,244,0.7);"><span style="color:var(--gold);">—</span> 6 Nights Luxury Hotels</li>
+            <li style="display:flex;align-items:center;gap:0.8rem;font-family:var(--font-ui);font-size:0.75rem;color:rgba(250,248,244,0.7);"><span style="color:var(--gold);">—</span> 10 Meals Included</li>
+            <li style="display:flex;align-items:center;gap:0.8rem;font-family:var(--font-ui);font-size:0.75rem;color:rgba(250,248,244,0.7);"><span style="color:var(--gold);">—</span> Departures from Sep 2026</li>
+          </ul>
+          <button onclick="openTour('tour1')" style="width:100%;font-family:var(--font-ui);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;background:transparent;color:var(--gold);border:1px solid rgba(201,168,76,0.4);padding:0.8rem;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--black)'" onmouseout="this.style.background='transparent';this.style.color='var(--gold)'">View Itinerary & Book</button>
+        </div>
+      </div>
+
+      <!-- CARD 2 - FEATURED -->
+      <div style="background:var(--dark3);border:1px solid rgba(201,168,76,0.5);overflow:hidden;cursor:pointer;transition:all 0.4s;position:relative;" onclick="openTour('tour2')">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);z-index:2;"></div>
+        <div style="background:var(--gold);padding:0.4rem;text-align:center;position:relative;z-index:2;">
+          <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--black);font-weight:600;">Most Popular</p>
+        </div>
+        <div style="position:relative;height:200px;overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1610649117595-01291cf7e3be?w=600&q=80&auto=format&fit=crop" alt="Sacred Valley Peru" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,10,10,0.85) 100%);"></div>
+          <div style="position:absolute;bottom:0;left:0;padding:1rem;">
+            <p style="font-family:var(--font-ui);font-size:0.55rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);">Lima · Cusco · Machu Picchu · Lake Titicaca</p>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,rgba(201,168,76,0.2),rgba(10,10,10,0.9));padding:2rem;border-bottom:1px solid rgba(201,168,76,0.15);">
+          <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Signature · 11 Days</p>
+          <h3 style="font-family:var(--font-display);font-size:1.6rem;font-weight:600;color:var(--white);margin-bottom:0.3rem;">Treasures<br>of Peru</h3>
+          <p style="font-family:var(--font-display);font-size:1.4rem;color:var(--gold);font-style:italic;">From $4,290 pp</p>
+        </div>
+        <div style="padding:1.5rem;">
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.5rem;">
+            <li style="display:flex;align-items:center;gap:0.8rem;font-family:var(--font-ui);font-size:0.75rem;color:rgba(250,248,244,0.7);"><span style="color:var(--gold);">—</span> Lima · Cusco · Sacred Valley</li>
+            <li style="display:flex;align-items:center;gap:0.8rem;font-family:var(--font-ui);font-size:0.75rem;color:rgba(250,248,244,0.7);"><span style="color:var(--gold);">—</span> Machu Picchu · Lake Titicaca</li>
+            <li style="display:flex;align-items:center;gap:0.8rem;font-family:var(--font-ui);font-size:0.75rem;color:rgba(250,248,244,0.7);"><span style="color:var(--gold);">—</span> 9 Nights Luxury Hotels</li>
+            <li style="display:flex;align-items:center;gap:0.8rem;font-family:var(--font-ui);font-size:0.75rem;color:rgba(250,248,244,0.7);"><span style="color:var(--gold);">—</span> 18 Meals Included</li>
+            <li style="display:flex;align-items:center;gap:0.8rem;font-family:var(--font-ui);font-size:0.75rem;color:rgba(250,248,244,0.7);"><span style="color:var(--gold);">—</span> Departures from Sep 2026</li>
+          </ul>
+          <button onclick="openTour('tour2')" style="width:100%;font-family:var(--font-ui);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;background:var(--gold);color:var(--black);border:1px solid var(--gold);padding:0.8rem;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.background='var(--gold-light)'" onmouseout="this.style.background='var(--gold)'">View Itinerary & Book</button>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div style="background:var(--dark3);border:1px solid rgba(201,168,76,0.2);overflow:hidden;cursor:pointer;transition:all 0.4s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.6)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.2)'" onclick="openTour('tour3')">
+        <div style="position:relative;height:200px;overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=600&q=80&auto=format&fit=crop" alt="Amazon Peru" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,10,10,0.85) 100%);"></div>
+          <div style="position:absolute;bottom:0;left:0;padding:1rem;">
+            <p style="font-family:var(--font-ui);font-size:0.55rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);">Lima · Cusco · Machu Picchu · Titicaca · Amazon</p>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(10,10,10,0.9));padding:2rem;border-bottom:1px solid rgba(201,168,76,0.15);">
+          <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Grand · 15 Days</p>
+          <h3 style="font-family:var(--font-display);font-size:1.6rem;font-weight:600;color:var(--white);margin-bottom:0.3rem;">Grand Peru<br>& Amazon</h3>
+          <p style="font-family:var(--font-display);font-size:1.4rem;color:var(--gold);font-style:italic;">From $5,790 pp</p>
+        </div>
+        <div style="padding:1.5rem;">
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.5rem;">
+            <li style="display:flex;align-items:center;gap:0.8rem;font-family:var(--font-ui);font-size:0.75rem;color:rgba(250,248,244,0.7);"><span style="color:var(--gold);">—</span> Lima · Cusco · Sacred Valley</li>
+            <li style="display:flex;align-items:center;gap:0.8rem;font-family:var(--font-ui);font-size:0.75rem;color:rgba(250,248,244,0.7);"><span style="color:var(--gold);">—</span> Machu Picchu · Titicaca · Amazon</li>
+            <li style="display:flex;align-items:center;gap:0.8rem;font-family:var(--font-ui);font-size:0.75rem;color:rgba(250,248,244,0.7);"><span style="color:var(--gold);">—</span> 13 Nights Luxury Hotels & Lodge</li>
+            <li style="display:flex;align-items:center;gap:0.8rem;font-family:var(--font-ui);font-size:0.75rem;color:rgba(250,248,244,0.7);"><span style="color:var(--gold);">—</span> 26 Meals Included</li>
+            <li style="display:flex;align-items:center;gap:0.8rem;font-family:var(--font-ui);font-size:0.75rem;color:rgba(250,248,244,0.7);"><span style="color:var(--gold);">—</span> Departures from Sep 2026</li>
+          </ul>
+          <button onclick="openTour('tour3')" style="width:100%;font-family:var(--font-ui);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;background:transparent;color:var(--gold);border:1px solid rgba(201,168,76,0.4);padding:0.8rem;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--black)'" onmouseout="this.style.background='transparent';this.style.color='var(--gold)'">View Itinerary & Book</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TOUR MODALS -->
+<div id="tourModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:999;overflow-y:auto;padding:2rem 1rem;">
+  <div style="max-width:800px;margin:0 auto;background:var(--dark2);border:1px solid rgba(201,168,76,0.3);">
+    
+    <!-- Modal Header -->
+    <div style="background:linear-gradient(135deg,rgba(201,168,76,0.15),var(--dark2));padding:2.5rem;border-bottom:1px solid rgba(201,168,76,0.2);position:relative;">
+      <button onclick="closeTour()" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:1px solid rgba(201,168,76,0.3);color:var(--gold);width:36px;height:36px;cursor:pointer;font-size:1.1rem;">✕</button>
+      <p id="modalEyebrow" style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;"></p>
+      <h2 id="modalTitle" style="font-family:var(--font-display);font-size:2rem;font-weight:600;color:var(--white);margin-bottom:0.3rem;"></h2>
+      <p id="modalPrice" style="font-family:var(--font-display);font-size:1.5rem;color:var(--gold);font-style:italic;"></p>
+    </div>
+
+    <!-- Tabs -->
+    <div style="display:flex;border-bottom:1px solid rgba(201,168,76,0.2);">
+      <button onclick="showTab('itinerary')" id="tabItinerary" style="flex:1;padding:1rem;font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;background:rgba(201,168,76,0.1);color:var(--gold);border:none;cursor:pointer;border-bottom:2px solid var(--gold);">Itinerary</button>
+      <button onclick="showTab('dates')" id="tabDates" style="flex:1;padding:1rem;font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;background:none;color:var(--gray);border:none;cursor:pointer;border-bottom:2px solid transparent;">Dates & Prices</button>
+      <button onclick="showTab('booking')" id="tabBooking" style="flex:1;padding:1rem;font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;background:none;color:var(--gray);border:none;cursor:pointer;border-bottom:2px solid transparent;">Book Now</button>
+      <button onclick="showTab('policies')" id="tabPolicies" style="flex:1;padding:1rem;font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;background:none;color:var(--gray);border:none;cursor:pointer;border-bottom:2px solid transparent;">Policies</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div style="padding:2rem;">
+
+      <!-- ITINERARY TAB -->
+      <div id="tabContent-itinerary">
+        <div id="modalItinerary"></div>
+      </div>
+
+      <!-- DATES TAB -->
+      <div id="tabContent-dates" style="display:none;">
+        <div id="modalDates"></div>
+      </div>
+
+      <!-- BOOKING TAB -->
+      <div id="tabContent-booking" style="display:none;">
+        <p style="font-family:var(--font-ui);font-size:0.72rem;letter-spacing:0.1em;color:var(--gray);margin-bottom:1.5rem;line-height:1.6;">Complete the form below to request your reservation. A TravizPeru representative will contact you within 24 hours to confirm availability and process your deposit.</p>
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div><label style="font-family:var(--font-ui);font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:0.4rem;">First Name</label><input type="text" id="bkFirstName" style="width:100%;background:var(--dark3);border:1px solid rgba(201,168,76,0.2);color:var(--white);font-family:var(--font-body);font-size:1rem;padding:0.8rem;outline:none;" onfocus="this.style.borderColor='rgba(201,168,76,0.6)'" onblur="this.style.borderColor='rgba(201,168,76,0.2)'"></div>
+            <div><label style="font-family:var(--font-ui);font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:0.4rem;">Last Name</label><input type="text" id="bkLastName" style="width:100%;background:var(--dark3);border:1px solid rgba(201,168,76,0.2);color:var(--white);font-family:var(--font-body);font-size:1rem;padding:0.8rem;outline:none;" onfocus="this.style.borderColor='rgba(201,168,76,0.6)'" onblur="this.style.borderColor='rgba(201,168,76,0.2)'"></div>
+          </div>
+          <div><label style="font-family:var(--font-ui);font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:0.4rem;">Email Address</label><input type="email" id="bkEmail" style="width:100%;background:var(--dark3);border:1px solid rgba(201,168,76,0.2);color:var(--white);font-family:var(--font-body);font-size:1rem;padding:0.8rem;outline:none;" onfocus="this.style.borderColor='rgba(201,168,76,0.6)'" onblur="this.style.borderColor='rgba(201,168,76,0.2)'"></div>
+          <div><label style="font-family:var(--font-ui);font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:0.4rem;">WhatsApp / Phone</label><input type="tel" id="bkPhone" style="width:100%;background:var(--dark3);border:1px solid rgba(201,168,76,0.2);color:var(--white);font-family:var(--font-body);font-size:1rem;padding:0.8rem;outline:none;" onfocus="this.style.borderColor='rgba(201,168,76,0.6)'" onblur="this.style.borderColor='rgba(201,168,76,0.2)'"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div><label style="font-family:var(--font-ui);font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:0.4rem;">Preferred Departure</label>
+            <select id="bkDate" style="width:100%;background:var(--dark3);border:1px solid rgba(201,168,76,0.2);color:var(--white);font-family:var(--font-body);font-size:1rem;padding:0.8rem;outline:none;"></select></div>
+            <div><label style="font-family:var(--font-ui);font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:0.4rem;">Number of Travelers</label>
+            <select id="bkTravelers" style="width:100%;background:var(--dark3);border:1px solid rgba(201,168,76,0.2);color:var(--white);font-family:var(--font-body);font-size:1rem;padding:0.8rem;outline:none;">
+              <option>10 travelers</option><option>11 travelers</option><option>12 travelers</option><option>13 travelers</option><option>14 travelers</option><option>15+ travelers</option>
+            </select></div>
+          </div>
+          <div><label style="font-family:var(--font-ui);font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:0.4rem;">Special Requests</label><textarea id="bkNotes" rows="3" style="width:100%;background:var(--dark3);border:1px solid rgba(201,168,76,0.2);color:var(--white);font-family:var(--font-body);font-size:1rem;padding:0.8rem;outline:none;resize:vertical;" onfocus="this.style.borderColor='rgba(201,168,76,0.6)'" onblur="this.style.borderColor='rgba(201,168,76,0.2)'"></textarea></div>
+          <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);padding:1rem;">
+            <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.1em;color:var(--gold);margin-bottom:0.3rem;">⚠ DEPOSIT & CANCELLATION POLICY</p>
+            <p style="font-family:var(--font-ui);font-size:0.65rem;color:rgba(250,248,244,0.5);line-height:1.6;">A non-refundable deposit of 25% per person is required to confirm your reservation. By submitting this form you agree to TravizPeru's cancellation policy. See Policies tab for full details.</p>
+          </div>
+          <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);padding:1rem;margin-bottom:1rem;">
+            <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.1em;color:var(--gold);margin-bottom:0.3rem;">💳 PAYMENT INFORMATION</p>
+            <p style="font-family:var(--font-ui);font-size:0.65rem;color:rgba(250,248,244,0.6);line-height:1.7;">Upon confirmation of your reservation, Francisco will contact you within 24 hours via WhatsApp or email with secure banking details for your 25% deposit payment. Full payment instructions will be provided privately and securely.</p>
+          </div>
+          <button onclick="submitBooking()" style="width:100%;font-family:var(--font-ui);font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--gold);color:var(--black);border:none;padding:1.1rem;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.background='var(--gold-light)'" onmouseout="this.style.background='var(--gold)'">Submit Reservation Request</button>
+        </div>
+      </div>
+
+      <!-- POLICIES TAB -->
+      <div id="tabContent-policies" style="display:none;">
+        <div style="display:flex;flex-direction:column;gap:1.5rem;">
+          <div style="border-left:2px solid var(--gold);padding-left:1.2rem;">
+            <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Deposit & Payment</p>
+            <p style="font-family:var(--font-ui);font-size:0.78rem;color:rgba(250,248,244,0.7);line-height:1.7;">A <strong style="color:var(--white);">non-refundable deposit of 25%</strong> per person is required at time of booking to secure your reservation. Full payment is due <strong style="color:var(--white);">95 days prior to departure</strong>. Payments accepted via bank transfer or credit card.</p>
+          </div>
+          <div style="border-left:2px solid var(--gold);padding-left:1.2rem;">
+            <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Cancellation Policy</p>
+            <div style="display:flex;flex-direction:column;gap:0.6rem;">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;font-family:var(--font-ui);font-size:0.75rem;">
+                <div style="background:rgba(201,168,76,0.06);padding:0.8rem;border:1px solid rgba(201,168,76,0.15);">
+                  <p style="color:var(--gold);margin-bottom:0.3rem;">96+ days before departure</p>
+                  <p style="color:rgba(250,248,244,0.7);">Loss of deposit only (25%)</p>
+                </div>
+                <div style="background:rgba(201,168,76,0.06);padding:0.8rem;border:1px solid rgba(201,168,76,0.15);">
+                  <p style="color:var(--gold);margin-bottom:0.3rem;">61–95 days before departure</p>
+                  <p style="color:rgba(250,248,244,0.7);">50% of total tour cost</p>
+                </div>
+                <div style="background:rgba(201,168,76,0.06);padding:0.8rem;border:1px solid rgba(201,168,76,0.15);">
+                  <p style="color:var(--gold);margin-bottom:0.3rem;">31–60 days before departure</p>
+                  <p style="color:rgba(250,248,244,0.7);">75% of total tour cost</p>
+                </div>
+                <div style="background:rgba(201,168,76,0.06);padding:0.8rem;border:1px solid rgba(201,168,76,0.15);">
+                  <p style="color:var(--gold);margin-bottom:0.3rem;">0–30 days before departure</p>
+                  <p style="color:rgba(250,248,244,0.7);"><strong style="color:#ff6b6b;">100% — No Refund</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="border-left:2px solid var(--gold);padding-left:1.2rem;">
+            <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">No-Show Policy</p>
+            <p style="font-family:var(--font-ui);font-size:0.78rem;color:rgba(250,248,244,0.7);line-height:1.7;">No-shows or departures after tour commencement are <strong style="color:#ff6b6b;">non-refundable</strong>. TravizPeru strongly recommends purchasing comprehensive travel insurance.</p>
+          </div>
+          <div style="border-left:2px solid var(--gold);padding-left:1.2rem;">
+            <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Travel Insurance</p>
+            <p style="font-family:var(--font-ui);font-size:0.78rem;color:rgba(250,248,244,0.7);line-height:1.7;">Travel insurance is <strong style="color:var(--white);">strongly recommended</strong> for all TravizPeru guests. Coverage should include trip cancellation, medical evacuation, and baggage protection.</p>
+          </div>
+          <div style="border-left:2px solid var(--gold);padding-left:1.2rem;">
+            <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Minimum Group Size</p>
+            <p style="font-family:var(--font-ui);font-size:0.78rem;color:rgba(250,248,244,0.7);line-height:1.7;">All TravizPeru escorted tours require a <strong style="color:var(--white);">minimum of 10 passengers</strong>. In the event a tour does not meet the minimum, guests will be offered an alternative departure date or a full refund.</p>
+          </div>
+          <div style="border-left:2px solid var(--gold);padding-left:1.2rem;">
+            <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Health & Altitude</p>
+            <p style="font-family:var(--font-ui);font-size:0.78rem;color:rgba(250,248,244,0.7);line-height:1.7;">Cusco sits at 11,150 ft and Lake Titicaca at 12,500 ft above sea level. Guests with health concerns should consult their physician before booking. TravizPeru is not liable for altitude-related medical issues.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const tours = {
+  tour1: {
+    eyebrow: 'Classic · 7 Days · Escorted Tour · Min. 10 Passengers',
+    title: 'Classic Peru & Machu Picchu',
+    price: 'From $2,190 per person (land only)',
+    dates: ['September 6, 2026','September 20, 2026','October 4, 2026','October 18, 2026','November 1, 2026','November 15, 2026','November 29, 2026','December 6, 2026'],
+    itinerary: `
+      <div style="display:flex;flex-direction:column;gap:1.2rem;">
+        ${dayBlock('DAY 1','Arrival in Lima','Upon arrival at Jorge Chávez International Airport, your TravizPeru representative escorts you to your hotel in Miraflores.','Casa Andina Private Collection, Miraflores, Lima','None')}
+        ${dayBlock('DAY 2','Lima','Meet your TravizPeru Tour Manager for a briefing, then tour colonial Lima: Rafael Larco Herrera Museum, Plaza de Armas, Government Palace, Santo Domingo Church, and the legendary Casa de Aliaga (c. 1535). Welcome dinner at the museum.','Casa Andina Private Collection, Miraflores, Lima','Breakfast, Dinner')}
+        ${dayBlock('DAY 3','Lima / Cusco / Sacred Valley','Morning flight to Cusco. Visit Koricancha and the Convent of Santo Domingo. Continue to the Sacred Valley with a stop at the colorful Pisac market.','Rio Sagrado, A Belmond Hotel, Sacred Valley','Breakfast, Lunch, Dinner')}
+        ${dayBlock('DAY 4','Sacred Valley / Machu Picchu','Board the Vistadome train to Aguas Calientes. After lunch, ascend to Machu Picchu for your first guided tour of the legendary Lost City of the Incas — a UNESCO World Heritage site.','Inkaterra Machu Picchu Pueblo Hotel','Breakfast, Lunch, Dinner')}
+        ${dayBlock('DAY 5','Machu Picchu / Cusco','Dawn return to Machu Picchu before the crowds arrive — morning light bathes the ancient stones in gold. Return to Cusco by afternoon. Evening at leisure.','Palacio Nazarenas, A Belmond Hotel, Cusco','Breakfast, Lunch')}
+        ${dayBlock('DAY 6','Cusco','Tour the oldest city in the Americas: Sacsayhuamán, Plaza de Armas, and the magnificent 16th-century Cathedral. Highlight: an intimate home-hosted lunch with a local Cusco family.','Palacio Nazarenas, A Belmond Hotel, Cusco','Breakfast, Lunch')}
+        ${dayBlock('DAY 7','Cusco / Lima / Depart','Morning at leisure in Cusco. Flight to Lima and onward connection home.','—','Breakfast')}
+      </div>
+      <div style="margin-top:2rem;padding:1.2rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);">
+        <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Included</p>
+        <p style="font-family:var(--font-ui);font-size:0.72rem;color:rgba(250,248,244,0.7);line-height:1.8;">6 nights luxury hotels · Internal flight Lima–Cusco · Vistadome train round trip · All archaeological entrance fees · 10 meals (5 breakfasts, 3 lunches, 2 dinners) · Expert TravizPeru Tour Manager · All airport and hotel transfers · Wireless audio headsets</p>
+        <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-top:1rem;margin-bottom:0.5rem;">Not Included</p>
+        <p style="font-family:var(--font-ui);font-size:0.72rem;color:rgba(250,248,244,0.7);">International airfare · Gratuities · Personal expenses · Travel insurance (strongly recommended)</p>
+      </div>`
+  },
+  tour2: {
+    eyebrow: 'Signature · 11 Days · Escorted Tour · Min. 10 Passengers',
+    title: 'Treasures of Peru',
+    price: 'From $4,290 per person (land only)',
+    dates: ['September 6, 2026','September 20, 2026','October 4, 2026','October 18, 2026','November 1, 2026','November 15, 2026','November 29, 2026','December 6, 2026'],
+    itinerary: `
+      <div style="display:flex;flex-direction:column;gap:1.2rem;">
+        ${dayBlock('DAY 1','Arrival in Lima','Upon arrival at Jorge Chávez International Airport, your TravizPeru representative escorts you to your hotel.','Casa Andina Private Collection, Miraflores, Lima','None')}
+        ${dayBlock('DAY 2','Lima','Meet your TravizPeru Tour Manager for a briefing, then tour colonial Lima: Rafael Larco Herrera Museum, Plaza de Armas, Government Palace, Santo Domingo Church, and the legendary Casa de Aliaga (c. 1535). Welcome dinner at the museum.','Casa Andina Private Collection, Miraflores, Lima','Breakfast, Dinner')}
+        ${dayBlock('DAY 3','Lima / Cusco / Sacred Valley','Morning flight to Cusco. Visit Koricancha and the Convent of Santo Domingo. Continue to the Sacred Valley with a stop at the colorful Pisac market.','Tambo del Inka, a Luxury Collection Resort & Spa, Valle Sagrado','Breakfast, Lunch, Dinner')}
+        ${dayBlock('DAY 4','Sacred Valley','Traditional "Offering to the Earth" ceremony with a local shaman. Explore Ollantaytambo's massive Inca ruins and the Quechua village of Chinchero — private weaving demonstration included.','Tambo del Inka, a Luxury Collection Resort & Spa, Valle Sagrado','Breakfast, Lunch, Dinner')}
+        ${dayBlock('DAY 5','Sacred Valley / Machu Picchu / Aguas Calientes','Board the Vistadome train to Aguas Calientes. First guided tour of Machu Picchu — the legendary Lost City of the Incas. Dinner together at our hotel.','Inkaterra Machu Picchu Pueblo Hotel','Breakfast, Lunch, Dinner')}
+        ${dayBlock('DAY 6','Machu Picchu / Cusco','Dawn return to Machu Picchu before the crowds arrive. After lunch in Aguas Calientes, train and coach to Cusco. Dinner on your own.','Palacio del Inka, a Luxury Collection Hotel, Cusco','Breakfast, Lunch')}
+        ${dayBlock('DAY 7','Cusco','Tour the oldest city in the Americas: Sacsayhuamán, Plaza de Armas, and the magnificent 16th-century Cathedral. Intimate home-hosted lunch with a local Cusco family.','Palacio del Inka, a Luxury Collection Hotel, Cusco','Breakfast, Lunch')}
+        ${dayBlock('DAY 8','Cusco / Puno','Scenic full-day coach journey through the Andes. Stops at Andahuaylillas, ruins of Raqchi, and La Raya — home of the Llama and Alpaca Research Center. Late arrival at Lake Titicaca.','Hotel Libertador Puno, Isla Esteves, Lake Titicaca','Breakfast, Lunch')}
+        ${dayBlock('DAY 9','Puno / Lake Titicaca','Full day on the world's highest navigable lake (12,500 ft). Visit the Floating Islands of Los Uros and Isla Taquile. Farewell dinner at our hotel.','Hotel Libertador Puno, Isla Esteves, Lake Titicaca','Breakfast, Boxed Lunch, Dinner')}
+        ${dayBlock('DAY 10','Puno / Lima','Visit the mysterious burial towers of Sillustani overlooking Lake Umayo. Flight to Lima. Day rooms at airport hotel.','Wyndham Grand Costa del Sol Lima Airport (Day Rooms)','Breakfast, Lunch')}
+        ${dayBlock('DAY 11','Arrive Home','We arrive home with memories of an extraordinary land — its ancient wonders, living cultures, and breathtaking landscapes.','—','Breakfast')}
+      </div>
+      <div style="margin-top:2rem;padding:1.2rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);">
+        <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Included</p>
+        <p style="font-family:var(--font-ui);font-size:0.72rem;color:rgba(250,248,244,0.7);line-height:1.8;">9 nights luxury hotels · Internal flights Lima–Cusco & Puno–Lima · Vistadome train round trip · All archaeological entrance fees · 18 meals (9 breakfasts, 6 lunches, 4 dinners) · Expert TravizPeru Tour Manager · All transfers · Wireless audio headsets</p>
+        <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-top:1rem;margin-bottom:0.5rem;">Not Included</p>
+        <p style="font-family:var(--font-ui);font-size:0.72rem;color:rgba(250,248,244,0.7);">International airfare · Gratuities · Personal expenses · Travel insurance (strongly recommended)</p>
+      </div>`
+  },
+  tour3: {
+    eyebrow: 'Grand · 15 Days · Escorted Tour · Min. 10 Passengers',
+    title: 'Grand Peru & Amazon',
+    price: 'From $5,790 per person (land only)',
+    dates: ['September 6, 2026','October 4, 2026','November 1, 2026','December 6, 2026'],
+    itinerary: `
+      <div style="display:flex;flex-direction:column;gap:1.2rem;">
+        ${dayBlock('DAY 1','Arrival in Lima','Upon arrival at Jorge Chávez International Airport, your TravizPeru representative escorts you to your hotel in Miraflores.','Casa Andina Private Collection, Miraflores, Lima','None')}
+        ${dayBlock('DAY 2','Lima','Meet your TravizPeru Tour Manager. Tour colonial Lima: Rafael Larco Herrera Museum, Plaza de Armas, Government Palace, Santo Domingo Church, and Casa de Aliaga (c. 1535). Welcome dinner at the museum.','Casa Andina Private Collection, Miraflores, Lima','Breakfast, Dinner')}
+        ${dayBlock('DAY 3','Lima / Cusco / Sacred Valley','Morning flight to Cusco. Visit Koricancha and the Convent of Santo Domingo. Continue to the Sacred Valley with a stop at the colorful Pisac market.','Tambo del Inka, a Luxury Collection Resort & Spa, Valle Sagrado','Breakfast, Lunch, Dinner')}
+        ${dayBlock('DAY 4','Sacred Valley','Traditional "Offering to the Earth" ceremony with a local shaman. Explore Ollantaytambo's massive Inca ruins and the Quechua village of Chinchero — private weaving demonstration included.','Tambo del Inka, a Luxury Collection Resort & Spa, Valle Sagrado','Breakfast, Lunch, Dinner')}
+        ${dayBlock('DAY 5','Sacred Valley / Machu Picchu / Aguas Calientes','Board the Vistadome train to Aguas Calientes. First guided tour of Machu Picchu — the legendary Lost City of the Incas. Dinner together at our hotel.','Inkaterra Machu Picchu Pueblo Hotel','Breakfast, Lunch, Dinner')}
+        ${dayBlock('DAY 6','Machu Picchu / Cusco','Dawn return to Machu Picchu before the crowds. After lunch in Aguas Calientes, train and coach to Cusco. Dinner on your own.','Palacio del Inka, a Luxury Collection Hotel, Cusco','Breakfast, Lunch')}
+        ${dayBlock('DAY 7','Cusco','Tour the oldest city in the Americas: Sacsayhuamán, Plaza de Armas, and the 16th-century Cathedral. Intimate home-hosted lunch with a local Cusco family.','Palacio del Inka, a Luxury Collection Hotel, Cusco','Breakfast, Lunch')}
+        ${dayBlock('DAY 8','Cusco / Puno','Scenic full-day coach through the Andes. Stops at Andahuaylillas, ruins of Raqchi, and La Raya altiplano. Late arrival at Lake Titicaca.','Hotel Libertador Puno, Isla Esteves, Lake Titicaca','Breakfast, Lunch')}
+        ${dayBlock('DAY 9','Puno / Lake Titicaca','Full day on the world's highest navigable lake. Visit the Floating Islands of Los Uros and Isla Taquile. Farewell dinner at our hotel.','Hotel Libertador Puno, Isla Esteves, Lake Titicaca','Breakfast, Boxed Lunch, Dinner')}
+        ${dayBlock('DAY 10','Puno / Lima','Visit the mysterious burial towers of Sillustani. Flight to Lima. Day rooms at airport hotel.','Wyndham Grand Costa del Sol Lima Airport (Day Rooms)','Breakfast, Lunch')}
+        ${dayBlock('DAY 11','Lima / Iquitos / Amazon Lodge','Morning flight to Iquitos — gateway to the Amazon. Your TravizPeru naturalist guide leads a river voyage 25 miles down the Amazon to our secluded jungle lodge. Afternoon rainforest hike.','Ceiba Tops Lodge & Resort, Amazon River','Breakfast, Lunch, Dinner')}
+        ${dayBlock('DAY 12','Amazon Rainforest','Early morning birding at dawn. Visit the indigenous Yagua community and witness traditional blowgun artistry. Dolphin watch on the Amazon River. Afternoon visit to a ribereño river village.','Ceiba Tops Lodge & Resort, Amazon River','Breakfast, Lunch, Dinner')}
+        ${dayBlock('DAY 13','Canopy Walkway & Ethnobotanical Garden','Deep into the rainforest to the world-famous suspended Canopy Walkway — 1,750 feet reaching 115 feet above the forest floor. A local shaman guides us through 240+ medicinal plants.','Ceiba Tops Lodge & Resort, Amazon River','Breakfast, Lunch, Dinner')}
+        ${dayBlock('DAY 14','Amazon / Lima / Depart','Optional dawn birding before final lunch at the lodge. River journey to Iquitos for evening flight to Lima and onward connections home.','—','Breakfast, Lunch')}
+        ${dayBlock('DAY 15','Arrive Home','We arrive home transformed — forever changed by the magic of Machu Picchu, Lake Titicaca, and the wild Amazon.','—','Breakfast')}
+      </div>
+      <div style="margin-top:2rem;padding:1.2rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);">
+        <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Included</p>
+        <p style="font-family:var(--font-ui);font-size:0.72rem;color:rgba(250,248,244,0.7);line-height:1.8;">13 nights luxury hotels & Amazon lodge · Internal flights Lima–Cusco, Puno–Lima & Lima–Iquitos · Vistadome train round trip · All archaeological entrance fees · 26 meals (13 breakfasts, 9 lunches, 6 dinners) · Expert TravizPeru Tour Manager & Amazon naturalist guide · All transfers · Wireless audio headsets</p>
+        <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-top:1rem;margin-bottom:0.5rem;">Not Included</p>
+        <p style="font-family:var(--font-ui);font-size:0.72rem;color:rgba(250,248,244,0.7);">International airfare · Gratuities · Personal expenses · Travel insurance (strongly recommended)</p>
+      </div>`
+  }
+};
+
+function dayBlock(day, title, desc, hotel, meals) {
+  return `<div style="border-left:2px solid rgba(201,168,76,0.3);padding-left:1.2rem;">
+    <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.2rem;">${day}</p>
+    <p style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--white);margin-bottom:0.4rem;">${title}</p>
+    <p style="font-family:var(--font-ui);font-size:0.75rem;color:rgba(250,248,244,0.65);line-height:1.7;margin-bottom:0.5rem;">${desc}</p>
+    ${hotel !== '—' ? `<p style="font-family:var(--font-ui);font-size:0.65rem;color:rgba(201,168,76,0.8);"><em>🏨 ${hotel}</em></p>` : ''}
+    <p style="font-family:var(--font-ui);font-size:0.65rem;color:var(--gray);margin-top:0.2rem;"><em>Meals: ${meals}</em></p>
+  </div>`;
+}
+
+let currentTour = null;
+
+function openTour(tourId) {
+  currentTour = tourId;
+  const tour = tours[tourId];
+  document.getElementById('modalEyebrow').textContent = tour.eyebrow;
+  document.getElementById('modalTitle').textContent = tour.title;
+  document.getElementById('modalPrice').textContent = tour.price;
+  document.getElementById('modalItinerary').innerHTML = tour.itinerary;
+  
+  // Populate dates
+  const dateSelect = document.getElementById('bkDate');
+  dateSelect.innerHTML = tour.dates.map(d => `<option>${d}</option>`).join('');
+  
+  showTab('itinerary');
+  document.getElementById('tourModal').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeTour() {
+  document.getElementById('tourModal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+function showTab(tab) {
+  ['itinerary','dates','booking','policies'].forEach(t => {
+    document.getElementById('tabContent-' + t).style.display = t === tab ? 'block' : 'none';
+    const btn = document.getElementById('tab' + t.charAt(0).toUpperCase() + t.slice(1));
+    if (btn) {
+      btn.style.background = t === tab ? 'rgba(201,168,76,0.1)' : 'none';
+      btn.style.color = t === tab ? 'var(--gold)' : 'var(--gray)';
+      btn.style.borderBottom = t === tab ? '2px solid var(--gold)' : '2px solid transparent';
+    }
+  });
+  
+  if (tab === 'dates' && currentTour) {
+    const tour = tours[currentTour];
+    document.getElementById('modalDates').innerHTML = `
+      <p style="font-family:var(--font-ui);font-size:0.72rem;color:var(--gray);margin-bottom:1.5rem;">All prices are per person based on double occupancy (land only). Single supplement available upon request.</p>
+      <div style="display:flex;flex-direction:column;gap:0.8rem;">
+        ${tour.dates.map(d => `
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.15);">
+            <div>
+              <p style="font-family:var(--font-display);font-size:1rem;color:var(--white);">${d}</p>
+              <p style="font-family:var(--font-ui);font-size:0.65rem;color:var(--gray);margin-top:0.2rem;">Minimum 10 passengers · Space available</p>
+            </div>
+            <div style="text-align:right;">
+              <p style="font-family:var(--font-display);font-size:1.1rem;color:var(--gold);">tour.price.replace('From ','')</p>
+              <button onclick="showTab('booking')" style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;background:var(--gold);color:var(--black);border:none;padding:0.4rem 0.8rem;cursor:pointer;margin-top:0.4rem;">Book</button>
+            </div>
+          </div>`).join('')}
+      </div>`;
+  }
+}
+
+function submitBooking() {
+  const fn = document.getElementById('bkFirstName').value;
+  const ln = document.getElementById('bkLastName').value;
+  const email = document.getElementById('bkEmail').value;
+  const phone = document.getElementById('bkPhone').value;
+  if (!fn || !ln || !email || !phone) {
+    alert('Please fill in all required fields.');
+    return;
+  }
+  const tour = tours[currentTour];
+  const date = document.getElementById('bkDate').value;
+  const travelers = document.getElementById('bkTravelers').value;
+  const msg = encodeURIComponent(`Hello Francisco! I would like to book the *${tour.title}* tour.\n\nDeparture: ${date}\nTravelers: ${travelers}\nName: ${fn} ${ln}\nEmail: ${email}`);
+  window.open(`https://wa.me/51982521128?text=${msg}`, '_blank');
+  closeTour();
+}
+
+document.getElementById('tourModal').addEventListener('click', function(e) {
+  if (e.target === this) closeTour();
+});
+</script>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container" style="text-align:center">
+    <span class="section-eyebrow reveal" data-es="Testimonios" data-en="Testimonials">Testimonials</span>
+    <h2 class="section-title reveal" data-es="Lo que Dicen <em>Nuestros Viajeros</em>" data-en="What Our <em>Travelers Say</em>">What Our <em>Travelers Say</em></h2>
+    <div class="section-divider reveal" style="margin:1.5rem auto 0"></div>
+    <div class="testi-wrap reveal">
+      <div class="testi-item active">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote" data-es="&ldquo;Francisco superó todas mis expectativas. Su conocimiento de Machu Picchu y los Andes es extraordinario. Una experiencia que cambió mi vida.&rdquo;" data-en="&ldquo;Francisco exceeded all my expectations. His knowledge of Machu Picchu and the Andes is extraordinary. A life-changing experience.&rdquo;">&ldquo;Francisco exceeded all my expectations. His knowledge of Machu Picchu and the Andes is extraordinary. A life-changing experience.&rdquo;</p>
+        <p class="testi-author">Sofia Müller <span class="testi-country">· Germany</span></p>
+      </div>
+      <div class="testi-item">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote" data-es="&ldquo;El Valle Sagrado al amanecer con Francisco fue algo que jamás olvidaré. Gracias por crear momentos mágicos.&rdquo;" data-en="&ldquo;The Sacred Valley at dawn with Francisco was something I will never forget. Thank you for creating magical moments.&rdquo;">&ldquo;The Sacred Valley at dawn with Francisco was something I will never forget. Thank you for creating magical moments.&rdquo;</p>
+        <p class="testi-author">James & Emily Carter <span class="testi-country">· United Kingdom</span></p>
+      </div>
+      <div class="testi-item">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote" data-es="&ldquo;El servicio personalizado vale cada centavo. Atención impecable y conocimiento profundo. Sin duda la mejor manera de descubrir Perú.&rdquo;" data-en="&ldquo;The personalized service is worth every penny. Impeccable attention and deep knowledge. Without a doubt the best way to discover Peru.&rdquo;">&ldquo;The personalized service is worth every penny. Impeccable attention and deep knowledge. Without a doubt the best way to discover Peru.&rdquo;</p>
+        <p class="testi-author">Marco Ricci <span class="testi-country">· Italy</span></p>
+      </div>
+    </div>
+    <div class="testi-dots reveal">
+      <button class="dot active" onclick="goTesti(0)"></button>
+      <button class="dot" onclick="goTesti(1)"></button>
+      <button class="dot" onclick="goTesti(2)"></button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div>
+        <span class="section-eyebrow reveal" data-es="Contáctame" data-en="Contact Me">Contact Me</span>
+        <h2 class="section-title reveal" data-es="Diseñemos tu <em>Viaje Ideal</em>" data-en="Let's Design your <em>Dream Journey</em>">Let's Design your <em>Dream Journey</em></h2>
+        <div class="section-divider reveal"></div>
+        <p class="section-intro reveal" data-es="Cada experiencia es única y personalizada. Cuéntame sobre tu viaje soñado y crearé el itinerario perfecto para ti. Sin precios fijos — solo experiencias hechas a tu medida." data-en="Every experience is unique and personalized. Tell me about your dream journey and I will create the perfect itinerary for you. No fixed prices — only experiences made for you.">Every experience is unique and personalized. Tell me about your dream journey and I will create the perfect itinerary for you. No fixed prices — only experiences made for you.</p>
+
+        <div style="margin-top:2.5rem">
+          <div class="contact-item reveal">
+            <div class="contact-icon">📱</div>
+            <div>
+              <p class="contact-label">WhatsApp</p>
+              <p class="contact-value">+51 982 521 128</p>
+            </div>
+          </div>
+          <div class="contact-item reveal">
+            <div class="contact-icon">✉</div>
+            <div>
+              <p class="contact-label">Email</p>
+              <p class="contact-value">fab0108@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item reveal">
+            <div class="contact-icon">📍</div>
+            <div>
+              <p class="contact-label" data-es="Ubicación" data-en="Location">Location</p>
+              <p class="contact-value">Lima, Peru</p>
+            </div>
+          </div>
+          <div class="contact-item reveal">
+            <div class="contact-icon">🏅</div>
+            <div>
+              <p class="contact-label">APOTUR Certified</p>
+              <p class="contact-value" style="font-size:0.9rem">Member of the Peruvian Association of Incoming Tour Operators · Code AP030-11</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://wa.me/51982521128" class="whatsapp-btn reveal" style="margin-top:1.5rem">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-es="Chatear por WhatsApp" data-en="Chat on WhatsApp">Chat on WhatsApp</span>
+        </a>
+      </div>
+
+      <div class="contact-form reveal">
+        <div class="form-row">
+          <div class="form-field">
+            <label data-es="Nombre" data-en="Name">Name</label>
+            <input type="text" placeholder="Your name">
+          </div>
+          <div class="form-field">
+            <label>Email</label>
+            <input type="email" placeholder="your@email.com">
+          </div>
+        </div>
+        <div class="form-field">
+          <label data-es="Destino de Interés" data-en="Destination of Interest">Destination of Interest</label>
+          <select>
+            <option>Select destination...</option>
+            <option>Machu Picchu & Cusco</option>
+            <option>Sacred Valley</option>
+            <option>Lake Titicaca</option>
+            <option>Lima</option>
+            <option>Amazon</option>
+            <option>Full Peru</option>
+            <option>Custom Route</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label data-es="Número de Viajeros" data-en="Number of Travelers">Number of Travelers</label>
+          <select>
+            <option>Select...</option>
+            <option>1-2 travelers</option>
+            <option>3-5 travelers</option>
+            <option>6-10 travelers</option>
+            <option>10+ travelers</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label data-es="Cuéntame tu Sueño" data-en="Tell Me Your Dream">Tell Me Your Dream</label>
+          <textarea placeholder="Describe your ideal Peru experience — dates, interests, special requirements..."></textarea>
+        </div>
+        <button class="btn-primary" style="width:100%;font-size:0.82rem;cursor:pointer" onclick="alert('Thank you! Francisco will contact you within 24 hours.')" data-es="Enviar Consulta" data-en="Request My Custom Quote">Request My Custom Quote</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<!-- INSTAGRAM -->
+<section style="background:var(--black);padding:5rem 4rem;text-align:center;">
+  <div class="container">
+    <span class="section-eyebrow reveal">Follow the Journey</span>
+    <h2 class="section-title reveal">Experience Peru on <em>Instagram</em></h2>
+    <div class="section-divider reveal" style="margin:1.5rem auto;"></div>
+    <p class="section-intro reveal" style="margin:0 auto 2.5rem;text-align:center;">Follow our daily adventures across Peru — Machu Picchu, Sacred Valley, Lake Titicaca, Amazon and beyond.</p>
+    <a href="https://www.instagram.com/travizperu" target="_blank" class="reveal" style="display:inline-flex;align-items:center;gap:0.8rem;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:#fff;font-family:var(--font-ui);font-size:0.78rem;letter-spacing:0.15em;text-transform:uppercase;padding:1rem 2.5rem;text-decoration:none;transition:all 0.3s;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      @travizperu
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <span class="footer-logo">Traviz<span>Peru</span></span>
+      <p class="footer-desc" data-es="Tu agencia de viajes premium en Perú. Experiencias únicas diseñadas por Francisco Arriz Barrantes, experto con 22 años en turismo de lujo." data-en="Your premium travel agency in Peru. Unique experiences designed by Francisco Arriz Barrantes, expert with 22 years in luxury tourism.">Your premium travel agency in Peru. Unique experiences designed by Francisco Arriz Barrantes, expert with 22 years in luxury tourism.</p>
+      <div class="apotur-bar">
+        <div class="credential-icon">🏅</div>
+        <div>
+          <div class="apotur-text">APOTUR Certified · AP030-11</div>
+          <div class="apotur-sub">Peruvian Association of Incoming Tour Operators</div>
+        </div>
+      </div>
+      <div class="social-row">
+        <a href="https://www.facebook.com/profile.php?id=61589856420423" target="_blank" class="social-btn">f</a>
+        <a href="https://www.instagram.com/travizperu" target="_blank" class="social-btn">ig</a>
+        <a href="#" class="social-btn">✈</a>
+        <a href="#" class="social-btn">▶</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-heading" data-es="Destinos" data-en="Destinations">Destinations</p>
+      <ul class="footer-links">
+        <li><a href="#">Machu Picchu</a></li>
+        <li><a href="#">Lima</a></li>
+        <li><a href="#" data-es="Valle Sagrado" data-en="Sacred Valley">Sacred Valley</a></li>
+        <li><a href="#" data-es="Lago Titicaca" data-en="Lake Titicaca">Lake Titicaca</a></li>
+        <li><a href="#" data-es="Amazonas" data-en="Amazon">Amazon</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading" data-es="Experiencias" data-en="Experiences">Experiences</p>
+      <ul class="footer-links">
+        <li><a href="#" data-es="Clásico Andino" data-en="Andean Classic">Andean Classic</a></li>
+        <li><a href="#" data-es="Peru Completo" data-en="Complete Peru">Complete Peru</a></li>
+        <li><a href="#" data-es="Gran Expedición" data-en="Grand Expedition">Grand Expedition</a></li>
+        <li><a href="#" data-es="A medida" data-en="Custom Journey">Custom Journey</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Contact</p>
+      <ul class="footer-links">
+        <li><a href="https://wa.me/51982521128">WhatsApp: +51 982 521 128</a></li>
+        <li><a href="mailto:fab0108@gmail.com">fab0108@gmail.com</a></li>
+        <li><a href="#">Lima, Peru</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 TravizPeru · Francisco Arriz Barrantes</span>
+    <span data-es="Hecho con ♥ en Lima, Perú" data-en="Made with ♥ in Lima, Peru">Made with ♥ in Lima, Peru</span>
+  </div>
+</footer>
+
+<script>
+  // NAV
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+
+  // REVEAL
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // TESTIMONIALS
+  let idx = 0;
+  const testis = document.querySelectorAll('.testi-item');
+  const dots = document.querySelectorAll('.dot');
+  function goTesti(n) {
+    testis[idx].classList.remove('active');
+    dots[idx].classList.remove('active');
+    idx = n;
+    testis[idx].classList.add('active');
+    dots[idx].classList.add('active');
+  }
+  setInterval(() => goTesti((idx + 1) % testis.length), 5000);
+
+  // LANGUAGE
+  let lang = 'en';
+  function toggleLang() {
+    lang = lang === 'en' ? 'es' : 'en';
+    document.getElementById('langBtn').textContent = lang === 'en' ? 'ES' : 'EN';
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const text = el.getAttribute('data-' + lang);
+      if (text) el.innerHTML = text;
+    });
+    document.querySelector('.hero-title').innerHTML = lang === 'en'
+      ? 'Discover <em>Eternal</em><br>Peru'
+      : 'Descubre el <em>Perú Eterno</em>';
+  }
+</script>
+</body>
+</html>
