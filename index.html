@@ -377,6 +377,23 @@
     <div class="section-divider reveal"></div>
     <p class="section-intro reveal">Three extraordinary escorted journeys through the wonders of Peru. All departures from September 2026 onwards. Select your tour to view the complete itinerary and book your place.</p>
 
+    <!-- SPECIAL OFFER BANNER -->
+    <div class="reveal" style="margin-top:3rem;background:linear-gradient(135deg,rgba(201,168,76,0.14),rgba(201,168,76,0.03));border:1px solid rgba(201,168,76,0.45);padding:2.5rem 3rem;">
+      <span style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;background:var(--gold);color:var(--black);display:inline-block;padding:0.3rem 1rem;margin-bottom:1.5rem;" data-es="Oferta Especial" data-en="Special Offer">Special Offer</span>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap;">
+        <div>
+          <p style="font-family:var(--font-display);font-size:2rem;font-weight:600;letter-spacing:0.03em;margin-bottom:0.6rem;" data-es="Gran Viaje al Perú" data-en="Grand Peru Journey">Grand Peru Journey</p>
+          <p style="font-size:1.05rem;color:rgba(250,248,244,0.8);font-weight:300;letter-spacing:0.02em;" data-es="Lima · Valle Sagrado · Machu Picchu · Cusco · Lago Titicaca · Regreso a casa" data-en="Lima · Sacred Valley · Machu Picchu · Cusco · Lake Titicaca · Return Home">Lima · Sacred Valley · Machu Picchu · Cusco · Lake Titicaca · Return Home</p>
+        </div>
+        <div style="text-align:right;flex-shrink:0;">
+          <span style="font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);display:block;" data-es="Desde" data-en="From">From</span>
+          <span style="font-family:var(--font-display);font-size:3rem;font-weight:700;color:var(--gold);display:block;line-height:1.1;">$1,899</span>
+          <span style="font-family:var(--font-ui);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);display:block;" data-es="por persona · solo terrestre" data-en="per person · land only">per person · land only</span>
+        </div>
+      </div>
+      <a href="https://wa.me/51982521128" class="btn-primary" style="margin-top:2rem;" data-es="Reservar esta Oferta" data-en="Book this Offer">Book this Offer</a>
+    </div>
+
     <!-- TOUR CARDS -->
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;" class="reveal">
 
@@ -392,7 +409,7 @@
         <div style="background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(10,10,10,0.9));padding:2rem;border-bottom:1px solid rgba(201,168,76,0.15);">
           <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Classic · 7 Days</p>
           <h3 style="font-family:var(--font-display);font-size:1.6rem;font-weight:600;color:var(--white);margin-bottom:0.3rem;">Classic Peru<br>& Machu Picchu</h3>
-          <p style="font-family:var(--font-display);font-size:1.4rem;color:var(--gold);font-style:italic;">From $2,190 pp</p>
+          
         </div>
         <div style="padding:1.5rem;">
           <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.5rem;">
@@ -422,7 +439,7 @@
         <div style="background:linear-gradient(135deg,rgba(201,168,76,0.2),rgba(10,10,10,0.9));padding:2rem;border-bottom:1px solid rgba(201,168,76,0.15);">
           <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Signature · 11 Days</p>
           <h3 style="font-family:var(--font-display);font-size:1.6rem;font-weight:600;color:var(--white);margin-bottom:0.3rem;">Treasures<br>of Peru</h3>
-          <p style="font-family:var(--font-display);font-size:1.4rem;color:var(--gold);font-style:italic;">From $4,290 pp</p>
+          
         </div>
         <div style="padding:1.5rem;">
           <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.5rem;">
@@ -448,7 +465,7 @@
         <div style="background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(10,10,10,0.9));padding:2rem;border-bottom:1px solid rgba(201,168,76,0.15);">
           <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Grand · 15 Days</p>
           <h3 style="font-family:var(--font-display);font-size:1.6rem;font-weight:600;color:var(--white);margin-bottom:0.3rem;">Grand Peru<br>& Amazon</h3>
-          <p style="font-family:var(--font-display);font-size:1.4rem;color:var(--gold);font-style:italic;">From $5,790 pp</p>
+          
         </div>
         <div style="padding:1.5rem;">
           <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.5rem;">
@@ -475,13 +492,13 @@
       <button onclick="closeTour()" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:1px solid rgba(201,168,76,0.3);color:var(--gold);width:36px;height:36px;cursor:pointer;font-size:1.1rem;">✕</button>
       <p id="modalEyebrow" style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;"></p>
       <h2 id="modalTitle" style="font-family:var(--font-display);font-size:2rem;font-weight:600;color:var(--white);margin-bottom:0.3rem;"></h2>
-      <p id="modalPrice" style="font-family:var(--font-display);font-size:1.5rem;color:var(--gold);font-style:italic;"></p>
+      <p id="modalPrice" style="display:none;"></p>
     </div>
 
     <!-- Tabs -->
     <div style="display:flex;border-bottom:1px solid rgba(201,168,76,0.2);">
       <button onclick="showTab('itinerary')" id="tabItinerary" style="flex:1;padding:1rem;font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;background:rgba(201,168,76,0.1);color:var(--gold);border:none;cursor:pointer;border-bottom:2px solid var(--gold);">Itinerary</button>
-      <button onclick="showTab('dates')" id="tabDates" style="flex:1;padding:1rem;font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;background:none;color:var(--gray);border:none;cursor:pointer;border-bottom:2px solid transparent;">Dates & Prices</button>
+      <button onclick="showTab('dates')" id="tabDates" style="flex:1;padding:1rem;font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;background:none;color:var(--gray);border:none;cursor:pointer;border-bottom:2px solid transparent;">Dates</button>
       <button onclick="showTab('booking')" id="tabBooking" style="flex:1;padding:1rem;font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;background:none;color:var(--gray);border:none;cursor:pointer;border-bottom:2px solid transparent;">Book Now</button>
       <button onclick="showTab('policies')" id="tabPolicies" style="flex:1;padding:1rem;font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;background:none;color:var(--gray);border:none;cursor:pointer;border-bottom:2px solid transparent;">Policies</button>
     </div>
@@ -588,7 +605,6 @@ const tours = {
   tour1: {
     eyebrow: 'Classic · 7 Days · Escorted Tour · Min. 10 Passengers',
     title: 'Classic Peru & Machu Picchu',
-    price: 'From $2,190 per person (land only)',
     dates: ['September 6, 2026','September 20, 2026','October 4, 2026','October 18, 2026','November 1, 2026','November 15, 2026','November 29, 2026','December 6, 2026'],
     itinerary: `
       <div style="display:flex;flex-direction:column;gap:1.2rem;">
@@ -610,7 +626,6 @@ const tours = {
   tour2: {
     eyebrow: 'Signature · 11 Days · Escorted Tour · Min. 10 Passengers',
     title: 'Treasures of Peru',
-    price: 'From $4,290 per person (land only)',
     dates: ['September 6, 2026','September 20, 2026','October 4, 2026','October 18, 2026','November 1, 2026','November 15, 2026','November 29, 2026','December 6, 2026'],
     itinerary: `
       <div style="display:flex;flex-direction:column;gap:1.2rem;">
@@ -636,7 +651,6 @@ const tours = {
   tour3: {
     eyebrow: 'Grand · 15 Days · Escorted Tour · Min. 10 Passengers',
     title: 'Grand Peru & Amazon',
-    price: 'From $5,790 per person (land only)',
     dates: ['September 6, 2026','October 4, 2026','November 1, 2026','December 6, 2026'],
     itinerary: `
       <div style="display:flex;flex-direction:column;gap:1.2rem;">
@@ -682,7 +696,6 @@ function openTour(tourId) {
   const tour = tours[tourId];
   document.getElementById('modalEyebrow').textContent = tour.eyebrow;
   document.getElementById('modalTitle').textContent = tour.title;
-  document.getElementById('modalPrice').textContent = tour.price;
   document.getElementById('modalItinerary').innerHTML = tour.itinerary;
   
   // Populate dates
@@ -713,7 +726,7 @@ function showTab(tab) {
   if (tab === 'dates' && currentTour) {
     const tour = tours[currentTour];
     document.getElementById('modalDates').innerHTML = `
-      <p style="font-family:var(--font-ui);font-size:0.72rem;color:var(--gray);margin-bottom:1.5rem;">All prices are per person based on double occupancy (land only). Single supplement available upon request.</p>
+      <p style="font-family:var(--font-ui);font-size:0.72rem;color:var(--gray);margin-bottom:1.5rem;">Contact us for a personalized quote for any of these departure dates.</p>
       <div style="display:flex;flex-direction:column;gap:0.8rem;">
         ${tour.dates.map(d => `
           <div style="display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.15);">
@@ -722,7 +735,6 @@ function showTab(tab) {
               <p style="font-family:var(--font-ui);font-size:0.65rem;color:var(--gray);margin-top:0.2rem;">Minimum 10 passengers · Space available</p>
             </div>
             <div style="text-align:right;">
-              <p style="font-family:var(--font-display);font-size:1.1rem;color:var(--gold);">tour.price.replace('From ','')</p>
               <button onclick="showTab('booking')" style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;background:var(--gold);color:var(--black);border:none;padding:0.4rem 0.8rem;cursor:pointer;margin-top:0.4rem;">Book</button>
             </div>
           </div>`).join('')}
