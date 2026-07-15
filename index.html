@@ -73,7 +73,7 @@ section { padding: 7rem 4rem; }
 
 /* ABOUT */
 #about { background: var(--dark); }
-.about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+.about-inner { display: flex; flex-direction: column; align-items: center; gap: 3rem; }
 .about-credential { display: flex; align-items: center; gap: 1rem; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25); padding: 1.2rem 1.5rem; margin-bottom: 1rem; }
 .credential-icon { font-size: 1.5rem; }
 .credential-text { font-family: var(--font-ui); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
@@ -81,7 +81,7 @@ section { padding: 7rem 4rem; }
 .companies-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; }
 .company-tag { font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; border: 1px solid rgba(201,168,76,0.3); color: rgba(250,248,244,0.7); padding: 0.4rem 0.9rem; transition: all 0.3s; }
 .company-tag:hover { border-color: var(--gold); color: var(--gold); }
-.about-image { position: relative; }
+.about-image { position: relative; width: 100%; max-width: 420px; }
 .about-img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
 .about-badge { position: absolute; bottom: -1.5rem; right: -1.5rem; background: var(--gold); color: var(--black); padding: 1.5rem; text-align: center; font-family: var(--font-display); }
 .badge-number { font-size: 2.5rem; font-weight: 600; display: block; line-height: 1; }
@@ -264,6 +264,13 @@ section { padding: 5rem 1.5rem; }
 <section id="about">
 <div class="container">
 <div class="about-inner">
+<div class="about-image reveal">
+<img class="about-img" src="about.jpeg" alt="Francisco Arriz, Founder of TravizPeru">
+<div class="about-badge">
+<span class="badge-number">22</span>
+<span class="badge-text">Years<br>Experience</span>
+</div>
+</div>
 <div>
 <span class="section-eyebrow reveal" data-es="Fundador de TravizPeru" data-en="Founder of TravizPeru">Founder of TravizPeru</span>
 <h2 class="section-title reveal" data-es="Francisco <em>Arriz Barrantes</em>" data-en="Francisco <em>Arriz Barrantes</em>">Francisco <em>Arriz Barrantes</em></h2>
@@ -294,13 +301,6 @@ section { padding: 5rem 1.5rem; }
 </div>
 </div>
 
-</div>
-<div class="about-image reveal">
-<img class="about-img" src="about.jpeg" alt="Francisco Arriz, Founder of TravizPeru">
-<div class="about-badge">
-<span class="badge-number">22</span>
-<span class="badge-text">Years<br>Experience</span>
-</div>
 </div>
 </div>
 </div>
