@@ -582,7 +582,7 @@ Ver todas las opiniones en Facebook
 </footer>
 
 <!-- BACKGROUND MUSIC -->
-<audio id="bgMusic" src="pachamama.mp3" loop preload="none"></audio>
+<audio id="bgMusic" src="pachamama.mp3" loop preload="auto" playsinline></audio>
 <button id="musicToggle" class="music-toggle" aria-label="Play background music" title="Play music">
   <span class="music-ring"></span>
   <svg id="musicIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -683,9 +683,20 @@ Ver todas las opiniones en Facebook
     if (autoStarted || musicPlaying) return;
     if (e.target && e.target.closest && e.target.closest('#musicToggle')) return;
     autoStarted = true;
-    bgMusic.play().then(() => setPlayingUI(true)).catch(() => { autoStarted = false; });
+    const p = bgMusic.play();
+    if (p && p.then) {
+      p.then(() => setPlayingUI(true)).catch(() => { autoStarted = false; });
+    } else {
+      setPlayingUI(true);
+    }
   }
-  ['pointerdown', 'touchstart', 'keydown', 'wheel', 'scroll'].forEach(evt => {
+  // touchstart/touchend/pointerdown/mousedown/click/keydown are all
+  // recognized as valid "user activation" gestures by mobile browsers.
+  // scroll/wheel are NOT reliable triggers for unlocking audio, so we
+  // listen on the gestures that actually count, as early in the event
+  // phase as possible (capture) so the very first tap anywhere works,
+  // including taps that also start a scroll.
+  ['touchstart', 'touchend', 'pointerdown', 'mousedown', 'click', 'keydown'].forEach(evt => {
     document.addEventListener(evt, tryAutoStart, { passive: true, capture: true });
   });
 
