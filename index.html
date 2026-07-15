@@ -189,6 +189,15 @@ footer { background: var(--dark2); border-top: 1px solid rgba(201,168,76,0.15); 
   .music-hint { bottom: 1.4rem; right: 3.8rem; font-size: 0.65rem; }
 }
 
+/* ENTRY GATE */
+#entryGate { position: fixed; inset: 0; z-index: 500; background: var(--black); display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: opacity 0.9s ease; }
+#entryGate.hide { opacity: 0; pointer-events: none; }
+.gate-logo { font-family: var(--font-display); font-size: clamp(1.8rem, 5vw, 2.6rem); letter-spacing: 0.14em; color: var(--gold); margin-bottom: 2rem; }
+.gate-logo span { color: var(--white); }
+.gate-btn { font-family: var(--font-ui); font-size: 0.75rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--white); border: 1px solid rgba(201,168,76,0.5); padding: 1rem 2.6rem; transition: all 0.3s; }
+#entryGate:hover .gate-btn { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.08); }
+.gate-note { margin-top: 1.4rem; font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.12em; color: var(--gray); }
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
 nav { padding: 1rem 1.5rem; }
@@ -593,6 +602,13 @@ Ver todas las opiniones en Facebook
 </button>
 <span class="music-hint" id="musicHint" data-es="La música comenzará en breve" data-en="Music will begin shortly">Music will begin shortly</span>
 
+<!-- ENTRY GATE: guarantees a real click, which is what starts the music -->
+<div id="entryGate">
+  <div class="gate-logo">Traviz<span>Peru</span></div>
+  <div class="gate-btn" data-es="Entrar" data-en="Enter">Enter</div>
+  <div class="gate-note" data-es="🎵 Con música" data-en="🎵 With sound">🎵 With sound</div>
+</div>
+
 <script>
   // NAV
   const nav = document.getElementById('nav');
@@ -678,30 +694,21 @@ Ver todas las opiniones en Facebook
   // visitor makes any gesture on the page (a tap, a scroll on mobile, a
   // click, a key press). This starts the music on that very first gesture,
   // so it plays "on its own" within a second or two of arriving.
-  let autoStarted = false;
-  function tryAutoStart(e) {
-    if (autoStarted || musicPlaying) return;
-    if (e.target && e.target.closest && e.target.closest('#musicToggle')) return;
-    autoStarted = true;
-    const p = bgMusic.play();
-    if (p && p.then) {
-      p.then(() => setPlayingUI(true)).catch(() => { autoStarted = false; });
-    } else {
-      setPlayingUI(true);
-    }
+  // ENTRY GATE: the visitor must click "Enter" to see the site at all,
+  // which guarantees a real, direct user gesture the browser will always
+  // honor — so the music reliably starts right as the site "opens".
+  const entryGate = document.getElementById('entryGate');
+  if (entryGate) {
+    document.body.style.overflow = 'hidden';
+    entryGate.addEventListener('click', function enterSite() {
+      bgMusic.play().then(() => setPlayingUI(true)).catch(() => {});
+      entryGate.classList.add('hide');
+      document.body.style.overflow = '';
+      setTimeout(() => entryGate.remove(), 1000);
+    }, { once: true });
   }
-  // touchstart/touchend/pointerdown/mousedown/click/keydown are all
-  // recognized as valid "user activation" gestures by mobile browsers.
-  // scroll/wheel are NOT reliable triggers for unlocking audio, so we
-  // listen on the gestures that actually count, as early in the event
-  // phase as possible (capture) so the very first tap anywhere works,
-  // including taps that also start a scroll.
-  ['touchstart', 'touchend', 'pointerdown', 'mousedown', 'click', 'keydown'].forEach(evt => {
-    document.addEventListener(evt, tryAutoStart, { passive: true, capture: true });
-  });
 
   musicToggle.addEventListener('click', () => {
-    autoStarted = true;
     if (musicPlaying) {
       bgMusic.pause();
       setPlayingUI(false);
