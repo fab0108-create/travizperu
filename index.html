@@ -545,7 +545,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
         </div>
         <p id="form-error"></p>
         <button class="submit-btn" onclick="sendInquiry()" data-en="Send My Request" data-es="Enviar Mi Solicitud">Send My Request</button>
-        <p class="form-note" data-en="Opens WhatsApp with your message ready to send" data-es="Abre WhatsApp con tu mensaje listo para enviar">Opens WhatsApp with your message ready to send</p>
+        <p class="form-note" data-en="Sends a copy to email and opens WhatsApp with your message ready" data-es="Envía una copia por email y abre WhatsApp con tu mensaje listo">Sends a copy to email and opens WhatsApp with your message ready</p>
       </div>
     </div>
   </div>
@@ -618,7 +618,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   }
   setInterval(() => goT((ti + 1) % tis.length), 5500);
 
-  // WHATSAPP FORM
+  // WHATSAPP + EMAIL FORM (dual: wa.me stays; email copy to fab0108@gmail.com)
   function sendInquiry() {
     const name = document.getElementById('fp-name').value.trim();
     const email = document.getElementById('fp-email').value.trim();
@@ -636,6 +636,22 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     if (dest && dest !== 'Select destination...') text += "\nDestination: " + dest;
     if (travelers && travelers !== 'Select...') text += "\nTravelers: " + travelers;
     text += "\n\nMessage: " + msg;
+    // Email backup so leads are not lost if WhatsApp Web is down
+    fetch('https://formsubmit.co/ajax/fab0108@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        destination: (dest && dest !== 'Select destination...') ? dest : '',
+        travelers: (travelers && travelers !== 'Select...') ? travelers : '',
+        message: msg,
+        _subject: 'TravizPeru — New quote request',
+        _template: 'table',
+        _captcha: 'false',
+        _replyto: email
+      })
+    }).catch(function () {});
     window.open("https://wa.me/51982521128?text=" + encodeURIComponent(text), '_blank');
   }
 
