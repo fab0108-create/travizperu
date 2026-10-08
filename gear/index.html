@@ -100,6 +100,13 @@ h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,3vw,2.1rem);l
 .cta p{color:rgba(255,255,255,.8);font-size:.98rem}
 .cta .actions{display:flex;flex-direction:column;gap:.7rem;align-items:flex-start}
 .cta small{color:rgba(255,255,255,.6);font-size:.8rem}
+.cta-box{background:#1A1A1A;border:1px solid rgba(201,168,76,.25);border-radius:10px;padding:2.5rem 1.5rem;text-align:center;margin:1.6rem 0 0}
+.cta-box h2{color:#fff;font-size:clamp(1.35rem,3vw,1.8rem);margin-bottom:1.4rem}
+.btn-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-primary{font-family:var(--sans);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;background:#C9A84C;color:#0A0A0A;padding:1rem 2.2rem;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;border-radius:2px}
+.btn-primary:hover{background:#E8C97A}
+.whatsapp-btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;background:#25D366;color:#fff;font-family:var(--sans);font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;padding:1rem 2rem;text-decoration:none;border-radius:2px}
+.whatsapp-btn:hover{background:#20b858}
 /* footer */
 footer{margin-top:3.4rem;background:#111;color:rgba(255,255,255,.72);font-size:.84rem;padding:2.4rem 0 2rem}
 footer h4{color:#fff;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem}
@@ -118,6 +125,9 @@ footer a{color:#fff}
   .hero{padding:3.6rem 0 3.6rem}
   .facts{grid-template-columns:1fr;margin-top:-1.6rem}
   .head img{height:44px}
+  .cta-box{padding:1.6rem 1rem}
+  .btn-row{flex-direction:column;align-items:stretch}
+  .btn-primary,.whatsapp-btn{width:100%}
 }
 </style>
 </head>
@@ -404,6 +414,14 @@ footer a{color:#fff}
     <div class="actions">
       <a class="btn btn-green" href="https://travizperu.com/#contact">Request a private trip</a>
       <small>at travizperu.com: tell us your dates and we'll reply with a proposal.</small>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <h2>Planning your Peru trip? Chat with us</h2>
+    <div class="btn-row">
+      <a class="btn-primary" href="https://travizperu.com/#contact">Request a Quote</a>
+      <a class="whatsapp-btn" href="https://wa.me/51982521128?text=Hi%20Francisco%2C%20I%20was%20reading%20your%20Peru%20packing%20guide%20and%20I%27d%20like%20help%20planning%20a%20private%20trip.">Chat on WhatsApp</a>
     </div>
   </div>
 </div>
