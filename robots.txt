@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.travizperu.com/sitemap.xml
+Sitemap: https://travizperu.com/sitemap.xml
