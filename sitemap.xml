@@ -87,9 +87,15 @@
   </url>
   <url>
     <loc>https://travizperu.com/blog/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://travizperu.com/blog/machu-picchu-tickets-new-system-2026/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://travizperu.com/blog/is-peru-safe-to-visit-2026/</loc>
