@@ -21,7 +21,7 @@
 <meta name="twitter:image" content="https://travizperu.com/images/machu-picchu.webp?v=20261012">
 <title>TravizPeru — Private Peru, Made Entirely Yours</title>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"TravelAgency","name":"TravizPeru","url":"https://travizperu.com/","image":"https://travizperu.com/images/machu-picchu.webp?v=20261012","description":"Private, tailor-made Peru travel designed by Francisco Arriz Barrantes, APOTUR-certified expert with 22+ years.","founder":{"@type":"Person","name":"Francisco Arriz Barrantes"},"telephone":"+51982521128","email":"fab0108@gmail.com","areaServed":["Peru","Argentina","Brazil"],"address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"},"sameAs":["https://www.facebook.com/share/18gXzzizA2/","https://www.instagram.com/travizperu/"]}
+{"@context":"https://schema.org","@type":"TravelAgency","name":"TravizPeru","url":"https://travizperu.com/","image":"https://travizperu.com/images/machu-picchu.webp?v=20261012","description":"Private, tailor-made Peru travel designed by Francisco Arriz Barrantes, APOTUR-certified expert with 22+ years.","founder":{"@type":"Person","name":"Francisco Arriz Barrantes"},"telephone":"+51982521128","email":"fab0108@gmail.com","areaServed":"Peru","address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"},"sameAs":["https://www.facebook.com/share/18gXzzizA2/","https://www.instagram.com/travizperu/"]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -209,7 +209,7 @@ select option{background:var(--white)}
 
 /* ─── FOOTER ─── */
 footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
-.footer-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(190px,1.35fr) 1fr 1fr 1.15fr 1fr;gap:2rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.08)}
 .footer-logo{font-family:var(--font-serif);font-size:1.25rem;color:#fff;display:block;margin-bottom:.8rem}
 .footer-logo em{font-style:italic;color:var(--gold)}
 .footer-desc{font-size:.88rem;line-height:1.65;color:rgba(255,255,255,.5);max-width:280px}
@@ -246,6 +246,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   .contact-grid{grid-template-columns:1fr;gap:2.5rem}
   .form-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+  .footer-grid > :first-child{grid-column:1 / -1}
   .footer-bottom{flex-direction:column;gap:.4rem;text-align:center}
 }
 </style>
@@ -574,10 +575,12 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
             <option>Lima</option>
             <option>Amazon</option>
             <option>Full Peru</option>
-            <option>Iguazú Falls</option>
-            <option>Buenos Aires</option>
-            <option>Rio de Janeiro</option>
             <option>Custom Route</option>
+            <optgroup label="Beyond Peru" data-label-en="Beyond Peru" data-label-es="Otros destinos">
+              <option>Iguazú Falls</option>
+              <option>Buenos Aires</option>
+              <option>Rio de Janeiro</option>
+            </optgroup>
           </select>
         </div>
         <div class="field" style="margin-bottom:1rem">
@@ -607,7 +610,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   <div class="footer-grid">
     <div>
       <span class="footer-logo">Traviz<em>Peru</em></span>
-      <p class="footer-desc" data-en="Private, tailor-made journeys in Peru, Argentina and Brazil. APOTUR certified, code AP030-11." data-es="Viajes privados y a medida en Perú, Argentina y Brasil. Certificado APOTUR, código AP030-11.">Private, tailor-made journeys in Peru, Argentina and Brazil. APOTUR certified, code AP030-11.</p>
+      <p class="footer-desc" data-en="Private, tailor-made journeys in Peru. APOTUR certified, code AP030-11." data-es="Viajes privados y a medida en Perú. Certificado APOTUR, código AP030-11.">Private, tailor-made journeys in Peru. APOTUR certified, code AP030-11.</p>
       <p class="apotur"><strong>APOTUR</strong><span>Certified · AP030-11</span></p>
       <div class="socials">
         <a href="https://www.facebook.com/share/18gXzzizA2/" class="social-ico" target="_blank" rel="noopener" aria-label="Facebook">
@@ -626,6 +629,11 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
         <li><a href="/sacred-valley/" data-en="Sacred Valley" data-es="Valle Sagrado">Sacred Valley</a></li>
         <li><a href="/lake-titicaca/" data-en="Lake Titicaca" data-es="Lago Titicaca">Lake Titicaca</a></li>
         <li><a href="/luxury-private-tours-peru/" data-en="Amazon &amp; beyond" data-es="Amazonía y más">Amazon &amp; beyond</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title" data-en="Beyond Peru" data-es="Otros destinos">Beyond Peru</p>
+      <ul class="footer-links">
         <li><a href="#iguazu">Iguazú</a></li>
         <li><a href="#buenos-aires">Buenos Aires</a></li>
         <li><a href="#rio">Rio de Janeiro</a></li>
@@ -734,6 +742,10 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     document.querySelectorAll('[data-href-en]').forEach(el => {
       const t = el.getAttribute('data-href-' + lang);
       if (t) el.href = t;
+    });
+    document.querySelectorAll('[data-label-en]').forEach(el => {
+      const t = el.getAttribute('data-label-' + lang);
+      if (t) el.label = t;
     });
     document.querySelector('.hero-title').innerHTML = lang === 'en'
       ? 'Private Peru,<br><em>Made Entirely Yours</em>'
