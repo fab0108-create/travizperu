@@ -137,8 +137,12 @@ section{padding:6rem 3rem}
 .exp-photo-wrap{position:relative;margin:-2.2rem -2.2rem .85rem}
 .exp-photo{width:100%;height:220px;object-fit:cover;display:block}
 .shot-credit{margin:0 0 1rem;font-size:.68rem;letter-spacing:.02em;color:var(--mid)}
+.shot-credit a,.card-credit a{color:inherit}
 .exp-card.highlight .shot-credit{color:rgba(255,255,255,.55)}
 .card-credit{display:block;margin-top:.45rem;font-size:.64rem;letter-spacing:.03em;color:rgba(255,255,255,.62)}
+.dest-hit{position:absolute;inset:0;z-index:1}
+.dest-card:has(.dest-hit) .dest-info{z-index:2;pointer-events:none}
+.dest-card:has(.dest-hit) .card-credit a{pointer-events:auto}
 .exp-card:hover{border-color:var(--gold);box-shadow:0 4px 24px rgba(0,0,0,.07)}
 .exp-card.highlight{background:var(--ink);color:#fff;border-color:var(--ink)}
 .exp-tag{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
@@ -330,13 +334,15 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
           <span class="card-credit">Jorge Láscar, CC BY 2.0</span>
         </div>
       </a>
-      <a class="dest-card sm3" href="/lake-titicaca/">
-        <img class="dest-img" src="/images/titicaca-card.webp?v=20261012" width="800" height="534" alt="Lake Titicaca in the late light, with the Andes along the far shore." data-alt-en="Lake Titicaca in the late light, with the Andes along the far shore." data-alt-es="El lago Titicaca al atardecer, con los Andes en la orilla lejana." loading="lazy" decoding="async">
+      <div class="dest-card sm3">
+        <img class="dest-img" src="/images/titicaca-card.webp?v=20261014" width="800" height="450" alt="Amantaní island above the deep blue water of Lake Titicaca." data-alt-en="Amantaní island above the deep blue water of Lake Titicaca." data-alt-es="La isla Amantaní sobre el agua azul del lago Titicaca." loading="lazy" decoding="async">
+        <a class="dest-hit" href="/lake-titicaca/" aria-label="Lake Titicaca"></a>
         <div class="dest-info">
           <h3 class="dest-name">Lake Titicaca</h3>
           <p class="dest-sub" data-en="World's highest navigable lake" data-es="El lago navegable más alto del mundo">World's highest navigable lake</p>
+          <span class="card-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Amantan%C3%AD_island_in_Lake_Titicaca.jpg">H.dav.are</a> / <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span>
         </div>
-      </a>
+      </div>
       <div class="dest-card sm4">
         <img class="dest-img" src="/images/amazon-card.webp?v=20261012" width="800" height="534" alt="Red-and-green macaws at a clay lick in Tambopata National Reserve, in the Peruvian Amazon." data-alt-en="Red-and-green macaws at a clay lick in Tambopata National Reserve, in the Peruvian Amazon." data-alt-es="Guacamayos rojos y verdes en una collpa de la Reserva Nacional Tambopata, en la Amazonía peruana." loading="lazy" decoding="async">
         <div class="dest-info">
@@ -383,8 +389,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     <div class="exp-grid">
       <div class="exp-card">
         <div class="exp-photo-wrap">
-          <img class="exp-photo" src="/images/inca-trail-card.webp?v=20261012" width="800" height="600" alt="Wiñay Wayna on the Inca Trail, stone terraces stepping down a green mountainside." data-alt-en="Wiñay Wayna on the Inca Trail, stone terraces stepping down a green mountainside." data-alt-es="Wiñay Wayna en el Camino Inca, terrazas de piedra sobre la ladera verde." loading="lazy" decoding="async">
+          <img class="exp-photo" src="/images/inca-trail-card.webp?v=20261014" width="800" height="534" alt="The Inca terraces at Pisac, stone steps climbing a green hillside." data-alt-en="The Inca terraces at Pisac, stone steps climbing a green hillside." data-alt-es="Las terrazas incas de Pisac, gradas de piedra sobre la ladera verde." loading="lazy" decoding="async">
         </div>
+        <p class="shot-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Terraces_of_Pisac.jpg">Martin Hinca</a> / <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a> (modified)</p>
         <p class="exp-tag" data-en="Classic" data-es="Clásico">Classic</p>
         <h3 class="exp-name" data-en="Andean Classic" data-es="Clásico Andino">Andean Classic</h3>
         <p class="exp-days" data-en="From 5 days · Price on request" data-es="Desde 5 días · Precio a consultar">From 5 days · Price on request</p>
@@ -398,9 +405,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
       </div>
       <div class="exp-card highlight">
         <div class="exp-photo-wrap">
-          <img class="exp-photo" src="/images/cusco-plaza-card.webp?v=20261013" width="800" height="534" alt="Cusco in daylight: terracotta roofs and a white church among the green hills, with no one in view." data-alt-en="Cusco in daylight: terracotta roofs and a white church among the green hills, with no one in view." data-alt-es="El Cusco de día: techos de teja y una iglesia blanca entre los cerros verdes, sin personas a la vista." loading="lazy" decoding="async">
+          <img class="exp-photo" src="/images/cusco-plaza-card.webp?v=20261014" width="800" height="420" alt="The domes of Cusco Cathedral above the rooftops, with the mountains behind." data-alt-en="The domes of Cusco Cathedral above the rooftops, with the mountains behind." data-alt-es="Las cúpulas de la catedral del Cusco sobre los techos, con las montañas detrás." loading="lazy" decoding="async">
         </div>
-        <p class="shot-credit">Wasif Malik, CC0</p>
+        <p class="shot-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Cusco_peru_2.jpg">Woldylen</a> / <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></p>
         <p class="exp-tag" data-en="Most Popular" data-es="Más Popular">Most Popular</p>
         <h3 class="exp-name" data-en="Complete Peru" data-es="Perú Completo">Complete Peru</h3>
         <p class="exp-days" data-en="From 10 days · Price on request" data-es="Desde 10 días · Precio a consultar">From 10 days · Price on request</p>
@@ -414,8 +421,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
       </div>
       <div class="exp-card">
         <div class="exp-photo-wrap">
-          <img class="exp-photo" src="/images/rainbow-mountain-card.webp?v=20261012" width="800" height="600" alt="Vinicunca, the Rainbow Mountain, striped red and gold above the high Andes." data-alt-en="Vinicunca, the Rainbow Mountain, striped red and gold above the high Andes." data-alt-es="Vinicunca, la Montaña de Colores, con franjas rojas y doradas sobre los Andes." loading="lazy" decoding="async">
+          <img class="exp-photo" src="/images/rainbow-mountain-card.webp?v=20261014" width="800" height="534" alt="Vinicunca, the Rainbow Mountain, striped red and gold under a deep blue sky." data-alt-en="Vinicunca, the Rainbow Mountain, striped red and gold under a deep blue sky." data-alt-es="Vinicunca, la Montaña de Colores, con franjas rojas y doradas bajo un cielo azul." loading="lazy" decoding="async">
         </div>
+        <p class="shot-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:View_of_the_Rainbow_mountain.jpg">Brian Jeffery Beggerly</a> / <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></p>
         <p class="exp-tag" data-en="Signature" data-es="Signature">Signature</p>
         <h3 class="exp-name" data-en="Grand Expedition" data-es="Gran Expedición">Grand Expedition</h3>
         <p class="exp-days" data-en="From 15 days · Price on request" data-es="Desde 15 días · Precio a consultar">From 15 days · Price on request</p>
