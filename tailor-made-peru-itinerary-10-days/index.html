@@ -10,7 +10,9 @@
 <meta property="og:title" content="Tailor-Made Peru Itinerary: 10 Days | TravizPeru">
 <meta property="og:description" content="A tailor-made 10-day Peru itinerary: Lima, the Sacred Valley, Machu Picchu, and Lake Titicaca. A starting rhythm, not a fixed package. APOTUR AP030-11.">
 <meta property="og:url" content="https://travizperu.com/tailor-made-peru-itinerary-10-days/">
-<meta property="og:image" content="https://travizperu.com/sacred-valley.jpeg">
+<meta property="og:image" content="https://travizperu.com/images/cusco-plaza.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="962">
 <meta property="og:locale" content="en_US">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
@@ -29,7 +31,7 @@
     "url": "https://travizperu.com/"
   },
   "mainEntityOfPage": "https://travizperu.com/tailor-made-peru-itinerary-10-days/",
-  "image": "https://travizperu.com/sacred-valley.jpeg",
+  "image": "https://travizperu.com/images/cusco-plaza.webp",
   "datePublished": "2026-10-08",
   "dateModified": "2026-10-08",
   "inLanguage": "en"
@@ -58,7 +60,16 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .logo span { color: var(--white); }
 .back-link { font-family: var(--font-ui); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(250,248,244,0.7); text-decoration: none; transition: color 0.3s; }
 .back-link:hover { color: var(--gold); }
-.hero-img { position: relative; height: 46vh; min-height: 320px; background: linear-gradient(180deg, rgba(10,10,10,0.35) 0%, rgba(10,10,10,0.85) 100%), url('https://travizperu.com/sacred-valley.jpeg') center/cover no-repeat; display: flex; align-items: flex-end; padding: 3rem 4rem; }
+.hero-img { position: relative; height: 62vh; min-height: 340px; max-height: 720px; display: flex; align-items: flex-end; padding: 3rem 4rem; overflow: hidden; }
+.hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,0.16) 0%, rgba(10,10,10,0.52) 100%); z-index: 1; pointer-events: none; }
+.hero-img > div { position: relative; z-index: 2; }
+.photo-credit { font-family: var(--font-ui); font-size: 0.68rem; letter-spacing: 0.03em; color: rgba(250,248,244,0.5); padding: 0.55rem 4rem 0; }
+.photo-credit a { color: var(--gold); text-decoration: none; }
+figure.story { margin: 0.2rem 0 1.8rem; }
+figure.story img { width: 100%; height: auto; display: block; }
+figure.story figcaption { font-family: var(--font-ui); font-size: 0.72rem; color: var(--gray); margin-top: 0.5rem; line-height: 1.5; }
+figure.story figcaption a { color: var(--gold); }
 .hero-eyebrow { font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
 .hero-h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 600; line-height: 1.15; max-width: 900px; text-shadow: 0 4px 30px rgba(0,0,0,0.6); }
 article { max-width: 760px; margin: 0 auto; padding: 4.5rem 2rem 6rem; }
@@ -90,6 +101,7 @@ footer a { color: var(--gold); text-decoration: none; }
 @media (max-width: 700px) {
   nav { padding: 1rem 1.5rem; }
   .hero-img { padding: 2rem 1.5rem; }
+  .photo-credit { padding-left: 1.5rem; padding-right: 1.5rem; }
   article { padding: 3rem 1.3rem 4rem; }
   footer { padding: 2rem 1.3rem; }
 }
@@ -104,11 +116,13 @@ footer a { color: var(--gold); text-decoration: none; }
 </nav>
 
 <div class="hero-img">
+<img class="hero-photo" src="/images/cusco-plaza.webp" width="1600" height="962" alt="Cusco's Plaza de Armas, with the cathedral and the hills behind the square." fetchpriority="high" decoding="async">
 <div>
 <span class="hero-eyebrow">Planning · 10 days</span>
 <h1 class="hero-h1">A Tailor-Made Peru Itinerary for 10 Days</h1>
 </div>
 </div>
+<p class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Catedral,_Plaza_de_Armas,_Cusco,_Per%C3%BA,_2015-07-31,_DD_77.JPG">Diego Delso</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>. Resized for this page.</p>
 
 <article>
 
@@ -120,6 +134,10 @@ footer a { color: var(--gold); text-decoration: none; }
 <p><a href="https://travizperu.com/lima/">Lima</a> is at sea level. Use it first, including the day you land. The <a href="https://travizperu.com/sacred-valley/">Sacred Valley</a> towns where you sleep sit lower than Cusco, which is about 3,400 meters. <a href="https://travizperu.com/machu-picchu/">Machu Picchu</a> itself is about 2,430 meters. <a href="https://travizperu.com/lake-titicaca/">Lake Titicaca</a>, at 3,812 meters, comes last. Reverse that and the first memory of the trip is a headache.</p>
 
 <h2>A ten-day rhythm</h2>
+<figure class="story">
+<img src="/images/titicaca.webp" width="1600" height="1068" alt="Lake Titicaca in the late light, with the Andes along the far shore." loading="lazy" decoding="async">
+<figcaption>Lake Titicaca is the high last chapter of a 10-day route, after the body has already been in the Andes.</figcaption>
+</figure>
 <div class="plan-card"><p class="plan-days">Day 1</p><p class="plan-name">Lima, arrival</p><p>Private transfer from Jorge Chávez. Miraflores, an early night. Nothing that has to be "achieved."</p></div>
 <div class="plan-card"><p class="plan-days">Day 2</p><p class="plan-name">Lima, properly</p><p>Huaca Pucllana, Barranco or the historic center, and one meal that was reserved ahead. A well-known dining room if that is the table you want and it is still open. A quieter room if it is not.</p></div>
 <div class="plan-card"><p class="plan-days">Day 3</p><p class="plan-name">Fly to Cusco, sleep in the valley</p><p>The flight is short. The drive down into the Sacred Valley is the point. A light afternoon. No ruin that requires a climb.</p></div>
@@ -155,6 +173,7 @@ footer a { color: var(--gold); text-decoration: none; }
 <footer>
 
 <div class="foot-links">
+<a href="/photo-credits/">Photo credits</a>
 <a href="https://travizperu.com/machu-picchu/">Machu Picchu</a>
 <a href="https://travizperu.com/lima/">Lima</a>
 <a href="https://travizperu.com/sacred-valley/">Sacred Valley</a>

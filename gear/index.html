@@ -10,7 +10,9 @@
 <meta property="og:description" content="Gear picked for Peru's altitude, rain and sun, plus insider guides by a 22-year Peru travel designer.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://travizperu.com/gear/">
-<meta property="og:image" content="https://travizperu.com/machupicchu.jpeg">
+<meta property="og:image" content="https://travizperu.com/images/inca-trail.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1200">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -39,7 +41,10 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
 .head .nav-cta{background:var(--ink);color:#fff;padding:.55rem 1.1rem;border-radius:3px;font-weight:600}
 .head .nav-cta:hover{background:var(--green);color:#fff}
 /* hero */
-.hero{background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.6)),url('https://travizperu.com/machupicchu.jpeg') center/cover no-repeat;color:#fff;padding:5rem 0 4.2rem;text-align:center}
+.hero{position:relative;color:#fff;padding:5rem 0 4.2rem;text-align:center;overflow:hidden}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.62));z-index:1;pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
 .hero .label{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85;margin-bottom:1rem}
 .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,3.4rem);line-height:1.12;margin-bottom:1rem}
 .hero h1 em{color:#F3D98B}
@@ -148,6 +153,7 @@ footer a{color:#fff}
 </header>
 
 <div class="hero">
+  <img class="hero-photo" src="/images/inca-trail.webp" width="1600" height="1200" alt="Wiñay Wayna on the Inca Trail, stone terraces stepping down a green mountainside." fetchpriority="high" decoding="async">
   <div class="wrap">
     <p class="label">TravizPeru · Peru travel gear</p>
     <h1>Pack right for <em>Peru</em></h1>
@@ -432,7 +438,7 @@ footer a{color:#fff}
     <p>TravizPeru takes part in the AliExpress affiliate program. Some links on this page are affiliate links: if you buy through them we may earn a commission at no extra cost to you. This doesn't change the price you pay.</p>
     <p><sup>*</sup> Prices are approximate, in US dollars, as shown on AliExpress on 3 October 2026. Where AliExpress was showing a new-shopper or one-off promotional price we show “Price varies” instead. Sellers set prices, stock, shipping costs and delivery times, and these change often, so always check the listing before you buy. We haven't personally tested every listing: read the size chart, specs and seller details before ordering.</p>
     <p>The insider guides are TravizPeru's own digital products, sold and delivered by Hotmart.</p>
-    <div class="foot-bottom"><span>© 2026 TravizPeru · Lima, Peru</span><span><a href="https://travizperu.com/">travizperu.com</a></span></div>
+    <div class="foot-bottom"><span>© 2026 TravizPeru · Lima, Peru</span><span><a href="/photo-credits/">Photo credits</a> · <a href="https://travizperu.com/">travizperu.com</a></span></div>
   </div>
 </footer>
 </body>

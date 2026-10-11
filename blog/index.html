@@ -10,7 +10,9 @@
 <meta property="og:title" content="Peru Travel Guide & Blog | TravizPeru">
 <meta property="og:description" content="Honest guides and private-journey pages from Francisco Arriz Barrantes, a Lima-based Peru specialist.">
 <meta property="og:url" content="https://travizperu.com/blog/">
-<meta property="og:image" content="https://travizperu.com/machupicchu.jpeg">
+<meta property="og:image" content="https://travizperu.com/images/machu-picchu.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1067">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -34,10 +36,15 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .back-link { font-family: var(--font-ui); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(250,248,244,0.7); text-decoration: none; }
 .back-link:hover { color: var(--gold); }
 
-.hero { padding: 5rem 4rem 3rem; max-width: 900px; }
+.hero { position: relative; height: 62vh; min-height: 340px; max-height: 720px; display: flex; align-items: flex-end; padding: 3rem 4rem; overflow: hidden; }
+.hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 42%; z-index: 0; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,0.16) 0%, rgba(10,10,10,0.55) 100%); z-index: 1; pointer-events: none; }
+.hero-copy { position: relative; z-index: 2; max-width: 760px; }
 .hero-eyebrow { font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
 .hero h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 600; line-height: 1.15; }
-.hero p { margin-top: 1.2rem; font-size: 1.2rem; color: rgba(250,248,244,0.8); font-weight: 300; max-width: 640px; }
+.hero p { margin-top: 1.2rem; font-size: 1.2rem; color: rgba(250,248,244,0.88); font-weight: 300; max-width: 640px; }
+.photo-credit { position: relative; z-index: 2; font-family: var(--font-ui); font-size: 0.68rem; letter-spacing: 0.03em; color: rgba(250,248,244,0.5); padding: 0.55rem 4rem 0; }
+.photo-credit a { color: var(--gold); text-decoration: none; }
 
 .post-list { max-width: 900px; margin: 0 auto; padding: 1rem 4rem 6rem; display: flex; flex-direction: column; gap: 1.5px; }
 .post-card { display: block; background: var(--dark2); border: 1px solid rgba(201,168,76,0.12); padding: 2rem 2.2rem; text-decoration: none; transition: all 0.3s; }
@@ -54,7 +61,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
 @media (max-width: 700px) {
   nav { padding: 1rem 1.5rem; }
-  .hero { padding: 3rem 1.5rem 2rem; }
+  .hero { padding: 2rem 1.5rem; }
+  .photo-credit { padding-left: 1.5rem; padding-right: 1.5rem; }
   .post-list { padding: 1rem 1.5rem 4rem; }
 }
 </style>
@@ -67,10 +75,14 @@ footer a { color: var(--gold); text-decoration: none; }
 </nav>
 
 <div class="hero">
+<img class="hero-photo" src="/images/machu-picchu.webp" width="1600" height="1067" alt="Machu Picchu from the Inca Trail: the citadel stands empty, with Huayna Picchu behind it." fetchpriority="high" decoding="async">
+<div class="hero-copy">
 <span class="hero-eyebrow">Peru Travel Guide</span>
 <h1>Everything you need to know before you go</h1>
 <p>Honest, practical guides from Francisco Arriz Barrantes — 22+ years designing private journeys through Peru.</p>
 </div>
+</div>
+<p class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Machu_Picchu_from_the_Inca_Trail_5118.jpg">Brian Jeffery Beggerly</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>. Resized for this page.</p>
 
 <div class="post-list">
 <p class="list-label">Guides</p>
@@ -153,7 +165,7 @@ footer a { color: var(--gold); text-decoration: none; }
 <a href="https://travizperu.com/peru-family-private-tour/">Family tour</a>
 <a href="https://travizperu.com/es/viaje-de-lujo-a-peru-a-medida/">Español</a>
 </div>
-<span>&copy; 2026 TravizPeru · Francisco Arriz Barrantes · APOTUR AP030-11 · <a href="https://travizperu.com/">travizperu.com</a></span>
+<span>&copy; 2026 TravizPeru · Francisco Arriz Barrantes · APOTUR AP030-11 · <a href="/photo-credits/">Photo credits</a> · <a href="https://travizperu.com/">travizperu.com</a></span>
 </footer>
 
 </body>
