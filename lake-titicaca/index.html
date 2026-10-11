@@ -10,7 +10,9 @@
 <meta property="og:title" content="Lake Titicaca: A Private Journey from Puno | TravizPeru">
 <meta property="og:description" content="Private days at Lake Titicaca: Uros, Taquile, and an optional night on Amantani, planned around the altitude. Francisco Arriz Barrantes, APOTUR AP030-11, Lima.">
 <meta property="og:url" content="https://travizperu.com/lake-titicaca/">
-<meta property="og:image" content="https://travizperu.com/titicaca.jpeg">
+<meta property="og:image" content="https://travizperu.com/images/titicaca.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1068">
 <meta property="og:locale" content="en_US">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
@@ -20,7 +22,7 @@
   "name": "Lake Titicaca",
   "description": "Private days at Lake Titicaca: Uros, Taquile, and an optional night on Amantani, planned around the altitude. Francisco Arriz Barrantes, APOTUR AP030-11, Lima.",
   "url": "https://travizperu.com/lake-titicaca/",
-  "image": "https://travizperu.com/titicaca.jpeg",
+  "image": "https://travizperu.com/images/titicaca.webp",
   "touristType": "Private travelers",
   "provider": {
     "@type": "TravelAgency",
@@ -60,7 +62,16 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .logo span { color: var(--white); }
 .back-link { font-family: var(--font-ui); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(250,248,244,0.7); text-decoration: none; transition: color 0.3s; }
 .back-link:hover { color: var(--gold); }
-.hero-img { position: relative; height: 46vh; min-height: 320px; background: linear-gradient(180deg, rgba(10,10,10,0.35) 0%, rgba(10,10,10,0.85) 100%), url('https://travizperu.com/titicaca.jpeg') center/cover no-repeat; display: flex; align-items: flex-end; padding: 3rem 4rem; }
+.hero-img { position: relative; height: 62vh; min-height: 340px; max-height: 720px; display: flex; align-items: flex-end; padding: 3rem 4rem; overflow: hidden; }
+.hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,0.16) 0%, rgba(10,10,10,0.52) 100%); z-index: 1; pointer-events: none; }
+.hero-img > div { position: relative; z-index: 2; }
+.photo-credit { font-family: var(--font-ui); font-size: 0.68rem; letter-spacing: 0.03em; color: rgba(250,248,244,0.5); padding: 0.55rem 4rem 0; }
+.photo-credit a { color: var(--gold); text-decoration: none; }
+figure.story { margin: 0.2rem 0 1.8rem; }
+figure.story img { width: 100%; height: auto; display: block; }
+figure.story figcaption { font-family: var(--font-ui); font-size: 0.72rem; color: var(--gray); margin-top: 0.5rem; line-height: 1.5; }
+figure.story figcaption a { color: var(--gold); }
 .hero-eyebrow { font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
 .hero-h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 600; line-height: 1.15; max-width: 900px; text-shadow: 0 4px 30px rgba(0,0,0,0.6); }
 article { max-width: 760px; margin: 0 auto; padding: 4.5rem 2rem 6rem; }
@@ -92,6 +103,7 @@ footer a { color: var(--gold); text-decoration: none; }
 @media (max-width: 700px) {
   nav { padding: 1rem 1.5rem; }
   .hero-img { padding: 2rem 1.5rem; }
+  .photo-credit { padding-left: 1.5rem; padding-right: 1.5rem; }
   article { padding: 3rem 1.3rem 4rem; }
   footer { padding: 2rem 1.3rem; }
 }
@@ -106,6 +118,7 @@ footer a { color: var(--gold); text-decoration: none; }
 </nav>
 
 <div class="hero-img">
+<img class="hero-photo" src="/images/titicaca.webp" width="1600" height="1068" alt="Lake Titicaca in the late light, with the Andes along the far shore." fetchpriority="high" decoding="async">
 <div>
 <span class="hero-eyebrow">Puno · 3,812 meters</span>
 <h1 class="hero-h1">Lake Titicaca: The World's Highest Navigable Lake</h1>
@@ -150,6 +163,7 @@ footer a { color: var(--gold); text-decoration: none; }
 <footer>
 
 <div class="foot-links">
+<a href="/photo-credits/">Photo credits</a>
 <a href="https://travizperu.com/machu-picchu/">Machu Picchu</a>
 <a href="https://travizperu.com/lima/">Lima</a>
 <a href="https://travizperu.com/sacred-valley/">Sacred Valley</a>

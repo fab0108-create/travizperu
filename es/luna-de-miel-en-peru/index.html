@@ -13,7 +13,9 @@
 <meta property="og:title" content="Luna de Miel en Perú de Lujo | TravizPeru">
 <meta property="og:description" content="Luna de miel en Perú, en privado y a medida: Lima, el Valle Sagrado y Machu Picchu a su ritmo. Francisco Arriz Barrantes, APOTUR AP030-11, Lima.">
 <meta property="og:url" content="https://travizperu.com/es/luna-de-miel-en-peru/">
-<meta property="og:image" content="https://travizperu.com/machupicchu.jpeg">
+<meta property="og:image" content="https://travizperu.com/images/sacred-valley.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1062">
 <meta property="og:locale" content="es_PE">
 <meta property="og:locale:alternate" content="en_US">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -24,7 +26,7 @@
   "name": "Luna de miel en Perú",
   "description": "Luna de miel en Perú, en privado y a medida: Lima, el Valle Sagrado y Machu Picchu a su ritmo. Francisco Arriz Barrantes, APOTUR AP030-11, Lima.",
   "url": "https://travizperu.com/es/luna-de-miel-en-peru/",
-  "image": "https://travizperu.com/machupicchu.jpeg",
+  "image": "https://travizperu.com/images/sacred-valley.webp",
   "inLanguage": "es",
   "touristType": "Private travelers",
   "provider": {
@@ -97,7 +99,16 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .logo span { color: var(--white); }
 .back-link { font-family: var(--font-ui); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(250,248,244,0.7); text-decoration: none; transition: color 0.3s; }
 .back-link:hover { color: var(--gold); }
-.hero-img { position: relative; height: 46vh; min-height: 320px; background: linear-gradient(180deg, rgba(10,10,10,0.35) 0%, rgba(10,10,10,0.85) 100%), url('https://travizperu.com/machupicchu.jpeg') center/cover no-repeat; display: flex; align-items: flex-end; padding: 3rem 4rem; }
+.hero-img { position: relative; height: 62vh; min-height: 340px; max-height: 720px; display: flex; align-items: flex-end; padding: 3rem 4rem; overflow: hidden; }
+.hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,0.16) 0%, rgba(10,10,10,0.52) 100%); z-index: 1; pointer-events: none; }
+.hero-img > div { position: relative; z-index: 2; }
+.photo-credit { font-family: var(--font-ui); font-size: 0.68rem; letter-spacing: 0.03em; color: rgba(250,248,244,0.5); padding: 0.55rem 4rem 0; }
+.photo-credit a { color: var(--gold); text-decoration: none; }
+figure.story { margin: 0.2rem 0 1.8rem; }
+figure.story img { width: 100%; height: auto; display: block; }
+figure.story figcaption { font-family: var(--font-ui); font-size: 0.72rem; color: var(--gray); margin-top: 0.5rem; line-height: 1.5; }
+figure.story figcaption a { color: var(--gold); }
 .hero-eyebrow { font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
 .hero-h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 600; line-height: 1.15; max-width: 900px; text-shadow: 0 4px 30px rgba(0,0,0,0.6); }
 article { max-width: 760px; margin: 0 auto; padding: 4.5rem 2rem 6rem; }
@@ -129,6 +140,7 @@ footer a { color: var(--gold); text-decoration: none; }
 @media (max-width: 700px) {
   nav { padding: 1rem 1.5rem; }
   .hero-img { padding: 2rem 1.5rem; }
+  .photo-credit { padding-left: 1.5rem; padding-right: 1.5rem; }
   article { padding: 3rem 1.3rem 4rem; }
   footer { padding: 2rem 1.3rem; }
 }
@@ -143,17 +155,23 @@ footer a { color: var(--gold); text-decoration: none; }
 </nav>
 
 <div class="hero-img">
+<img class="hero-photo" src="/images/sacred-valley.webp" width="1600" height="1062" alt="Terrazas de piedra en Ollantaytambo, en el Valle Sagrado, con el pueblo bajo las ruinas." fetchpriority="high" decoding="async">
 <div>
 <span class="hero-eyebrow">En pareja · Perú</span>
 <h1 class="hero-h1">Luna de miel en Perú, en privado y a medida</h1>
 </div>
 </div>
+<p class="photo-credit">Foto: <a href="https://commons.wikimedia.org/wiki/File:Lascar_Some_of_the_Ollantaytambo%27s_terraces_(Sacred_Valley_of_the_Incas)_(4577538815).jpg">Jorge Láscar</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>. Redimensionada para esta página.</p>
 
 <article>
 
 <p class="byline">Por Francisco Arriz Barrantes · Fundador, TravizPeru · APOTUR, código AP030-11 · <a href="https://travizperu.com/peru-honeymoon/">Read in English</a></p>
 <p class="lede">Una luna de miel en Perú se siente privada porque lo es: ustedes dos, su guía, y ningún grupo que tenga que estar en las ruinas a las 5:40 porque así salía el bus. Lo que importa es el ritmo, y que nadie más marca su reloj.</p>
 <p>Soy Francisco Arriz Barrantes. Planeo estos viajes desde Lima. Certificación APOTUR, código AP030-11. Llevo más de 22 años diseñando viajes privados en Perú. No van a recibir un paquete llamado "luna de miel 7".</p>
+<figure class="story">
+<img src="/images/moray.webp" width="1600" height="560" alt="Las terrazas circulares incas de Moray, en el Valle Sagrado del Perú." loading="lazy" decoding="async">
+<figcaption>Moray queda por encima del piso del valle. Las primeras noches siguen siendo en un pueblo más bajo. Foto: <a href="https://commons.wikimedia.org/wiki/File:Peru_-_Sacred_Valley_%26_Incan_Ruins_284_-_Moray_(8118168211).jpg">McKay Savage</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>. Redimensionada para esta página.</figcaption>
+</figure>
 
 <h2>Una forma que funciona para dos</h2>
 <ul>
@@ -190,6 +208,7 @@ footer a { color: var(--gold); text-decoration: none; }
 <footer>
 
 <div class="foot-links">
+<a href="/photo-credits/">Créditos de fotos</a>
 <a href="https://travizperu.com/es/tour-privado-machu-picchu/">Tour privado</a>
 <a href="https://travizperu.com/es/viaje-de-lujo-a-peru-a-medida/">Viaje de lujo</a>
 <a href="https://travizperu.com/es/luna-de-miel-en-peru/">Luna de miel</a>

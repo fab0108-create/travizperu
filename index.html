@@ -11,17 +11,17 @@
 <meta property="og:description" content="Private, tailor-made luxury travel across Peru, designed by a 22-year local expert.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://travizperu.com/">
-<meta property="og:image" content="https://travizperu.com/about.jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="1500">
+<meta property="og:image" content="https://travizperu.com/images/machu-picchu.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1067">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TravizPeru — Luxury Peru, Made Entirely Yours">
 <meta name="twitter:description" content="Private, tailor-made luxury travel across Peru, designed by a 22-year local expert.">
-<meta name="twitter:image" content="https://travizperu.com/about.jpeg">
+<meta name="twitter:image" content="https://travizperu.com/images/machu-picchu.webp">
 <title>TravizPeru — Luxury Peru, Made Entirely Yours</title>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"TravelAgency","name":"TravizPeru","url":"https://travizperu.com/","image":"https://travizperu.com/about.jpeg","description":"Luxury custom Peru travel designed by Francisco Arriz Barrantes, APOTUR-certified expert with 22+ years.","founder":{"@type":"Person","name":"Francisco Arriz Barrantes"},"telephone":"+51982521128","email":"fab0108@gmail.com","areaServed":"Peru","address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"},"sameAs":["https://www.facebook.com/share/18gXzzizA2/","https://www.instagram.com/travizperu/"]}
+{"@context":"https://schema.org","@type":"TravelAgency","name":"TravizPeru","url":"https://travizperu.com/","image":"https://travizperu.com/images/machu-picchu.webp","description":"Luxury custom Peru travel designed by Francisco Arriz Barrantes, APOTUR-certified expert with 22+ years.","founder":{"@type":"Person","name":"Francisco Arriz Barrantes"},"telephone":"+51982521128","email":"fab0108@gmail.com","areaServed":"Peru","address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"},"sameAs":["https://www.facebook.com/share/18gXzzizA2/","https://www.instagram.com/travizperu/"]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,27 +52,37 @@ a{color:inherit;text-decoration:none}
 /* ─── NAV ─── */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;transition:all .35s}
 nav.scrolled{background:rgba(250,248,243,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:.8rem 3rem}
-.logo{font-family:var(--font-serif);font-size:1.3rem;color:var(--ink);letter-spacing:.01em}
-.logo em{font-style:italic;color:var(--gold)}
-.nav-links{display:flex;gap:2rem;list-style:none;font-size:.88rem;color:var(--ink2)}
-.nav-links a{color:var(--ink2);transition:color .2s}
-.nav-links a:hover{color:var(--gold)}
-.nav-cta{font-size:.85rem;font-weight:600;background:var(--ink);color:#fff;padding:.55rem 1.4rem;border-radius:2px;transition:background .2s}
-.nav-cta:hover{background:var(--gold)}
-.lang-btn{font-size:.82rem;font-weight:600;background:none;border:1px solid var(--border);color:var(--mid);padding:.4rem .8rem;border-radius:2px;cursor:pointer;transition:all .2s;margin-right:.5rem}
-.lang-btn:hover{border-color:var(--gold);color:var(--gold)}
+.logo{font-family:var(--font-serif);font-size:1.3rem;color:#fff;letter-spacing:.01em}
+.logo em{font-style:italic;color:rgba(255,255,255,.86)}
+.nav-links{display:flex;gap:2rem;list-style:none;font-size:.88rem;color:rgba(255,255,255,.88)}
+.nav-links a{color:rgba(255,255,255,.88);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{font-size:.85rem;font-weight:600;background:#fff;color:var(--ink);padding:.55rem 1.4rem;border-radius:2px;transition:background .2s}
+.nav-cta:hover{background:var(--cream)}
+.lang-btn{font-size:.82rem;font-weight:600;background:none;border:1px solid rgba(255,255,255,.45);color:#fff;padding:.4rem .8rem;border-radius:2px;cursor:pointer;transition:all .2s;margin-right:.5rem}
+.lang-btn:hover{border-color:#fff;color:#fff}
+nav.scrolled .logo{color:var(--ink)}
+nav.scrolled .logo em{color:var(--gold)}
+nav.scrolled .nav-links a{color:var(--ink2)}
+nav.scrolled .nav-links a:hover{color:var(--gold)}
+nav.scrolled .nav-cta{background:var(--ink);color:#fff}
+nav.scrolled .nav-cta:hover{background:var(--gold)}
+nav.scrolled .lang-btn{border-color:var(--border);color:var(--mid)}
+nav.scrolled .lang-btn:hover{border-color:var(--gold);color:var(--gold)}
 
 /* ─── HERO ─── */
 #hero{position:relative;height:100vh;min-height:640px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url('https://travizperu.com/machupicchu.jpeg') center/cover no-repeat}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.52) 100%)}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,8,.4) 0%,rgba(8,8,8,.1) 24%,rgba(8,8,8,.16) 58%,rgba(8,8,8,.34) 100%),radial-gradient(ellipse at 50% 48%,rgba(8,8,8,.4) 0%,rgba(8,8,8,.08) 58%)}
+.hero-credit{position:absolute;left:1.2rem;bottom:.85rem;z-index:3;max-width:min(92vw,34rem);font-size:.64rem;letter-spacing:.02em;line-height:1.4;color:rgba(255,255,255,.62)}
+.hero-credit a{color:rgba(255,255,255,.82)}
 .hero-content{position:relative;text-align:center;padding:0 1.5rem;color:#fff;max-width:780px}
 .hero-label{font-family:var(--font-sans);font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.8);margin-bottom:1.2rem}
 .hero-title{font-family:var(--font-serif);font-size:clamp(2.4rem,6vw,5rem);font-weight:400;line-height:1.08;color:#fff;margin-bottom:1.4rem}
 .hero-title em{font-style:italic}
 .hero-sub{font-size:1.1rem;color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 2.4rem;line-height:1.65}
-.hero-btn{display:inline-block;font-family:var(--font-sans);font-size:.9rem;font-weight:600;background:#fff;color:var(--ink);padding:1rem 2.6rem;border-radius:2px;transition:all .25s}
-.hero-btn:hover{background:var(--cream);transform:translateY(-2px)}
+.hero-btn{display:inline-block;font-family:var(--font-sans);font-size:.9rem;font-weight:600;background:#fff;color:var(--ink);padding:1rem 2.6rem;border-radius:2px;transition:background .25s}
+.hero-btn:hover{background:var(--cream)}
 .hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6)}
 .hero-scroll span{display:block;width:1px;height:36px;background:rgba(255,255,255,.5);margin:0 auto}
 
@@ -116,8 +126,7 @@ section{padding:6rem 3rem}
 .dest-card.sm2{grid-column:span 4;aspect-ratio:4/3}
 .dest-card.sm3{grid-column:span 4;aspect-ratio:4/3}
 .dest-card.sm4{grid-column:span 4;aspect-ratio:4/3}
-.dest-img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
-.dest-card:hover .dest-img{transform:scale(1.05)}
+.dest-img{width:100%;height:100%;object-fit:cover}
 .dest-info{position:absolute;bottom:0;left:0;right:0;padding:1.4rem;background:linear-gradient(transparent,rgba(0,0,0,.72))}
 .dest-name{font-family:var(--font-serif);font-size:1.3rem;font-weight:400;color:#fff}
 .dest-card.big .dest-name{font-size:1.8rem}
@@ -135,6 +144,11 @@ section{padding:6rem 3rem}
 #experiences{background:var(--white)}
 .exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
 .exp-card{border:1px solid var(--border);padding:2.2rem;position:relative;transition:border-color .25s,box-shadow .25s}
+.exp-photo-wrap{position:relative;margin:-2.2rem -2.2rem .85rem}
+.exp-photo{width:100%;height:220px;object-fit:cover;display:block}
+.shot-credit{margin:0 0 1rem;font-size:.68rem;letter-spacing:.02em;color:var(--mid)}
+.exp-card.highlight .shot-credit{color:rgba(255,255,255,.55)}
+.card-credit{display:block;margin-top:.45rem;font-size:.64rem;letter-spacing:.03em;color:rgba(255,255,255,.62)}
 .exp-card:hover{border-color:var(--gold);box-shadow:0 4px 24px rgba(0,0,0,.07)}
 .exp-card.highlight{background:var(--ink);color:#fff;border-color:var(--ink)}
 .exp-tag{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
@@ -214,6 +228,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
 
 /* ─── RESPONSIVE ─── */
 @media(max-width:900px){
+  .hero-scroll{bottom:4.4rem}
+  .hero-credit{right:1.2rem;bottom:.75rem}
   nav{padding:1rem 1.2rem}
   nav.scrolled{padding:.7rem 1.2rem}
   .nav-links,.nav-cta{display:none}
@@ -256,7 +272,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-bg"></div>
+  <img class="hero-bg" src="/images/machu-picchu.webp" width="1600" height="1067" alt="Machu Picchu from the Inca Trail: the citadel stands empty, with Huayna Picchu behind it." data-alt-en="Machu Picchu from the Inca Trail: the citadel stands empty, with Huayna Picchu behind it." data-alt-es="Machu Picchu desde el Camino Inca: la ciudadela vacía, con el Huayna Picchu detrás." fetchpriority="high" decoding="async">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <p class="hero-label" data-en="Luxury Travel · Peru" data-es="Viajes de Lujo · Perú">Luxury Travel · Peru</p>
@@ -268,6 +284,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     <span></span>
     <p data-en="Scroll" data-es="Explorar">Scroll</p>
   </div>
+  <p class="hero-credit" data-en="Photo: &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Machu_Picchu_from_the_Inca_Trail_5118.jpg&quot;&gt;Brian Jeffery Beggerly&lt;/a&gt;, &lt;a href=&quot;https://creativecommons.org/licenses/by/2.0&quot;&gt;CC BY 2.0&lt;/a&gt;" data-es="Foto: &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Machu_Picchu_from_the_Inca_Trail_5118.jpg&quot;&gt;Brian Jeffery Beggerly&lt;/a&gt;, &lt;a href=&quot;https://creativecommons.org/licenses/by/2.0&quot;&gt;CC BY 2.0&lt;/a&gt;">Photo: <a href="https://commons.wikimedia.org/wiki/File:Machu_Picchu_from_the_Inca_Trail_5118.jpg">Brian Jeffery Beggerly</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></p>
 </section>
 
 <!-- TRUST BAR -->
@@ -284,7 +301,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   <div class="container">
     <div class="about-grid">
       <div class="about-img-wrap">
-        <img class="about-img" src="https://travizperu.com/about.jpeg" alt="Francisco Arriz Barrantes, founder of TravizPeru, Lima">
+        <img class="about-img" src="/images/francisco.webp" width="900" height="1200" alt="Francisco Arriz Barrantes, founder of TravizPeru, in Lima" data-alt-en="Francisco Arriz Barrantes, founder of TravizPeru, in Lima" data-alt-es="Francisco Arriz Barrantes, fundador de TravizPeru, en Lima" loading="lazy" decoding="async">
         <div class="about-badge">
           <span class="badge-num">22</span>
           <span class="badge-txt">years<br>experience</span>
@@ -317,37 +334,41 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     </div>
     <div class="dest-grid">
       <a class="dest-card big" href="/machu-picchu/">
-        <img class="dest-img" src="https://travizperu.com/machupicchu.jpeg" alt="Private Machu Picchu guided tour, Cusco, Peru">
+        <img class="dest-img" src="/images/machu-picchu-card.webp" width="800" height="533" alt="Machu Picchu from the Inca Trail: the citadel stands empty, with Huayna Picchu behind it." data-alt-en="Machu Picchu from the Inca Trail: the citadel stands empty, with Huayna Picchu behind it." data-alt-es="Machu Picchu desde el Camino Inca: la ciudadela vacía, con el Huayna Picchu detrás." loading="lazy" decoding="async">
         <div class="dest-info">
           <h3 class="dest-name">Machu Picchu</h3>
           <p class="dest-sub" data-en="Cusco · UNESCO World Heritage" data-es="Cusco · Patrimonio UNESCO">Cusco · UNESCO World Heritage</p>
+          <span class="card-credit">Brian Jeffery Beggerly, CC BY 2.0</span>
         </div>
       </a>
       <a class="dest-card sm" href="/lima/">
-        <img class="dest-img" src="https://travizperu.com/lima.jpeg" alt="Lima culinary and cultural tour, Peru">
+        <img class="dest-img" src="/images/lima-card.webp" width="800" height="600" alt="The Costa Verde cliffs and the Pacific at Miraflores, Lima." data-alt-en="The Costa Verde cliffs and the Pacific at Miraflores, Lima." data-alt-es="Los acantilados de la Costa Verde y el Pacífico en Miraflores, Lima." loading="lazy" decoding="async">
         <div class="dest-info">
           <h3 class="dest-name">Lima</h3>
           <p class="dest-sub" data-en="Gastronomic capital of the Americas" data-es="Capital gastronómica de América">Gastronomic capital of the Americas</p>
         </div>
       </a>
       <a class="dest-card sm2" href="/sacred-valley/">
-        <img class="dest-img" src="https://travizperu.com/sacred-valley.jpeg" alt="Sacred Valley of the Incas, Peru">
+        <img class="dest-img" src="/images/sacred-valley-card.webp" width="800" height="532" alt="Stone terraces at Ollantaytambo in the Sacred Valley, with the town below the ruins." data-alt-en="Stone terraces at Ollantaytambo in the Sacred Valley, with the town below the ruins." data-alt-es="Terrazas de piedra en Ollantaytambo, en el Valle Sagrado, con el pueblo bajo las ruinas." loading="lazy" decoding="async">
         <div class="dest-info">
           <h3 class="dest-name">Sacred Valley</h3>
           <p class="dest-sub" data-en="Inca heartland" data-es="Territorio inca">Inca heartland</p>
+          <span class="card-credit">Jorge Láscar, CC BY 2.0</span>
         </div>
       </a>
       <a class="dest-card sm3" href="/lake-titicaca/">
-        <img class="dest-img" src="https://travizperu.com/titicaca.jpeg" alt="Lake Titicaca floating islands, Puno, Peru">
+        <img class="dest-img" src="/images/titicaca-card.webp" width="800" height="534" alt="Lake Titicaca in the late light, with the Andes along the far shore." data-alt-en="Lake Titicaca in the late light, with the Andes along the far shore." data-alt-es="El lago Titicaca al atardecer, con los Andes en la orilla lejana." loading="lazy" decoding="async">
         <div class="dest-info">
           <h3 class="dest-name">Lake Titicaca</h3>
           <p class="dest-sub" data-en="World's highest navigable lake" data-es="El lago navegable más alto del mundo">World's highest navigable lake</p>
         </div>
       </a>
-      <div class="dest-card sm4" style="background:#1a1a1a;display:flex;align-items:center;justify-content:center;text-align:center;padding:1.5rem">
-        <div>
-          <p style="font-family:'Libre Baskerville',serif;font-size:1.05rem;color:#fff;margin-bottom:1rem" data-en="The Amazon, Arequipa, Colca Canyon &amp; more" data-es="La Amazonía, Arequipa, el Cañón del Colca y más">The Amazon, Arequipa, Colca Canyon &amp; more</p>
+      <div class="dest-card sm4">
+        <img class="dest-img" src="/images/amazon-card.webp" width="800" height="534" alt="Red-and-green macaws at a clay lick in Tambopata National Reserve, in the Peruvian Amazon." data-alt-en="Red-and-green macaws at a clay lick in Tambopata National Reserve, in the Peruvian Amazon." data-alt-es="Guacamayos rojos y verdes en una collpa de la Reserva Nacional Tambopata, en la Amazonía peruana." loading="lazy" decoding="async">
+        <div class="dest-info">
+          <p style="font-family:'Libre Baskerville',serif;font-size:1.05rem;color:#fff;margin-bottom:.4rem" data-en="The Amazon, Arequipa, Colca Canyon &amp; more" data-es="La Amazonía, Arequipa, el Cañón del Colca y más">The Amazon, Arequipa, Colca Canyon &amp; more</p>
           <a href="#contact" style="font-size:.82rem;font-weight:600;color:var(--gold);text-decoration:underline;text-underline-offset:3px" data-en="Ask about a custom route" data-es="Pregunta por una ruta personalizada">Ask about a custom route</a>
+          <span class="card-credit">The Next Gen Scientist, CC BY 2.0</span>
         </div>
       </div>
     </div>
@@ -373,7 +394,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
       <div class="process-step">
         <p class="step-num">03</p>
         <h3 class="step-title" data-en="Arrive and be amazed" data-es="Llega y asómbrate">Arrive and be amazed</h3>
-        <p class="step-desc" data-en="I meet you at the airport and stay by your side throughout. No call centers, no middlemen — just your expert on the ground, 24/7." data-es="Te recibo en el aeropuerto y permanezco a tu lado. Sin centros de llamadas ni intermediarios, solo tu experto sobre el terreno, 24/7.">I meet you at the airport and stay by your side throughout. No call centers, no middlemen — just your expert on the ground, 24/7.</p>
+        <p class="step-desc" data-en="You message me on WhatsApp. I design the trip from Lima, stay in touch throughout, and confirm the train before each departure. No call center in between." data-es="Me escribes por WhatsApp. Diseño el viaje desde Lima, sigo en contacto durante todo el viaje y confirmo el tren antes de cada salida. No hay un call center de por medio.">You message me on WhatsApp. I design the trip from Lima, stay in touch throughout, and confirm the train before each departure. No call center in between.</p>
       </div>
     </div>
   </div>
@@ -387,6 +408,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     <p class="section-lead" data-en="These are starting points, not catalogues. Every detail is adapted to you." data-es="Estos son puntos de partida, no catálogos. Cada detalle se adapta a ti.">These are starting points, not catalogues. Every detail is adapted to you.</p>
     <div class="exp-grid">
       <div class="exp-card">
+        <div class="exp-photo-wrap">
+          <img class="exp-photo" src="/images/inca-trail-card.webp" width="800" height="600" alt="Wiñay Wayna on the Inca Trail, stone terraces stepping down a green mountainside." data-alt-en="Wiñay Wayna on the Inca Trail, stone terraces stepping down a green mountainside." data-alt-es="Wiñay Wayna en el Camino Inca, terrazas de piedra sobre la ladera verde." loading="lazy" decoding="async">
+        </div>
         <p class="exp-tag" data-en="Classic" data-es="Clásico">Classic</p>
         <h3 class="exp-name" data-en="Andean Classic" data-es="Clásico Andino">Andean Classic</h3>
         <p class="exp-days" data-en="From 5 days · Price on request" data-es="Desde 5 días · Precio a consultar">From 5 days · Price on request</p>
@@ -399,6 +423,10 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
         <a href="#contact" class="exp-link" data-en="Request a quote" data-es="Solicitar cotización">Request a quote →</a>
       </div>
       <div class="exp-card highlight">
+        <div class="exp-photo-wrap">
+          <img class="exp-photo" src="/images/cusco-plaza-card.webp" width="800" height="482" alt="Cusco's Plaza de Armas, with the cathedral and the hills behind the square." data-alt-en="Cusco's Plaza de Armas, with the cathedral and the hills behind the square." data-alt-es="La Plaza de Armas de Cusco, con la catedral y los cerros detrás de la plaza." loading="lazy" decoding="async">
+        </div>
+        <p class="shot-credit">Diego Delso, CC BY-SA 4.0</p>
         <p class="exp-tag" data-en="Most Popular" data-es="Más Popular">Most Popular</p>
         <h3 class="exp-name" data-en="Complete Peru" data-es="Perú Completo">Complete Peru</h3>
         <p class="exp-days" data-en="From 10 days · Price on request" data-es="Desde 10 días · Precio a consultar">From 10 days · Price on request</p>
@@ -411,6 +439,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
         <a href="#contact" class="exp-link" data-en="Request a quote" data-es="Solicitar cotización">Request a quote →</a>
       </div>
       <div class="exp-card">
+        <div class="exp-photo-wrap">
+          <img class="exp-photo" src="/images/rainbow-mountain-card.webp" width="800" height="600" alt="Vinicunca, the Rainbow Mountain, striped red and gold above the high Andes." data-alt-en="Vinicunca, the Rainbow Mountain, striped red and gold above the high Andes." data-alt-es="Vinicunca, la Montaña de Colores, con franjas rojas y doradas sobre los Andes." loading="lazy" decoding="async">
+        </div>
         <p class="exp-tag" data-en="Signature" data-es="Signature">Signature</p>
         <h3 class="exp-name" data-en="Grand Expedition" data-es="Gran Expedición">Grand Expedition</h3>
         <p class="exp-days" data-en="From 15 days · Price on request" data-es="Desde 15 días · Precio a consultar">From 15 days · Price on request</p>
@@ -597,6 +628,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/machu-picchu-train-status/" data-en="Train status" data-es="Estado del tren">Train status</a></li>
         <li><a href="/gear/" data-en="Travel Gear" data-es="Equipo de viaje">Travel Gear</a></li>
+        <li><a href="/photo-credits/" data-en="Photo credits" data-es="Créditos de fotos">Photo credits</a></li>
       </ul>
     </div>
   </div>
@@ -667,6 +699,10 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     document.querySelectorAll('[data-en]').forEach(el => {
       const t = el.getAttribute('data-' + lang);
       if (t) el.innerHTML = t;
+    });
+    document.querySelectorAll('[data-alt-en]').forEach(el => {
+      const t = el.getAttribute('data-alt-' + lang);
+      if (t) el.alt = t;
     });
     document.querySelector('.hero-title').innerHTML = lang === 'en'
       ? 'Luxury Peru<br><em>Made Entirely Yours</em>'
