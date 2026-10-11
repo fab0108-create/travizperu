@@ -21,7 +21,7 @@
 <meta name="twitter:image" content="https://travizperu.com/images/machu-picchu.webp?v=20261012">
 <title>TravizPeru — Private Peru, Made Entirely Yours</title>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"TravelAgency","name":"TravizPeru","url":"https://travizperu.com/","image":"https://travizperu.com/images/machu-picchu.webp?v=20261012","description":"Private, tailor-made Peru travel designed by Francisco Arriz Barrantes, APOTUR-certified expert with 22+ years.","founder":{"@type":"Person","name":"Francisco Arriz Barrantes"},"telephone":"+51982521128","email":"fab0108@gmail.com","areaServed":["Peru","Argentina","Brazil"],"address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"},"sameAs":["https://www.facebook.com/share/18gXzzizA2/","https://www.instagram.com/travizperu/"]}
+{"@context":"https://schema.org","@type":"TravelAgency","name":"TravizPeru","url":"https://travizperu.com/","image":"https://travizperu.com/images/machu-picchu.webp?v=20261012","description":"Private, tailor-made Peru travel designed by Francisco Arriz Barrantes, APOTUR-certified expert with 22+ years.","founder":{"@type":"Person","name":"Francisco Arriz Barrantes"},"telephone":"+51982521128","email":"fab0108@gmail.com","areaServed":"Peru","address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"},"sameAs":["https://www.facebook.com/share/18gXzzizA2/","https://www.instagram.com/travizperu/"]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,12 +100,6 @@ section{padding:6rem 3rem}
 .section-title em{font-style:italic}
 .section-lead{font-size:1.05rem;color:var(--mid);max-width:560px;margin-top:.9rem;line-height:1.7}
 
-/* ─── ABOUT TEASER ─── */
-#about{background:var(--white);border-top:1px solid var(--border)}
-.about-teaser .section-lead{margin-top:.4rem}
-.about-teaser .exp-link{display:inline-block;margin-top:1.2rem}
-
-
 /* ─── DESTINATIONS ─── */
 #destinations{background:var(--cream)}
 .dest-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem}
@@ -162,7 +156,7 @@ section{padding:6rem 3rem}
 /* ─── BEYOND PERU ─── */
 #beyond{background:var(--cream);border-top:1px solid var(--border)}
 .beyond-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2rem;margin-top:3.2rem}
-.beyond-card img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.beyond-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
 .beyond-credit{margin:.55rem 0 0;font-size:.68rem;letter-spacing:.02em;color:var(--mid)}
 .beyond-credit a{color:var(--mid);text-decoration:underline;text-underline-offset:2px}
 .beyond-name{font-family:var(--font-serif);font-size:1.45rem;font-weight:400;margin-top:1rem}
@@ -215,7 +209,7 @@ select option{background:var(--white)}
 
 /* ─── FOOTER ─── */
 footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
-.footer-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(190px,1.35fr) 1fr 1fr 1.15fr 1fr;gap:2rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.08)}
 .footer-logo{font-family:var(--font-serif);font-size:1.25rem;color:#fff;display:block;margin-bottom:.8rem}
 .footer-logo em{font-style:italic;color:var(--gold)}
 .footer-desc{font-size:.88rem;line-height:1.65;color:rgba(255,255,255,.5);max-width:280px}
@@ -252,6 +246,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   .contact-grid{grid-template-columns:1fr;gap:2.5rem}
   .form-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+  .footer-grid > :first-child{grid-column:1 / -1}
   .footer-bottom{flex-direction:column;gap:.4rem;text-align:center}
 }
 </style>
@@ -458,11 +453,11 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
         </div>
       </article>
       <article class="beyond-card" id="buenos-aires">
-        <img src="/images/buenos-aires.webp?v=20261012" width="1600" height="1067" alt="The illuminated Obelisco on Avenida 9 de Julio at night, with the portrait of Eva Perón on the ministry building." data-alt-en="The illuminated Obelisco on Avenida 9 de Julio at night, with the portrait of Eva Perón on the ministry building." data-alt-es="El Obelisco iluminado en la Avenida 9 de Julio de noche, con el retrato de Eva Perón en el edificio del ministerio." loading="lazy" decoding="async">
-        <p class="beyond-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Avenida_9_de_Julio_iluminada_-_Obelisco%2C_Evita_y_el_Metrob%C3%BAs.jpg">Banfield</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></p>
+        <img src="/images/buenos-aires.webp?v=20261011b" width="1600" height="1066" alt="Elevated view of the Obelisco and Avenida 9 de Julio at dusk." data-alt-en="Elevated view of the Obelisco and Avenida 9 de Julio at dusk." data-alt-es="Vista elevada del Obelisco y la Avenida 9 de Julio al atardecer." loading="lazy" decoding="async">
+        <p class="beyond-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:20181210_OBELISCO_VISTA_IMG_6525.jpg">Enrico Fantoni / Subse Contenidos / GCBA</a>, <a href="https://creativecommons.org/licenses/by/2.5/ar/">CC BY 2.5 AR</a></p>
         <h3 class="beyond-name">Buenos Aires</h3>
         <p class="beyond-place">Argentina</p>
-        <p class="beyond-desc" data-en="The Obelisco, white above Avenida 9 de Julio after dark." data-es="El Obelisco, blanco sobre la Avenida 9 de Julio de noche.">The Obelisco, white above Avenida 9 de Julio after dark.</p>
+        <p class="beyond-desc" data-en="An elevated view of the Obelisco and Avenida 9 de Julio at dusk." data-es="Una vista elevada del Obelisco y la Avenida 9 de Julio al atardecer.">An elevated view of the Obelisco and Avenida 9 de Julio at dusk.</p>
         <div class="beyond-actions">
           <a class="exp-link" data-en="Ask on WhatsApp" data-es="Escribir por WhatsApp" data-href-en="https://wa.me/51982521128?text=Hello%20Francisco%2C%20I%20would%20like%20a%20private%2C%20tailor-made%20trip%20to%20Buenos%20Aires.%20It%20can%20be%20combined%20with%20Peru." data-href-es="https://wa.me/51982521128?text=Hola%20Francisco%2C%20busco%20un%20viaje%20privado%20y%20a%20medida%20a%20Buenos%20Aires.%20Puede%20combinarse%20con%20Per%C3%BA." href="https://wa.me/51982521128?text=Hello%20Francisco%2C%20I%20would%20like%20a%20private%2C%20tailor-made%20trip%20to%20Buenos%20Aires.%20It%20can%20be%20combined%20with%20Peru.">Ask on WhatsApp</a>
           <a class="exp-link" href="#contact" onclick="var s=document.getElementById('fp-dest'); if(s) s.value='Buenos Aires';" data-en="Request a quote" data-es="Pedir una cotización">Request a quote</a>
@@ -580,10 +575,12 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
             <option>Lima</option>
             <option>Amazon</option>
             <option>Full Peru</option>
-            <option>Iguazú Falls</option>
-            <option>Buenos Aires</option>
-            <option>Rio de Janeiro</option>
             <option>Custom Route</option>
+            <optgroup label="Beyond Peru" data-label-en="Beyond Peru" data-label-es="Otros destinos">
+              <option>Iguazú Falls</option>
+              <option>Buenos Aires</option>
+              <option>Rio de Janeiro</option>
+            </optgroup>
           </select>
         </div>
         <div class="field" style="margin-bottom:1rem">
@@ -608,22 +605,12 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   </div>
 </section>
 
-<!-- ABOUT TEASER -->
-<section id="about" class="about-teaser">
-  <div class="container">
-    <p class="section-label" data-en="About" data-es="Quiénes somos">About</p>
-    <h2 class="section-title" data-en="Designed by Francisco, <em>from Lima</em>" data-es="Diseñado por Francisco, <em>desde Lima</em>">Designed by Francisco, <em>from Lima</em></h2>
-    <p class="section-lead" data-en="Francisco Arriz designs each private trip from Lima and stays in touch by WhatsApp. He has spent 22 years in Peru tourism and is APOTUR certified, code AP030-11." data-es="Francisco Arriz diseña cada viaje privado desde Lima y sigue en contacto por WhatsApp. Lleva 22 años en el turismo del Perú y está certificado por APOTUR, código AP030-11.">Francisco Arriz designs each private trip from Lima and stays in touch by WhatsApp. He has spent 22 years in Peru tourism and is APOTUR certified, code AP030-11.</p>
-    <a class="exp-link" href="/about/" data-en="About us" data-es="Quiénes somos">About us</a>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div>
       <span class="footer-logo">Traviz<em>Peru</em></span>
-      <p class="footer-desc" data-en="Your premium travel agency in Peru. Unique experiences designed by Francisco Arriz Barrantes, expert with 22 years in luxury tourism." data-es="Tu agencia de viajes premium en Perú. Experiencias únicas diseñadas por Francisco Arriz Barrantes, experto con 22 años en turismo de lujo.">Your premium travel agency in Peru. Unique experiences designed by Francisco Arriz Barrantes, expert with 22 years in luxury tourism.</p>
+      <p class="footer-desc" data-en="Private, tailor-made journeys in Peru. APOTUR certified, code AP030-11." data-es="Viajes privados y a medida en Perú. Certificado APOTUR, código AP030-11.">Private, tailor-made journeys in Peru. APOTUR certified, code AP030-11.</p>
       <p class="apotur"><strong>APOTUR</strong><span>Certified · AP030-11</span></p>
       <div class="socials">
         <a href="https://www.facebook.com/share/18gXzzizA2/" class="social-ico" target="_blank" rel="noopener" aria-label="Facebook">
@@ -642,6 +629,11 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
         <li><a href="/sacred-valley/" data-en="Sacred Valley" data-es="Valle Sagrado">Sacred Valley</a></li>
         <li><a href="/lake-titicaca/" data-en="Lake Titicaca" data-es="Lago Titicaca">Lake Titicaca</a></li>
         <li><a href="/luxury-private-tours-peru/" data-en="Amazon &amp; beyond" data-es="Amazonía y más">Amazon &amp; beyond</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title" data-en="Beyond Peru" data-es="Otros destinos">Beyond Peru</p>
+      <ul class="footer-links">
         <li><a href="#iguazu">Iguazú</a></li>
         <li><a href="#buenos-aires">Buenos Aires</a></li>
         <li><a href="#rio">Rio de Janeiro</a></li>
@@ -676,7 +668,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 TravizPeru · Francisco Arriz Barrantes · Lima, Peru</span>
+    <span>© 2026 TravizPeru · Lima, Peru</span>
     <span data-en="Made with ♥ in Lima, Peru" data-es="Hecho con ♥ en Lima, Perú">Made with ♥ in Lima, Peru</span>
   </div>
 </footer>
@@ -750,6 +742,10 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     document.querySelectorAll('[data-href-en]').forEach(el => {
       const t = el.getAttribute('data-href-' + lang);
       if (t) el.href = t;
+    });
+    document.querySelectorAll('[data-label-en]').forEach(el => {
+      const t = el.getAttribute('data-label-' + lang);
+      if (t) el.label = t;
     });
     document.querySelector('.hero-title').innerHTML = lang === 'en'
       ? 'Private Peru,<br><em>Made Entirely Yours</em>'
