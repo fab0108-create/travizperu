@@ -11,17 +11,17 @@
 <meta property="og:description" content="Private, tailor-made travel across Peru, designed by a 22-year local expert.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://travizperu.com/">
-<meta property="og:image" content="https://travizperu.com/images/machu-picchu.webp">
+<meta property="og:image" content="https://travizperu.com/images/machu-picchu.webp?v=20261012">
 <meta property="og:image:width" content="1600">
 <meta property="og:image:height" content="1067">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TravizPeru — Private Peru, Made Entirely Yours">
 <meta name="twitter:description" content="Private, tailor-made travel across Peru, designed by a 22-year local expert.">
-<meta name="twitter:image" content="https://travizperu.com/images/machu-picchu.webp">
+<meta name="twitter:image" content="https://travizperu.com/images/machu-picchu.webp?v=20261012">
 <title>TravizPeru — Private Peru, Made Entirely Yours</title>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"TravelAgency","name":"TravizPeru","url":"https://travizperu.com/","image":"https://travizperu.com/images/machu-picchu.webp","description":"Private, tailor-made Peru travel designed by Francisco Arriz Barrantes, APOTUR-certified expert with 22+ years.","founder":{"@type":"Person","name":"Francisco Arriz Barrantes"},"telephone":"+51982521128","email":"fab0108@gmail.com","areaServed":["Peru","Argentina","Brazil"],"address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"},"sameAs":["https://www.facebook.com/share/18gXzzizA2/","https://www.instagram.com/travizperu/"]}
+{"@context":"https://schema.org","@type":"TravelAgency","name":"TravizPeru","url":"https://travizperu.com/","image":"https://travizperu.com/images/machu-picchu.webp?v=20261012","description":"Private, tailor-made Peru travel designed by Francisco Arriz Barrantes, APOTUR-certified expert with 22+ years.","founder":{"@type":"Person","name":"Francisco Arriz Barrantes"},"telephone":"+51982521128","email":"fab0108@gmail.com","areaServed":["Peru","Argentina","Brazil"],"address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"},"sameAs":["https://www.facebook.com/share/18gXzzizA2/","https://www.instagram.com/travizperu/"]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,7 +72,7 @@ nav.scrolled .lang-btn:hover{border-color:var(--gold);color:var(--gold)}
 
 /* ─── HERO ─── */
 #hero{position:relative;height:100vh;min-height:640px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 50%}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,8,.4) 0%,rgba(8,8,8,.1) 24%,rgba(8,8,8,.16) 58%,rgba(8,8,8,.34) 100%),radial-gradient(ellipse at 50% 48%,rgba(8,8,8,.4) 0%,rgba(8,8,8,.08) 58%)}
 .hero-credit{position:absolute;left:1.2rem;bottom:.85rem;z-index:3;max-width:min(92vw,34rem);font-size:.64rem;letter-spacing:.02em;line-height:1.4;color:rgba(255,255,255,.62)}
 .hero-credit a{color:rgba(255,255,255,.82)}
@@ -100,20 +100,10 @@ section{padding:6rem 3rem}
 .section-title em{font-style:italic}
 .section-lead{font-size:1.05rem;color:var(--mid);max-width:560px;margin-top:.9rem;line-height:1.7}
 
-/* ─── ABOUT ─── */
-#about{background:var(--white)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
-.about-img-wrap{position:relative}
-.about-img{width:100%;aspect-ratio:3/4;object-fit:cover}
-.about-badge{position:absolute;bottom:-1.2rem;right:-1.2rem;background:var(--gold-bg);border:1px solid var(--gold);padding:1.2rem 1.6rem;font-family:var(--font-serif)}
-.badge-num{font-size:2.2rem;font-weight:700;color:var(--gold);display:block;line-height:1}
-.badge-txt{font-size:.78rem;color:var(--ink);line-height:1.3}
-.about-name{font-family:var(--font-serif);font-size:1.8rem;font-weight:400;margin:1.2rem 0 .8rem}
-.about-role{font-size:.84rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem}
-.about-bio{font-size:1.02rem;color:var(--ink2);line-height:1.78;margin-bottom:1.8rem}
-.cred-list{list-style:none;display:flex;flex-direction:column;gap:.7rem}
-.cred-list li{display:flex;align-items:flex-start;gap:.75rem;font-size:.93rem;color:var(--ink2)}
-.cred-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:.42em}
+/* ─── ABOUT TEASER ─── */
+#about{background:var(--white);border-top:1px solid var(--border)}
+.about-teaser .section-lead{margin-top:.4rem}
+.about-teaser .exp-link{display:inline-block;margin-top:1.2rem}
 
 
 /* ─── DESTINATIONS ─── */
@@ -147,8 +137,12 @@ section{padding:6rem 3rem}
 .exp-photo-wrap{position:relative;margin:-2.2rem -2.2rem .85rem}
 .exp-photo{width:100%;height:220px;object-fit:cover;display:block}
 .shot-credit{margin:0 0 1rem;font-size:.68rem;letter-spacing:.02em;color:var(--mid)}
+.shot-credit a,.card-credit a{color:inherit}
 .exp-card.highlight .shot-credit{color:rgba(255,255,255,.55)}
 .card-credit{display:block;margin-top:.45rem;font-size:.64rem;letter-spacing:.03em;color:rgba(255,255,255,.62)}
+.dest-hit{position:absolute;inset:0;z-index:1}
+.dest-card:has(.dest-hit) .dest-info{z-index:2;pointer-events:none}
+.dest-card:has(.dest-hit) .card-credit a{pointer-events:auto}
 .exp-card:hover{border-color:var(--gold);box-shadow:0 4px 24px rgba(0,0,0,.07)}
 .exp-card.highlight{background:var(--ink);color:#fff;border-color:var(--ink)}
 .exp-tag{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
@@ -243,13 +237,12 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   .hero-credit{right:1.2rem;bottom:1rem}
   nav{padding:1rem 1.2rem}
   nav.scrolled{padding:.7rem 1.2rem}
-  .nav-links,.nav-cta{display:none}
+  .nav-cta{display:none}
+  .nav-links{gap:0}
+  .nav-links li:not(:first-child){display:none}
   section{padding:4rem 1.2rem}
   #trust{padding:1rem 1.2rem}
   .trust-inner{gap:1.5rem;justify-content:flex-start}
-  .about-grid{grid-template-columns:1fr;gap:2rem}
-  .about-img-wrap{max-width:320px}
-  .about-badge{right:0}
   .dest-grid{grid-template-columns:1fr 1fr}
   .dest-card.big,.dest-card.sm,.dest-card.sm2,.dest-card.sm3,.dest-card.sm4{grid-column:span 1;aspect-ratio:4/3}
   .process-grid{grid-template-columns:1fr}
@@ -269,7 +262,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
 <nav id="nav">
   <a href="#" class="logo">Traviz<em>Peru</em></a>
   <ul class="nav-links">
-    <li><a href="#about" data-en="About" data-es="Nosotros">About</a></li>
+    <li><a href="/about/" data-en="About" data-es="Quiénes somos">About</a></li>
     <li><a href="#destinations" data-en="Destinations" data-es="Destinos">Destinations</a></li>
     <li><a href="#experiences" data-en="Experiences" data-es="Experiencias">Experiences</a></li>
     <li><a href="#testimonials" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
@@ -284,7 +277,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
 
 <!-- HERO -->
 <section id="hero">
-  <img class="hero-bg" src="/images/machu-picchu.webp" width="1600" height="1067" alt="Machu Picchu from the Inca Trail: the citadel stands empty, with Huayna Picchu behind it." data-alt-en="Machu Picchu from the Inca Trail: the citadel stands empty, with Huayna Picchu behind it." data-alt-es="Machu Picchu desde el Camino Inca: la ciudadela vacía, con el Huayna Picchu detrás." fetchpriority="high" decoding="async">
+  <img class="hero-bg" src="/images/machu-picchu.webp?v=20261012" width="1600" height="1067" alt="Machu Picchu at dawn: the citadel and Huayna Picchu fill the view, with no one in sight." data-alt-en="Machu Picchu at dawn: the citadel and Huayna Picchu fill the view, with no one in sight." data-alt-es="Machu Picchu al amanecer: la ciudadela y el Huayna Picchu llenan la vista, sin personas." fetchpriority="high" decoding="async">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <p class="hero-label" data-en="Private Travel · Peru" data-es="Viajes privados · Perú">Private Travel · Peru</p>
@@ -296,7 +289,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     <span></span>
     <p data-en="Scroll" data-es="Explorar">Scroll</p>
   </div>
-  <p class="hero-credit" data-en="Photo: &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Machu_Picchu_from_the_Inca_Trail_5118.jpg&quot;&gt;Brian Jeffery Beggerly&lt;/a&gt;, &lt;a href=&quot;https://creativecommons.org/licenses/by/2.0&quot;&gt;CC BY 2.0&lt;/a&gt;" data-es="Foto: &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Machu_Picchu_from_the_Inca_Trail_5118.jpg&quot;&gt;Brian Jeffery Beggerly&lt;/a&gt;, &lt;a href=&quot;https://creativecommons.org/licenses/by/2.0&quot;&gt;CC BY 2.0&lt;/a&gt;">Photo: <a href="https://commons.wikimedia.org/wiki/File:Machu_Picchu_from_the_Inca_Trail_5118.jpg">Brian Jeffery Beggerly</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></p>
+  <p class="hero-credit" data-en="Photo: &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Machu_Picchu,_Peru.jpg&quot;&gt;Pedro Szekely&lt;/a&gt;, &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/2.0/&quot;&gt;CC BY-SA 2.0&lt;/a&gt;" data-es="Foto: &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Machu_Picchu,_Peru.jpg&quot;&gt;Pedro Szekely&lt;/a&gt;, &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/2.0/&quot;&gt;CC BY-SA 2.0&lt;/a&gt;">Photo: <a href="https://commons.wikimedia.org/wiki/File:Machu_Picchu,_Peru.jpg">Pedro Szekely</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></p>
 </section>
 
 <!-- TRUST BAR -->
@@ -307,33 +300,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     <div class="trust-item"><strong>APOTUR</strong><span>Certified · AP030-11</span></div>
   </div>
 </div>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-img-wrap">
-        <img class="about-img" src="/images/francisco.webp" width="900" height="1200" alt="Francisco Arriz Barrantes, founder of TravizPeru, in Lima" data-alt-en="Francisco Arriz Barrantes, founder of TravizPeru, in Lima" data-alt-es="Francisco Arriz Barrantes, fundador de TravizPeru, en Lima" loading="lazy" decoding="async">
-        <div class="about-badge">
-          <span class="badge-num">22</span>
-          <span class="badge-txt">years<br>experience</span>
-        </div>
-      </div>
-      <div>
-        <p class="section-label" data-en="Your Peru Expert" data-es="Tu Experto en Perú">Your Peru Expert</p>
-        <p class="about-role" data-en="Founder &amp; trip designer" data-es="Fundador y diseñador del viaje">Founder &amp; trip designer</p>
-        <h2 class="about-name">Francisco Arriz Barrantes</h2>
-        <p class="about-bio" data-en="I founded TravizPeru after 22 years building luxury travel operations across Peru for the world's most demanding clients. Today I run a company with one clear purpose: to design private, bespoke journeys that no mass-market operator can replicate. Every itinerary carries my personal signature — because when you travel with TravizPeru, you work directly with me." data-es="Fundé TravizPeru tras 22 años construyendo operaciones de viaje de lujo en Perú para los clientes más exigentes del mundo. Hoy dirijo una empresa con un propósito claro: diseñar viajes privados y a medida que ningún operador masivo puede replicar. Cada itinerario lleva mi firma personal, porque cuando viajas con TravizPeru, trabajas directamente conmigo.">I founded TravizPeru after 22 years building luxury travel operations across Peru for the world's most demanding clients. Today I run a company with one clear purpose: to design private, bespoke journeys that no mass-market operator can replicate. Every itinerary carries my personal signature — because when you travel with TravizPeru, you work directly with me.</p>
-        <ul class="cred-list">
-          <li><span class="cred-dot"></span><span><strong>APOTUR Certified</strong> · Peruvian Association of Incoming Tour Operators, Code AP030-11</span></li>
-          <li><span class="cred-dot"></span><span><strong>Founder &amp; CEO of TravizPeru</strong> · 22 years building luxury travel operations in Peru</span></li>
-          <li><span class="cred-dot"></span><span>Trusted by the world's most prestigious travel companies for over two decades</span></li>
-        </ul>
-
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- DESTINATIONS -->
 <section id="destinations">
@@ -346,37 +312,39 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     </div>
     <div class="dest-grid">
       <a class="dest-card big" href="/machu-picchu/">
-        <img class="dest-img" src="/images/machu-picchu-card.webp" width="800" height="533" alt="Machu Picchu from the Inca Trail: the citadel stands empty, with Huayna Picchu behind it." data-alt-en="Machu Picchu from the Inca Trail: the citadel stands empty, with Huayna Picchu behind it." data-alt-es="Machu Picchu desde el Camino Inca: la ciudadela vacía, con el Huayna Picchu detrás." loading="lazy" decoding="async">
+        <img class="dest-img" src="/images/machu-picchu-card.webp?v=20261012" width="800" height="534" alt="Machu Picchu at dawn: the citadel and Huayna Picchu fill the view, with no one in sight." data-alt-en="Machu Picchu at dawn: the citadel and Huayna Picchu fill the view, with no one in sight." data-alt-es="Machu Picchu al amanecer: la ciudadela y el Huayna Picchu llenan la vista, sin personas." loading="lazy" decoding="async">
         <div class="dest-info">
           <h3 class="dest-name">Machu Picchu</h3>
           <p class="dest-sub" data-en="Cusco · UNESCO World Heritage" data-es="Cusco · Patrimonio UNESCO">Cusco · UNESCO World Heritage</p>
-          <span class="card-credit">Brian Jeffery Beggerly, CC BY 2.0</span>
+          <span class="card-credit">Pedro Szekely, CC BY-SA 2.0</span>
         </div>
       </a>
       <a class="dest-card sm" href="/lima/">
-        <img class="dest-img" src="/images/lima-card.webp" width="800" height="600" alt="The Costa Verde cliffs and the Pacific at Miraflores, Lima." data-alt-en="The Costa Verde cliffs and the Pacific at Miraflores, Lima." data-alt-es="Los acantilados de la Costa Verde y el Pacífico en Miraflores, Lima." loading="lazy" decoding="async">
+        <img class="dest-img" src="/images/lima-card.webp?v=20261012" width="800" height="600" alt="The Costa Verde cliffs and the Pacific at Miraflores, Lima." data-alt-en="The Costa Verde cliffs and the Pacific at Miraflores, Lima." data-alt-es="Los acantilados de la Costa Verde y el Pacífico en Miraflores, Lima." loading="lazy" decoding="async">
         <div class="dest-info">
           <h3 class="dest-name">Lima</h3>
           <p class="dest-sub" data-en="Gastronomic capital of the Americas" data-es="Capital gastronómica de América">Gastronomic capital of the Americas</p>
         </div>
       </a>
       <a class="dest-card sm2" href="/sacred-valley/">
-        <img class="dest-img" src="/images/sacred-valley-card.webp" width="800" height="532" alt="Stone terraces at Ollantaytambo in the Sacred Valley, with the town below the ruins." data-alt-en="Stone terraces at Ollantaytambo in the Sacred Valley, with the town below the ruins." data-alt-es="Terrazas de piedra en Ollantaytambo, en el Valle Sagrado, con el pueblo bajo las ruinas." loading="lazy" decoding="async">
+        <img class="dest-img" src="/images/sacred-valley-card.webp?v=20261012" width="800" height="532" alt="Stone terraces at Ollantaytambo in the Sacred Valley, with the town below the ruins." data-alt-en="Stone terraces at Ollantaytambo in the Sacred Valley, with the town below the ruins." data-alt-es="Terrazas de piedra en Ollantaytambo, en el Valle Sagrado, con el pueblo bajo las ruinas." loading="lazy" decoding="async">
         <div class="dest-info">
           <h3 class="dest-name">Sacred Valley</h3>
           <p class="dest-sub" data-en="Inca heartland" data-es="Territorio inca">Inca heartland</p>
           <span class="card-credit">Jorge Láscar, CC BY 2.0</span>
         </div>
       </a>
-      <a class="dest-card sm3" href="/lake-titicaca/">
-        <img class="dest-img" src="/images/titicaca-card.webp" width="800" height="534" alt="Lake Titicaca in the late light, with the Andes along the far shore." data-alt-en="Lake Titicaca in the late light, with the Andes along the far shore." data-alt-es="El lago Titicaca al atardecer, con los Andes en la orilla lejana." loading="lazy" decoding="async">
+      <div class="dest-card sm3">
+        <img class="dest-img" src="/images/titicaca-card.webp?v=20261014" width="800" height="450" alt="Amantaní island above the deep blue water of Lake Titicaca." data-alt-en="Amantaní island above the deep blue water of Lake Titicaca." data-alt-es="La isla Amantaní sobre el agua azul del lago Titicaca." loading="lazy" decoding="async">
+        <a class="dest-hit" href="/lake-titicaca/" aria-label="Lake Titicaca"></a>
         <div class="dest-info">
           <h3 class="dest-name">Lake Titicaca</h3>
           <p class="dest-sub" data-en="World's highest navigable lake" data-es="El lago navegable más alto del mundo">World's highest navigable lake</p>
+          <span class="card-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Amantan%C3%AD_island_in_Lake_Titicaca.jpg">H.dav.are</a> / <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span>
         </div>
-      </a>
+      </div>
       <div class="dest-card sm4">
-        <img class="dest-img" src="/images/amazon-card.webp" width="800" height="534" alt="Red-and-green macaws at a clay lick in Tambopata National Reserve, in the Peruvian Amazon." data-alt-en="Red-and-green macaws at a clay lick in Tambopata National Reserve, in the Peruvian Amazon." data-alt-es="Guacamayos rojos y verdes en una collpa de la Reserva Nacional Tambopata, en la Amazonía peruana." loading="lazy" decoding="async">
+        <img class="dest-img" src="/images/amazon-card.webp?v=20261012" width="800" height="534" alt="Red-and-green macaws at a clay lick in Tambopata National Reserve, in the Peruvian Amazon." data-alt-en="Red-and-green macaws at a clay lick in Tambopata National Reserve, in the Peruvian Amazon." data-alt-es="Guacamayos rojos y verdes en una collpa de la Reserva Nacional Tambopata, en la Amazonía peruana." loading="lazy" decoding="async">
         <div class="dest-info">
           <p style="font-family:'Libre Baskerville',serif;font-size:1.05rem;color:#fff;margin-bottom:.4rem" data-en="The Amazon, Arequipa, Colca Canyon &amp; more" data-es="La Amazonía, Arequipa, el Cañón del Colca y más">The Amazon, Arequipa, Colca Canyon &amp; more</p>
           <a href="#contact" style="font-size:.82rem;font-weight:600;color:var(--gold);text-decoration:underline;text-underline-offset:3px" data-en="Ask about a custom route" data-es="Pregunta por una ruta personalizada">Ask about a custom route</a>
@@ -421,8 +389,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     <div class="exp-grid">
       <div class="exp-card">
         <div class="exp-photo-wrap">
-          <img class="exp-photo" src="/images/inca-trail-card.webp" width="800" height="600" alt="Wiñay Wayna on the Inca Trail, stone terraces stepping down a green mountainside." data-alt-en="Wiñay Wayna on the Inca Trail, stone terraces stepping down a green mountainside." data-alt-es="Wiñay Wayna en el Camino Inca, terrazas de piedra sobre la ladera verde." loading="lazy" decoding="async">
+          <img class="exp-photo" src="/images/inca-trail-card.webp?v=20261014" width="800" height="534" alt="The Inca terraces at Pisac, stone steps climbing a green hillside." data-alt-en="The Inca terraces at Pisac, stone steps climbing a green hillside." data-alt-es="Las terrazas incas de Pisac, gradas de piedra sobre la ladera verde." loading="lazy" decoding="async">
         </div>
+        <p class="shot-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Terraces_of_Pisac.jpg">Martin Hinca</a> / <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a> (modified)</p>
         <p class="exp-tag" data-en="Classic" data-es="Clásico">Classic</p>
         <h3 class="exp-name" data-en="Andean Classic" data-es="Clásico Andino">Andean Classic</h3>
         <p class="exp-days" data-en="From 5 days · Price on request" data-es="Desde 5 días · Precio a consultar">From 5 days · Price on request</p>
@@ -436,9 +405,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
       </div>
       <div class="exp-card highlight">
         <div class="exp-photo-wrap">
-          <img class="exp-photo" src="/images/cusco-plaza-card.webp" width="800" height="482" alt="Cusco's Plaza de Armas, with the cathedral and the hills behind the square." data-alt-en="Cusco's Plaza de Armas, with the cathedral and the hills behind the square." data-alt-es="La Plaza de Armas de Cusco, con la catedral y los cerros detrás de la plaza." loading="lazy" decoding="async">
+          <img class="exp-photo" src="/images/cusco-plaza-card.webp?v=20261014" width="800" height="420" alt="The domes of Cusco Cathedral above the rooftops, with the mountains behind." data-alt-en="The domes of Cusco Cathedral above the rooftops, with the mountains behind." data-alt-es="Las cúpulas de la catedral del Cusco sobre los techos, con las montañas detrás." loading="lazy" decoding="async">
         </div>
-        <p class="shot-credit">Diego Delso, CC BY-SA 4.0</p>
+        <p class="shot-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Cusco_peru_2.jpg">Woldylen</a> / <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></p>
         <p class="exp-tag" data-en="Most Popular" data-es="Más Popular">Most Popular</p>
         <h3 class="exp-name" data-en="Complete Peru" data-es="Perú Completo">Complete Peru</h3>
         <p class="exp-days" data-en="From 10 days · Price on request" data-es="Desde 10 días · Precio a consultar">From 10 days · Price on request</p>
@@ -452,8 +421,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
       </div>
       <div class="exp-card">
         <div class="exp-photo-wrap">
-          <img class="exp-photo" src="/images/rainbow-mountain-card.webp" width="800" height="600" alt="Vinicunca, the Rainbow Mountain, striped red and gold above the high Andes." data-alt-en="Vinicunca, the Rainbow Mountain, striped red and gold above the high Andes." data-alt-es="Vinicunca, la Montaña de Colores, con franjas rojas y doradas sobre los Andes." loading="lazy" decoding="async">
+          <img class="exp-photo" src="/images/rainbow-mountain-card.webp?v=20261014" width="800" height="534" alt="Vinicunca, the Rainbow Mountain, striped red and gold under a deep blue sky." data-alt-en="Vinicunca, the Rainbow Mountain, striped red and gold under a deep blue sky." data-alt-es="Vinicunca, la Montaña de Colores, con franjas rojas y doradas bajo un cielo azul." loading="lazy" decoding="async">
         </div>
+        <p class="shot-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:View_of_the_Rainbow_mountain.jpg">Brian Jeffery Beggerly</a> / <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></p>
         <p class="exp-tag" data-en="Signature" data-es="Signature">Signature</p>
         <h3 class="exp-name" data-en="Grand Expedition" data-es="Gran Expedición">Grand Expedition</h3>
         <p class="exp-days" data-en="From 15 days · Price on request" data-es="Desde 15 días · Precio a consultar">From 15 days · Price on request</p>
@@ -477,7 +447,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     <p class="section-lead" data-en="Private, tailor-made journeys in Argentina and Brazil. On their own, or added before or after Peru. No set departures." data-es="Viajes privados y a medida en Argentina y Brasil. Solos, o sumados antes o después del Perú. Sin salidas fijas.">Private, tailor-made journeys in Argentina and Brazil. On their own, or added before or after Peru. No set departures.</p>
     <div class="beyond-grid">
       <article class="beyond-card" id="iguazu">
-        <img src="/images/iguazu.webp" width="1400" height="934" alt="Iguazú Falls, a wide horseshoe of white water in the rainforest on the Argentina–Brazil border." data-alt-en="Iguazú Falls, a wide horseshoe of white water in the rainforest on the Argentina–Brazil border." data-alt-es="Las Cataratas del Iguazú, una herradura de agua blanca en la selva, en la frontera de Argentina y Brasil." loading="lazy" decoding="async">
+        <img src="/images/iguazu.webp?v=20261012" width="1400" height="934" alt="Iguazú Falls, a wide horseshoe of white water in the rainforest on the Argentina–Brazil border." data-alt-en="Iguazú Falls, a wide horseshoe of white water in the rainforest on the Argentina–Brazil border." data-alt-es="Las Cataratas del Iguazú, una herradura de agua blanca en la selva, en la frontera de Argentina y Brasil." loading="lazy" decoding="async">
         <p class="beyond-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Iguaz%C3%BA_Falls_01.jpg">Bernard Gagnon</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></p>
         <h3 class="beyond-name">Iguazú Falls</h3>
         <p class="beyond-place" data-en="Argentina &amp; Brazil" data-es="Argentina y Brasil">Argentina &amp; Brazil</p>
@@ -488,7 +458,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
         </div>
       </article>
       <article class="beyond-card" id="buenos-aires">
-        <img src="/images/buenos-aires.webp" width="1400" height="934" alt="The illuminated Obelisco on Avenida 9 de Julio at night, with the portrait of Eva Perón on the ministry building." data-alt-en="The illuminated Obelisco on Avenida 9 de Julio at night, with the portrait of Eva Perón on the ministry building." data-alt-es="El Obelisco iluminado en la Avenida 9 de Julio de noche, con el retrato de Eva Perón en el edificio del ministerio." loading="lazy" decoding="async">
+        <img src="/images/buenos-aires.webp?v=20261012" width="1600" height="1067" alt="The illuminated Obelisco on Avenida 9 de Julio at night, with the portrait of Eva Perón on the ministry building." data-alt-en="The illuminated Obelisco on Avenida 9 de Julio at night, with the portrait of Eva Perón on the ministry building." data-alt-es="El Obelisco iluminado en la Avenida 9 de Julio de noche, con el retrato de Eva Perón en el edificio del ministerio." loading="lazy" decoding="async">
         <p class="beyond-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Avenida_9_de_Julio_iluminada_-_Obelisco%2C_Evita_y_el_Metrob%C3%BAs.jpg">Banfield</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></p>
         <h3 class="beyond-name">Buenos Aires</h3>
         <p class="beyond-place">Argentina</p>
@@ -499,7 +469,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
         </div>
       </article>
       <article class="beyond-card" id="rio">
-        <img src="/images/rio.webp" width="1400" height="856" alt="Sugarloaf Mountain over the bay of Rio de Janeiro at sunset." data-alt-en="Sugarloaf Mountain over the bay of Rio de Janeiro at sunset." data-alt-es="El Pan de Azúcar sobre la bahía de Río de Janeiro al atardecer." loading="lazy" decoding="async">
+        <img src="/images/rio.webp?v=20261012" width="1400" height="856" alt="Sugarloaf Mountain over the bay of Rio de Janeiro at sunset." data-alt-en="Sugarloaf Mountain over the bay of Rio de Janeiro at sunset." data-alt-es="El Pan de Azúcar sobre la bahía de Río de Janeiro al atardecer." loading="lazy" decoding="async">
         <p class="beyond-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Rio_de_Janeiro_skyline_and_Sugarloaf_Mountain_at_sunset,_Brazil_3.jpg">Wilfredor</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></p>
         <h3 class="beyond-name">Rio de Janeiro</h3>
         <p class="beyond-place" data-en="Brazil" data-es="Brasil">Brazil</p>
@@ -638,6 +608,16 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   </div>
 </section>
 
+<!-- ABOUT TEASER -->
+<section id="about" class="about-teaser">
+  <div class="container">
+    <p class="section-label" data-en="About" data-es="Quiénes somos">About</p>
+    <h2 class="section-title" data-en="Designed by Francisco, <em>from Lima</em>" data-es="Diseñado por Francisco, <em>desde Lima</em>">Designed by Francisco, <em>from Lima</em></h2>
+    <p class="section-lead" data-en="Francisco Arriz designs each private trip from Lima and stays in touch by WhatsApp. He has spent 22 years in Peru tourism and is APOTUR certified, code AP030-11." data-es="Francisco Arriz diseña cada viaje privado desde Lima y sigue en contacto por WhatsApp. Lleva 22 años en el turismo del Perú y está certificado por APOTUR, código AP030-11.">Francisco Arriz designs each private trip from Lima and stays in touch by WhatsApp. He has spent 22 years in Peru tourism and is APOTUR certified, code AP030-11.</p>
+    <a class="exp-link" href="/about/" data-en="About us" data-es="Quiénes somos">About us</a>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-grid">
@@ -690,6 +670,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/machu-picchu-train-status/" data-en="Train status" data-es="Estado del tren">Train status</a></li>
         <li><a href="/gear/" data-en="Travel Gear" data-es="Equipo de viaje">Travel Gear</a></li>
+        <li><a href="/about/" data-en="About us" data-es="Quiénes somos">About us</a></li>
         <li><a href="/photo-credits/" data-en="Photo credits" data-es="Créditos de fotos">Photo credits</a></li>
       </ul>
     </div>
