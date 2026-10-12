@@ -21,6 +21,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/about/"/>
   </url>
   <url>
+    <loc>https://travizperu.com/beyond-peru/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/beyond-peru/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://travizperu.com/zh/beyond-peru/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://travizperu.com/ja/beyond-peru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/beyond-peru/"/>
+  </url>
+  <url>
     <loc>https://travizperu.com/machu-picchu/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -178,6 +188,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/about/"/>
   </url>
   <url>
+    <loc>https://travizperu.com/zh/beyond-peru/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/beyond-peru/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://travizperu.com/zh/beyond-peru/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://travizperu.com/ja/beyond-peru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/beyond-peru/"/>
+  </url>
+  <url>
     <loc>https://travizperu.com/zh/machu-picchu/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -236,6 +256,16 @@
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://travizperu.com/zh/about/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://travizperu.com/ja/about/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/about/"/>
+  </url>
+  <url>
+    <loc>https://travizperu.com/ja/beyond-peru/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/beyond-peru/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://travizperu.com/zh/beyond-peru/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://travizperu.com/ja/beyond-peru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/beyond-peru/"/>
   </url>
   <url>
     <loc>https://travizperu.com/ja/machu-picchu/</loc>

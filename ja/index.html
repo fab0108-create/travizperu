@@ -59,7 +59,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 nav.scrolled{background:rgba(250,248,243,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:.8rem 3rem}
 .logo{font-family:var(--font-serif);font-size:1.3rem;color:#fff;letter-spacing:.01em}
 .logo em{font-style:italic;color:rgba(255,255,255,.86)}
-.nav-links{display:flex;gap:2rem;list-style:none;font-size:.88rem;color:rgba(255,255,255,.88)}
+.nav-links{display:flex;gap:1.15rem;list-style:none;font-size:.84rem;color:rgba(255,255,255,.88)}
 .nav-links a{color:rgba(255,255,255,.88);transition:color .2s}
 .nav-links a:hover{color:#fff}
 .nav-cta{font-size:.85rem;font-weight:600;background:#fff;color:var(--ink);padding:.55rem 1.4rem;border-radius:2px;transition:background .2s}
@@ -162,15 +162,9 @@ section{padding:6rem 3rem}
 .exp-card.highlight .exp-link{color:#fff}
 
 /* ─── BEYOND PERU ─── */
-#beyond{background:var(--cream);border-top:1px solid var(--border)}
-.beyond-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2rem;margin-top:3.2rem}
-.beyond-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
-.beyond-credit{margin:.55rem 0 0;font-size:.68rem;letter-spacing:.02em;color:var(--mid)}
-.beyond-credit a{color:var(--mid);text-decoration:underline;text-underline-offset:2px}
-.beyond-name{font-family:var(--font-serif);font-size:1.45rem;font-weight:400;margin-top:1rem}
-.beyond-place{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:.35rem 0 .75rem}
-.beyond-desc{font-size:.98rem;color:var(--ink2);line-height:1.65;margin-bottom:1.15rem}
-.beyond-actions{display:flex;flex-direction:column;align-items:flex-start;gap:.4rem}
+.footer-col-title.footer-beyond{text-transform:none;letter-spacing:.02em;line-height:1.45;font-weight:600}
+.footer-beyond a{color:rgba(255,255,255,.72);font-size:.9rem}
+.footer-beyond a:hover{color:#fff}
 
 /* ─── TESTIMONIALS ─── */
 #testimonials{background:var(--cream)}
@@ -249,7 +243,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   .dest-card.big,.dest-card.sm,.dest-card.sm2,.dest-card.sm3,.dest-card.sm4{grid-column:span 1;aspect-ratio:4/3}
   .process-grid{grid-template-columns:1fr}
   .exp-grid{grid-template-columns:1fr}
-  .beyond-grid{grid-template-columns:1fr;gap:2.6rem}
   .testi-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr;gap:2.5rem}
   .form-grid{grid-template-columns:1fr}
@@ -258,7 +251,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   .footer-bottom{flex-direction:column;gap:.4rem;text-align:center}
 }
 
-.hero-label,.section-label,.exp-tag,.beyond-place,.cinfo-label,.footer-col-title,.hero-scroll{letter-spacing:.08em;text-transform:none}
+.hero-label,.section-label,.exp-tag,.cinfo-label,.footer-col-title,.hero-scroll{letter-spacing:.08em;text-transform:none}
 .hero-title{font-size:clamp(2.15rem,5vw,4.1rem);line-height:1.25;font-weight:500}
 .hero-title em,.section-title em{font-style:normal}
 .section-title{line-height:1.35;font-weight:500;max-width:14em}
@@ -272,6 +265,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   <ul class="nav-links">
     <li><a href="/ja/about/">私たちについて</a></li>
     <li><a href="#destinations">行き先</a></li>
+    <li><a href="/ja/beyond-peru/">ペルーの外</a></li>
     <li><a href="#experiences">体験</a></li>
     <li><a href="#testimonials">旅した人の言葉</a></li>
     <li><a href="/blog/">Blog</a></li>
@@ -447,49 +441,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   </div>
 </section>
 
-<section id="beyond">
-  <div class="container">
-    <p class="section-label">ペルーの外</p>
-    <h2 class="section-title">同じ心配りを、<em>もう少し遠くへ</em></h2>
-    <p class="section-lead">アルゼンチンとブラジルの、プライベートでオーダーメイドの旅。単独でも、ペルーの前か後に足しても。決まった出発日はありません。</p>
-    <div class="beyond-grid">
-      <article class="beyond-card" id="iguazu">
-        <img src="/images/iguazu.webp?v=20261012" width="1400" height="934" alt="イグアスの滝。雨林のなかで、白い水が馬蹄形に落ちます。アルゼンチンとブラジルの境です。" loading="lazy" decoding="async">
-        <p class="beyond-credit">写真：<a href="https://commons.wikimedia.org/wiki/File:Iguaz%C3%BA_Falls_01.jpg">Bernard Gagnon</a>，<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></p>
-        <h3 class="beyond-name">イグアスの滝</h3>
-        <p class="beyond-place">アルゼンチンとブラジル</p>
-        <p class="beyond-desc">アルゼンチンとブラジルが接するところで、白い水が馬蹄形に落ちます。</p>
-        <div class="beyond-actions">
-          <a class="exp-link" href="https://wa.me/51982521128?text=%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF%E3%80%81Francisco%E3%80%82%E3%82%A4%E3%82%B0%E3%82%A2%E3%82%B9%E3%81%AE%E6%BB%9D%E3%81%B8%E3%80%81%E3%83%97%E3%83%A9%E3%82%A4%E3%83%99%E3%83%BC%E3%83%88%E3%81%A7%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%81%AE%E6%97%85%E3%82%92%E8%80%83%E3%81%88%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%E3%83%9A%E3%83%AB%E3%83%BC%E3%81%A8%E3%81%A4%E3%81%AA%E3%81%90%E3%81%93%E3%81%A8%E3%82%82%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%80%82">WhatsAppで尋ねる</a>
-          <a class="exp-link" href="#contact" onclick="var s=document.getElementById('fp-dest'); if(s) s.value='イグアスの滝';">行程を頼む</a>
-        </div>
-      </article>
-      <article class="beyond-card" id="buenos-aires">
-        <img src="/images/buenos-aires.webp?v=20261011b" width="1600" height="1066" alt="黄昏。高いところから見る、ブエノスアイレスのオベリスクと7月9日大通り。" loading="lazy" decoding="async">
-        <p class="beyond-credit">写真：<a href="https://commons.wikimedia.org/wiki/File:20181210_OBELISCO_VISTA_IMG_6525.jpg">Enrico Fantoni / Subse Contenidos / GCBA</a>，<a href="https://creativecommons.org/licenses/by/2.5/ar/">CC BY 2.5 AR</a></p>
-        <h3 class="beyond-name">ブエノスアイレス</h3>
-        <p class="beyond-place">アルゼンチン</p>
-        <p class="beyond-desc">黄昏。高いところから見る、オベリスクと7月9日大通り。</p>
-        <div class="beyond-actions">
-          <a class="exp-link" href="https://wa.me/51982521128?text=%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF%E3%80%81Francisco%E3%80%82%E3%83%96%E3%82%A8%E3%83%8E%E3%82%B9%E3%82%A2%E3%82%A4%E3%83%AC%E3%82%B9%E3%81%B8%E3%80%81%E3%83%97%E3%83%A9%E3%82%A4%E3%83%99%E3%83%BC%E3%83%88%E3%81%A7%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%81%AE%E6%97%85%E3%82%92%E8%80%83%E3%81%88%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%E3%83%9A%E3%83%AB%E3%83%BC%E3%81%A8%E3%81%A4%E3%81%AA%E3%81%90%E3%81%93%E3%81%A8%E3%82%82%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%80%82">WhatsAppで尋ねる</a>
-          <a class="exp-link" href="#contact" onclick="var s=document.getElementById('fp-dest'); if(s) s.value='ブエノスアイレス';">行程を頼む</a>
-        </div>
-      </article>
-      <article class="beyond-card" id="rio">
-        <img src="/images/rio.webp?v=20261012" width="1400" height="856" alt="日没。砂糖パン山が、リオデジャネイロの湾を見下ろします。" loading="lazy" decoding="async">
-        <p class="beyond-credit">写真：<a href="https://commons.wikimedia.org/wiki/File:Rio_de_Janeiro_skyline_and_Sugarloaf_Mountain_at_sunset,_Brazil_3.jpg">Wilfredor</a>，<a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></p>
-        <h3 class="beyond-name">リオデジャネイロ</h3>
-        <p class="beyond-place">ブラジル</p>
-        <p class="beyond-desc">砂糖パン山が湾を見下ろし、街がこの時刻に金色になります。</p>
-        <div class="beyond-actions">
-          <a class="exp-link" href="https://wa.me/51982521128?text=%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF%E3%80%81Francisco%E3%80%82%E3%83%AA%E3%82%AA%E3%83%87%E3%82%B8%E3%83%A3%E3%83%8D%E3%82%A4%E3%83%AD%E3%81%B8%E3%80%81%E3%83%97%E3%83%A9%E3%82%A4%E3%83%99%E3%83%BC%E3%83%88%E3%81%A7%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%89%E3%81%AE%E6%97%85%E3%82%92%E8%80%83%E3%81%88%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%E3%83%9A%E3%83%AB%E3%83%BC%E3%81%A8%E3%81%A4%E3%81%AA%E3%81%90%E3%81%93%E3%81%A8%E3%82%82%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%80%82">WhatsAppで尋ねる</a>
-          <a class="exp-link" href="#contact" onclick="var s=document.getElementById('fp-dest'); if(s) s.value='リオデジャネイロ';">行程を頼む</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
 <section id="testimonials">
   <div class="container">
     <p class="section-label">旅した人の言葉</p>
@@ -586,11 +537,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
             <option>アマゾン</option>
             <option>ペルーをひと通り</option>
             <option>好きな道筋</option>
-            <optgroup label="ペルーの外">
-              <option>イグアスの滝</option>
-              <option>ブエノスアイレス</option>
-              <option>リオデジャネイロ</option>
-            </optgroup>
           </select>
         </div>
         <div class="field" style="margin-bottom:1rem">
@@ -641,12 +587,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
       </ul>
     </div>
     <div>
-      <p class="footer-col-title">ペルーの外</p>
-      <ul class="footer-links">
-        <li><a href="#iguazu">イグアス</a></li>
-        <li><a href="#buenos-aires">ブエノスアイレス</a></li>
-        <li><a href="#rio">リオデジャネイロ</a></li>
-      </ul>
+      <p class="footer-col-title footer-beyond"><a href="/ja/beyond-peru/">ペルーの外</a></p>
     </div>
     <div>
       <p class="footer-col-title">体験</p>
