@@ -7,6 +7,9 @@
 <meta name="google-site-verification" content="OpFL78vq6LeKjGtFGw8yxFsfRA7sq7WeEerZcFO6fq0">
 <meta name="description" content="Private, tailor-made Peru travel designed by Francisco Arriz Barrantes, APOTUR-certified expert with 22+ years of experience. Machu Picchu, the Sacred Valley, Lima and Lake Titicaca, arranged for you.">
 <link rel="canonical" href="https://travizperu.com/">
+<link rel="alternate" hreflang="en" href="https://travizperu.com/">
+<link rel="alternate" hreflang="zh-Hans" href="https://travizperu.com/zh/">
+<link rel="alternate" hreflang="x-default" href="https://travizperu.com/">
 <meta property="og:title" content="TravizPeru — Private Peru, Made Entirely Yours">
 <meta property="og:description" content="Private, tailor-made travel across Peru, designed by a 22-year local expert.">
 <meta property="og:type" content="website">
@@ -15,6 +18,7 @@
 <meta property="og:image:width" content="1600">
 <meta property="og:image:height" content="1067">
 <meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TravizPeru — Private Peru, Made Entirely Yours">
 <meta name="twitter:description" content="Private, tailor-made travel across Peru, designed by a 22-year local expert.">
@@ -59,16 +63,19 @@ nav.scrolled{background:rgba(250,248,243,.97);backdrop-filter:blur(8px);border-b
 .nav-links a:hover{color:#fff}
 .nav-cta{font-size:.85rem;font-weight:600;background:#fff;color:var(--ink);padding:.55rem 1.4rem;border-radius:2px;transition:background .2s}
 .nav-cta:hover{background:var(--cream)}
-.lang-btn{font-size:.82rem;font-weight:600;background:none;border:1px solid rgba(255,255,255,.45);color:#fff;padding:.4rem .8rem;border-radius:2px;cursor:pointer;transition:all .2s;margin-right:.5rem}
+.lang-switch{display:flex;align-items:center;gap:.28rem}
+.lang-btn{font-family:var(--font-sans);font-size:.78rem;font-weight:600;letter-spacing:.06em;background:none;border:1px solid rgba(255,255,255,.45);color:#fff;padding:.38rem .58rem;border-radius:2px;cursor:pointer;transition:all .2s;line-height:1;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-width:2.15rem}
 .lang-btn:hover{border-color:#fff;color:#fff}
+.lang-btn.is-on{background:rgba(255,255,255,.16);border-color:#fff}
 nav.scrolled .logo{color:var(--ink)}
 nav.scrolled .logo em{color:var(--gold)}
 nav.scrolled .nav-links a{color:var(--ink2)}
 nav.scrolled .nav-links a:hover{color:var(--gold)}
 nav.scrolled .nav-cta{background:var(--ink);color:#fff}
 nav.scrolled .nav-cta:hover{background:var(--gold)}
-nav.scrolled .lang-btn{border-color:var(--border);color:var(--mid)}
+nav.scrolled .lang-btn{border-color:var(--border);color:var(--mid);background:transparent}
 nav.scrolled .lang-btn:hover{border-color:var(--gold);color:var(--gold)}
+nav.scrolled .lang-btn.is-on{border-color:var(--gold);color:var(--gold);background:var(--gold-bg)}
 
 /* ─── HERO ─── */
 #hero{position:relative;height:100vh;min-height:640px;display:flex;align-items:center;justify-content:center;overflow:hidden}
@@ -265,7 +272,11 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     <li><a href="/gear/" data-en="Travel Gear" data-es="Equipo de viaje">Travel Gear</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:.5rem">
-    <button class="lang-btn" id="langBtn" onclick="toggleLang()">ES</button>
+    <div class="lang-switch" role="navigation" aria-label="Language">
+      <button type="button" class="lang-btn is-on" id="langEn" onclick="setLang('en')" aria-pressed="true">EN</button>
+      <button type="button" class="lang-btn" id="langEs" onclick="setLang('es')" aria-pressed="false">ES</button>
+      <a class="lang-btn" href="/zh/" hreflang="zh-Hans" lang="zh-Hans">ZH</a>
+    </div>
     <a href="#contact" class="nav-cta" data-en="Start Planning" data-es="Planificar">Start Planning</a>
   </div>
 </nav>
@@ -651,6 +662,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
         <li><a href="/peru-honeymoon/" data-en="Honeymoon" data-es="Luna de miel">Honeymoon</a></li>
         <li><a href="/peru-family-private-tour/" data-en="Family tour" data-es="Viaje en familia">Family tour</a></li>
         <li><a href="/es/viaje-de-lujo-a-peru-a-medida/">Español</a></li>
+        <li><a href="/zh/" hreflang="zh-Hans">中文</a></li>
       </ul>
     </div>
     <div>
@@ -726,11 +738,15 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     window.open("https://wa.me/51982521128?text=" + encodeURIComponent(text), '_blank');
   }
 
-  // LANGUAGE
+  // LANGUAGE — EN and ES share this page. ZH is a separate URL.
   let lang = 'en';
-  function toggleLang() {
-    lang = lang === 'en' ? 'es' : 'en';
-    document.getElementById('langBtn').textContent = lang === 'en' ? 'ES' : 'EN';
+  function setLang(next) {
+    lang = next === 'es' ? 'es' : 'en';
+    document.documentElement.lang = lang;
+    document.getElementById('langEn').classList.toggle('is-on', lang === 'en');
+    document.getElementById('langEs').classList.toggle('is-on', lang === 'es');
+    document.getElementById('langEn').setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+    document.getElementById('langEs').setAttribute('aria-pressed', lang === 'es' ? 'true' : 'false');
     document.querySelectorAll('[data-en]').forEach(el => {
       const t = el.getAttribute('data-' + lang);
       if (t) el.innerHTML = t;
@@ -751,6 +767,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
       ? 'Private Peru,<br><em>Made Entirely Yours</em>'
       : 'Perú privado,<br><em>hecho a tu medida</em>';
   }
+  if (new URLSearchParams(location.search).get('lang') === 'es') setLang('es');
 </script>
 </body>
 </html>

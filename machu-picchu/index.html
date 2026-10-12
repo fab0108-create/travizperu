@@ -6,6 +6,9 @@
 <title>Private Machu Picchu Tours, Designed Around You | TravizPeru</title>
 <meta name="description" content="Private Machu Picchu visits with timed entry, your own guide, and trains arranged in advance. Designed in Lima by Francisco Arriz Barrantes, APOTUR AP030-11.">
 <link rel="canonical" href="https://travizperu.com/machu-picchu/">
+<link rel="alternate" hreflang="en" href="https://travizperu.com/machu-picchu/">
+<link rel="alternate" hreflang="zh-Hans" href="https://travizperu.com/zh/machu-picchu/">
+<link rel="alternate" hreflang="x-default" href="https://travizperu.com/machu-picchu/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Private Machu Picchu Tours, Designed Around You | TravizPeru">
 <meta property="og:description" content="Private Machu Picchu visits with timed entry, your own guide, and trains arranged in advance. Designed in Lima by Francisco Arriz Barrantes, APOTUR AP030-11.">
@@ -14,6 +17,7 @@
 <meta property="og:image:width" content="1600">
 <meta property="og:image:height" content="1067">
 <meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
@@ -60,6 +64,10 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
 nav { display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 4rem; border-bottom: 1px solid rgba(201,168,76,0.15); background: rgba(10,10,10,0.96); }
 .logo { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.12em; color: var(--gold); text-decoration: none; }
 .logo span { color: var(--white); }
+.nav-end { display: flex; align-items: center; gap: 1.15rem; }
+.lang-switch { display: flex; align-items: center; gap: .3rem; }
+.lang-btn { font-family: var(--font-ui); font-size: .72rem; letter-spacing: .08em; color: rgba(250,248,244,.6); text-decoration: none; border: 1px solid rgba(201,168,76,.35); padding: .32rem .55rem; line-height: 1; }
+.lang-btn.is-on, .lang-btn:hover { color: var(--gold); border-color: var(--gold); }
 .back-link { font-family: var(--font-ui); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(250,248,244,0.7); text-decoration: none; transition: color 0.3s; }
 .back-link:hover { color: var(--gold); }
 .hero-img { position: relative; height: 62vh; min-height: 340px; max-height: 720px; display: flex; align-items: flex-end; padding: 3rem 4rem; overflow: hidden; }
@@ -114,7 +122,13 @@ footer a { color: var(--gold); text-decoration: none; }
 
 <nav>
 <a href="https://travizperu.com/" class="logo">Traviz<span>Peru</span></a>
+<div class="nav-end">
+<span class="lang-switch" aria-label="Language">
+<a class="lang-btn is-on" href="https://travizperu.com/machu-picchu/" hreflang="en" aria-current="page">EN</a>
+<a class="lang-btn" href="https://travizperu.com/zh/machu-picchu/" hreflang="zh-Hans">ZH</a>
+</span>
 <a href="https://travizperu.com/" class="back-link">← Back to TravizPeru</a>
+</div>
 </nav>
 
 <div class="hero-img">
