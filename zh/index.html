@@ -7,6 +7,7 @@
 <link rel="canonical" href="https://travizperu.com/zh/">
 <link rel="alternate" hreflang="en" href="https://travizperu.com/">
 <link rel="alternate" hreflang="zh-Hans" href="https://travizperu.com/zh/">
+<link rel="alternate" hreflang="ja" href="https://travizperu.com/ja/">
 <link rel="alternate" hreflang="x-default" href="https://travizperu.com/">
 <meta property="og:title" content="TravizPeru — 私人秘鲁，完全为您而作">
 <meta property="og:description" content="全程私人、量身定制的秘鲁旅程，由一位在当地工作超过二十二年的人从利马设计。">
@@ -57,12 +58,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 nav.scrolled{background:rgba(250,248,243,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:.8rem 3rem}
 .logo{font-family:var(--font-serif);font-size:1.3rem;color:#fff;letter-spacing:.01em}
 .logo em{font-style:italic;color:rgba(255,255,255,.86)}
-.nav-links{display:flex;gap:2rem;list-style:none;font-size:.88rem;color:rgba(255,255,255,.88)}
+.nav-links{display:flex;gap:1.15rem;list-style:none;font-size:.84rem;color:rgba(255,255,255,.88)}
 .nav-links a{color:rgba(255,255,255,.88);transition:color .2s}
 .nav-links a:hover{color:#fff}
 .nav-cta{font-size:.85rem;font-weight:600;background:#fff;color:var(--ink);padding:.55rem 1.4rem;border-radius:2px;transition:background .2s}
 .nav-cta:hover{background:var(--cream)}
-.lang-switch{display:flex;align-items:center;gap:.28rem}
+.lang-switch{display:flex;align-items:center;gap:.28rem;flex-shrink:0}
 .lang-btn{font-family:var(--font-sans);font-size:.78rem;font-weight:600;letter-spacing:.06em;background:none;border:1px solid rgba(255,255,255,.45);color:#fff;padding:.38rem .58rem;border-radius:2px;cursor:pointer;transition:all .2s;line-height:1;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-width:2.15rem}
 .lang-btn:hover{border-color:#fff;color:#fff}
 .lang-btn.is-on{background:rgba(255,255,255,.16);border-color:#fff}
@@ -160,15 +161,9 @@ section{padding:6rem 3rem}
 .exp-card.highlight .exp-link{color:#fff}
 
 /* ─── BEYOND PERU ─── */
-#beyond{background:var(--cream);border-top:1px solid var(--border)}
-.beyond-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2rem;margin-top:3.2rem}
-.beyond-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
-.beyond-credit{margin:.55rem 0 0;font-size:.68rem;letter-spacing:.02em;color:var(--mid)}
-.beyond-credit a{color:var(--mid);text-decoration:underline;text-underline-offset:2px}
-.beyond-name{font-family:var(--font-serif);font-size:1.45rem;font-weight:400;margin-top:1rem}
-.beyond-place{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:.35rem 0 .75rem}
-.beyond-desc{font-size:.98rem;color:var(--ink2);line-height:1.65;margin-bottom:1.15rem}
-.beyond-actions{display:flex;flex-direction:column;align-items:flex-start;gap:.4rem}
+.footer-col-title.footer-beyond{text-transform:none;letter-spacing:.02em;line-height:1.45;font-weight:600}
+.footer-beyond a{color:rgba(255,255,255,.72);font-size:.9rem}
+.footer-beyond a:hover{color:#fff}
 
 /* ─── TESTIMONIALS ─── */
 #testimonials{background:var(--cream)}
@@ -247,7 +242,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   .dest-card.big,.dest-card.sm,.dest-card.sm2,.dest-card.sm3,.dest-card.sm4{grid-column:span 1;aspect-ratio:4/3}
   .process-grid{grid-template-columns:1fr}
   .exp-grid{grid-template-columns:1fr}
-  .beyond-grid{grid-template-columns:1fr;gap:2.6rem}
   .testi-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr;gap:2.5rem}
   .form-grid{grid-template-columns:1fr}
@@ -256,7 +250,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   .footer-bottom{flex-direction:column;gap:.4rem;text-align:center}
 }
 
-.hero-label,.section-label,.exp-tag,.beyond-place,.cinfo-label,.footer-col-title,.hero-scroll{letter-spacing:.08em;text-transform:none}
+.hero-label,.section-label,.exp-tag,.cinfo-label,.footer-col-title,.hero-scroll{letter-spacing:.08em;text-transform:none}
 .hero-title{font-size:clamp(2.15rem,5vw,4.1rem);line-height:1.25;font-weight:500}
 .hero-title em,.section-title em{font-style:normal}
 .section-title{line-height:1.35;font-weight:500;max-width:14em}
@@ -270,6 +264,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   <ul class="nav-links">
     <li><a href="/zh/about/">关于我们</a></li>
     <li><a href="#destinations">目的地</a></li>
+    <li><a href="/zh/beyond-peru/">秘鲁之外</a></li>
     <li><a href="#experiences">体验</a></li>
     <li><a href="#testimonials">旅客的话</a></li>
     <li><a href="/blog/">Blog</a></li>
@@ -280,6 +275,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
       <a class="lang-btn" href="/" hreflang="en">EN</a>
       <a class="lang-btn" href="/?lang=es" hreflang="es">ES</a>
       <a class="lang-btn is-on" href="/zh/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">ZH</a>
+      <a class="lang-btn" href="/ja/" hreflang="ja" lang="ja">JA</a>
     </div>
     <a href="#contact" class="nav-cta">开始规划</a>
   </div>
@@ -444,49 +440,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   </div>
 </section>
 
-<section id="beyond">
-  <div class="container">
-    <p class="section-label">秘鲁之外</p>
-    <h2 class="section-title">同样的用心，<em>再远一些</em></h2>
-    <p class="section-lead">阿根廷与巴西的私人定制旅程。可以单独成行，也可以接在秘鲁之前或之后。没有固定出发日。</p>
-    <div class="beyond-grid">
-      <article class="beyond-card" id="iguazu">
-        <img src="/images/iguazu.webp?v=20261012" width="1400" height="934" alt="伊瓜苏瀑布：雨林里一道白色的马蹄形水帘，位于阿根廷与巴西边境。" loading="lazy" decoding="async">
-        <p class="beyond-credit">图片：<a href="https://commons.wikimedia.org/wiki/File:Iguaz%C3%BA_Falls_01.jpg">Bernard Gagnon</a>，<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></p>
-        <h3 class="beyond-name">伊瓜苏瀑布</h3>
-        <p class="beyond-place">阿根廷与巴西</p>
-        <p class="beyond-desc">阿根廷与巴西交界处，一道白色的水帘弯成马蹄。</p>
-        <div class="beyond-actions">
-          <a class="exp-link" href="https://wa.me/51982521128?text=%E6%82%A8%E5%A5%BD%EF%BC%8CFrancisco%E3%80%82%E6%88%91%E6%83%B3%E8%A6%81%E4%B8%80%E4%BB%BD%E5%89%8D%E5%BE%80%E4%BC%8A%E7%93%9C%E8%8B%8F%E7%80%91%E5%B8%83%E7%9A%84%E7%A7%81%E4%BA%BA%E5%AE%9A%E5%88%B6%E8%A1%8C%E7%A8%8B%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%B8%8E%E7%A7%98%E9%B2%81%E8%A1%94%E6%8E%A5%E3%80%82">在 WhatsApp 上询问</a>
-          <a class="exp-link" href="#contact" onclick="var s=document.getElementById('fp-dest'); if(s) s.value='伊瓜苏瀑布';">索取方案</a>
-        </div>
-      </article>
-      <article class="beyond-card" id="buenos-aires">
-        <img src="/images/buenos-aires.webp?v=20261011b" width="1600" height="1066" alt="黄昏时分，从高处看布宜诺斯艾利斯的方尖碑与七月九日大道。" loading="lazy" decoding="async">
-        <p class="beyond-credit">图片：<a href="https://commons.wikimedia.org/wiki/File:20181210_OBELISCO_VISTA_IMG_6525.jpg">Enrico Fantoni / Subse Contenidos / GCBA</a>，<a href="https://creativecommons.org/licenses/by/2.5/ar/">CC BY 2.5 AR</a></p>
-        <h3 class="beyond-name">布宜诺斯艾利斯</h3>
-        <p class="beyond-place">阿根廷</p>
-        <p class="beyond-desc">黄昏时分，从高处看方尖碑与七月九日大道。</p>
-        <div class="beyond-actions">
-          <a class="exp-link" href="https://wa.me/51982521128?text=%E6%82%A8%E5%A5%BD%EF%BC%8CFrancisco%E3%80%82%E6%88%91%E6%83%B3%E8%A6%81%E4%B8%80%E4%BB%BD%E5%89%8D%E5%BE%80%E5%B8%83%E5%AE%9C%E8%AF%BA%E6%96%AF%E8%89%BE%E5%88%A9%E6%96%AF%E7%9A%84%E7%A7%81%E4%BA%BA%E5%AE%9A%E5%88%B6%E8%A1%8C%E7%A8%8B%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%B8%8E%E7%A7%98%E9%B2%81%E8%A1%94%E6%8E%A5%E3%80%82">在 WhatsApp 上询问</a>
-          <a class="exp-link" href="#contact" onclick="var s=document.getElementById('fp-dest'); if(s) s.value='布宜诺斯艾利斯';">索取方案</a>
-        </div>
-      </article>
-      <article class="beyond-card" id="rio">
-        <img src="/images/rio.webp?v=20261012" width="1400" height="856" alt="日落时分，糖面包山俯瞰里约热内卢的海湾。" loading="lazy" decoding="async">
-        <p class="beyond-credit">图片：<a href="https://commons.wikimedia.org/wiki/File:Rio_de_Janeiro_skyline_and_Sugarloaf_Mountain_at_sunset,_Brazil_3.jpg">Wilfredor</a>，<a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></p>
-        <h3 class="beyond-name">里约热内卢</h3>
-        <p class="beyond-place">巴西</p>
-        <p class="beyond-desc">糖面包山俯瞰海湾，城市在这一刻染上金色。</p>
-        <div class="beyond-actions">
-          <a class="exp-link" href="https://wa.me/51982521128?text=%E6%82%A8%E5%A5%BD%EF%BC%8CFrancisco%E3%80%82%E6%88%91%E6%83%B3%E8%A6%81%E4%B8%80%E4%BB%BD%E5%89%8D%E5%BE%80%E9%87%8C%E7%BA%A6%E7%83%AD%E5%86%85%E5%8D%A2%E7%9A%84%E7%A7%81%E4%BA%BA%E5%AE%9A%E5%88%B6%E8%A1%8C%E7%A8%8B%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%B8%8E%E7%A7%98%E9%B2%81%E8%A1%94%E6%8E%A5%E3%80%82">在 WhatsApp 上询问</a>
-          <a class="exp-link" href="#contact" onclick="var s=document.getElementById('fp-dest'); if(s) s.value='里约热内卢';">索取方案</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
 <section id="testimonials">
   <div class="container">
     <p class="section-label">旅客的话</p>
@@ -583,11 +536,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
             <option>亚马孙</option>
             <option>完整秘鲁</option>
             <option>定制路线</option>
-            <optgroup label="秘鲁之外">
-              <option>伊瓜苏瀑布</option>
-              <option>布宜诺斯艾利斯</option>
-              <option>里约热内卢</option>
-            </optgroup>
           </select>
         </div>
         <div class="field" style="margin-bottom:1rem">
@@ -638,12 +586,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
       </ul>
     </div>
     <div>
-      <p class="footer-col-title">秘鲁之外</p>
-      <ul class="footer-links">
-        <li><a href="#iguazu">伊瓜苏</a></li>
-        <li><a href="#buenos-aires">布宜诺斯艾利斯</a></li>
-        <li><a href="#rio">里约热内卢</a></li>
-      </ul>
+      <p class="footer-col-title footer-beyond"><a href="/zh/beyond-peru/">秘鲁之外</a></p>
     </div>
     <div>
       <p class="footer-col-title">体验</p>

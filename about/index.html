@@ -8,6 +8,7 @@
 <link rel="canonical" href="https://travizperu.com/about/">
 <link rel="alternate" hreflang="en" href="https://travizperu.com/about/">
 <link rel="alternate" hreflang="zh-Hans" href="https://travizperu.com/zh/about/">
+<link rel="alternate" hreflang="ja" href="https://travizperu.com/ja/about/">
 <link rel="alternate" hreflang="x-default" href="https://travizperu.com/about/">
 <meta property="og:title" content="About Us — Francisco Arriz Barrantes | TravizPeru">
 <meta property="og:description" content="Francisco Arriz Barrantes designs private Peru trips from Lima. 22 years in Peru tourism, APOTUR certified AP030-11.">
@@ -16,6 +17,7 @@
 <meta property="og:image" content="https://travizperu.com/images/machu-picchu.webp?v=20261012">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About Us — Francisco Arriz Barrantes | TravizPeru">
 <meta name="twitter:description" content="Francisco Arriz Barrantes designs private Peru trips from Lima. 22 years in Peru tourism, APOTUR certified AP030-11.">
@@ -42,7 +44,7 @@ nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-con
 .nav-links a{color:var(--ink2);text-decoration:none}
 .nav-links a:hover,.nav-links a[aria-current]{color:var(--gold)}
 .nav-end{display:flex;align-items:center;gap:.5rem}
-.lang-switch{display:flex;align-items:center;gap:.28rem}
+.lang-switch{display:flex;align-items:center;gap:.28rem;flex-shrink:0}
 .lang-btn{font-family:var(--font-sans);font-size:.78rem;font-weight:600;letter-spacing:.06em;background:none;border:1px solid var(--border);color:var(--mid);padding:.38rem .58rem;border-radius:2px;cursor:pointer;line-height:1;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-width:2.15rem}
 .lang-btn:hover,.lang-btn.is-on{border-color:var(--gold);color:var(--gold)}
 .lang-btn.is-on{background:var(--gold-bg)}
@@ -80,6 +82,7 @@ footer a{color:rgba(255,255,255,.85)}
   <ul class="nav-links">
     <li><a href="/about/" aria-current="page" data-en="About Us" data-es="Quiénes somos">About Us</a></li>
     <li><a href="/#destinations" data-en="Destinations" data-es="Destinos">Destinations</a></li>
+    <li><a href="/beyond-peru/" data-en="Beyond Peru / Otros destinos" data-es="Beyond Peru / Otros destinos">Beyond Peru / Otros destinos</a></li>
     <li><a href="/#experiences" data-en="Experiences" data-es="Experiencias">Experiences</a></li>
     <li><a href="/blog/">Blog</a></li>
   </ul>
@@ -88,6 +91,7 @@ footer a{color:rgba(255,255,255,.85)}
       <button type="button" class="lang-btn is-on" id="langEn" onclick="setLang('en')" aria-pressed="true">EN</button>
       <button type="button" class="lang-btn" id="langEs" onclick="setLang('es')" aria-pressed="false">ES</button>
       <a class="lang-btn" href="/zh/about/" hreflang="zh-Hans" lang="zh-Hans">ZH</a>
+      <a class="lang-btn" href="/ja/about/" hreflang="ja" lang="ja">JA</a>
     </div>
     <a class="nav-cta" href="/#contact" data-en="Start Planning" data-es="Planificar">Start Planning</a>
   </div>

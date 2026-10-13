@@ -9,6 +9,7 @@
 <link rel="canonical" href="https://travizperu.com/">
 <link rel="alternate" hreflang="en" href="https://travizperu.com/">
 <link rel="alternate" hreflang="zh-Hans" href="https://travizperu.com/zh/">
+<link rel="alternate" hreflang="ja" href="https://travizperu.com/ja/">
 <link rel="alternate" hreflang="x-default" href="https://travizperu.com/">
 <meta property="og:title" content="TravizPeru — Private Peru, Made Entirely Yours">
 <meta property="og:description" content="Private, tailor-made travel across Peru, designed by a 22-year local expert.">
@@ -19,6 +20,7 @@
 <meta property="og:image:height" content="1067">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TravizPeru — Private Peru, Made Entirely Yours">
 <meta name="twitter:description" content="Private, tailor-made travel across Peru, designed by a 22-year local expert.">
@@ -58,12 +60,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 nav.scrolled{background:rgba(250,248,243,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:.8rem 3rem}
 .logo{font-family:var(--font-serif);font-size:1.3rem;color:#fff;letter-spacing:.01em}
 .logo em{font-style:italic;color:rgba(255,255,255,.86)}
-.nav-links{display:flex;gap:2rem;list-style:none;font-size:.88rem;color:rgba(255,255,255,.88)}
+.nav-links{display:flex;gap:1.15rem;list-style:none;font-size:.84rem;color:rgba(255,255,255,.88)}
 .nav-links a{color:rgba(255,255,255,.88);transition:color .2s}
 .nav-links a:hover{color:#fff}
 .nav-cta{font-size:.85rem;font-weight:600;background:#fff;color:var(--ink);padding:.55rem 1.4rem;border-radius:2px;transition:background .2s}
 .nav-cta:hover{background:var(--cream)}
-.lang-switch{display:flex;align-items:center;gap:.28rem}
+.lang-switch{display:flex;align-items:center;gap:.28rem;flex-shrink:0}
 .lang-btn{font-family:var(--font-sans);font-size:.78rem;font-weight:600;letter-spacing:.06em;background:none;border:1px solid rgba(255,255,255,.45);color:#fff;padding:.38rem .58rem;border-radius:2px;cursor:pointer;transition:all .2s;line-height:1;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-width:2.15rem}
 .lang-btn:hover{border-color:#fff;color:#fff}
 .lang-btn.is-on{background:rgba(255,255,255,.16);border-color:#fff}
@@ -160,16 +162,9 @@ section{padding:6rem 3rem}
 .exp-link:hover{color:var(--gold)}
 .exp-card.highlight .exp-link{color:#fff}
 
-/* ─── BEYOND PERU ─── */
-#beyond{background:var(--cream);border-top:1px solid var(--border)}
-.beyond-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2rem;margin-top:3.2rem}
-.beyond-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
-.beyond-credit{margin:.55rem 0 0;font-size:.68rem;letter-spacing:.02em;color:var(--mid)}
-.beyond-credit a{color:var(--mid);text-decoration:underline;text-underline-offset:2px}
-.beyond-name{font-family:var(--font-serif);font-size:1.45rem;font-weight:400;margin-top:1rem}
-.beyond-place{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:.35rem 0 .75rem}
-.beyond-desc{font-size:.98rem;color:var(--ink2);line-height:1.65;margin-bottom:1.15rem}
-.beyond-actions{display:flex;flex-direction:column;align-items:flex-start;gap:.4rem}
+.footer-col-title.footer-beyond{text-transform:none;letter-spacing:.01em;line-height:1.45;font-weight:600}
+.footer-beyond a{color:rgba(255,255,255,.72);font-size:.9rem}
+.footer-beyond a:hover{color:#fff}
 
 /* ─── TESTIMONIALS ─── */
 #testimonials{background:var(--cream)}
@@ -248,7 +243,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   .dest-card.big,.dest-card.sm,.dest-card.sm2,.dest-card.sm3,.dest-card.sm4{grid-column:span 1;aspect-ratio:4/3}
   .process-grid{grid-template-columns:1fr}
   .exp-grid{grid-template-columns:1fr}
-  .beyond-grid{grid-template-columns:1fr;gap:2.6rem}
   .testi-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr;gap:2.5rem}
   .form-grid{grid-template-columns:1fr}
@@ -266,6 +260,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   <ul class="nav-links">
     <li><a href="/about/" data-en="About Us" data-es="Quiénes somos">About Us</a></li>
     <li><a href="#destinations" data-en="Destinations" data-es="Destinos">Destinations</a></li>
+    <li><a href="/beyond-peru/" data-en="Beyond Peru / Otros destinos" data-es="Beyond Peru / Otros destinos">Beyond Peru / Otros destinos</a></li>
     <li><a href="#experiences" data-en="Experiences" data-es="Experiencias">Experiences</a></li>
     <li><a href="#testimonials" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
     <li><a href="/blog/">Blog</a></li>
@@ -276,6 +271,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
       <button type="button" class="lang-btn is-on" id="langEn" onclick="setLang('en')" aria-pressed="true">EN</button>
       <button type="button" class="lang-btn" id="langEs" onclick="setLang('es')" aria-pressed="false">ES</button>
       <a class="lang-btn" href="/zh/" hreflang="zh-Hans" lang="zh-Hans">ZH</a>
+      <a class="lang-btn" href="/ja/" hreflang="ja" lang="ja">JA</a>
     </div>
     <a href="#contact" class="nav-cta" data-en="Start Planning" data-es="Planificar">Start Planning</a>
   </div>
@@ -445,50 +441,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   </div>
 </section>
 
-<!-- BEYOND PERU -->
-<section id="beyond">
-  <div class="container">
-    <p class="section-label" data-en="Otros destinos / Beyond Peru" data-es="Otros destinos / Beyond Peru">Otros destinos / Beyond Peru</p>
-    <h2 class="section-title" data-en="The same care, <em>further afield</em>" data-es="El mismo cuidado, <em>un poco más lejos</em>">The same care, <em>further afield</em></h2>
-    <p class="section-lead" data-en="Private, tailor-made journeys in Argentina and Brazil. On their own, or added before or after Peru. No set departures." data-es="Viajes privados y a medida en Argentina y Brasil. Solos, o sumados antes o después del Perú. Sin salidas fijas.">Private, tailor-made journeys in Argentina and Brazil. On their own, or added before or after Peru. No set departures.</p>
-    <div class="beyond-grid">
-      <article class="beyond-card" id="iguazu">
-        <img src="/images/iguazu.webp?v=20261012" width="1400" height="934" alt="Iguazú Falls, a wide horseshoe of white water in the rainforest on the Argentina–Brazil border." data-alt-en="Iguazú Falls, a wide horseshoe of white water in the rainforest on the Argentina–Brazil border." data-alt-es="Las Cataratas del Iguazú, una herradura de agua blanca en la selva, en la frontera de Argentina y Brasil." loading="lazy" decoding="async">
-        <p class="beyond-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Iguaz%C3%BA_Falls_01.jpg">Bernard Gagnon</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></p>
-        <h3 class="beyond-name">Iguazú Falls</h3>
-        <p class="beyond-place" data-en="Argentina &amp; Brazil" data-es="Argentina y Brasil">Argentina &amp; Brazil</p>
-        <p class="beyond-desc" data-en="A horseshoe of white water where Argentina meets Brazil." data-es="Una herradura de agua blanca donde Argentina se encuentra con Brasil.">A horseshoe of white water where Argentina meets Brazil.</p>
-        <div class="beyond-actions">
-          <a class="exp-link" data-en="Ask on WhatsApp" data-es="Escribir por WhatsApp" data-href-en="https://wa.me/51982521128?text=Hello%20Francisco%2C%20I%20would%20like%20a%20private%2C%20tailor-made%20trip%20to%20Iguaz%C3%BA%20Falls.%20It%20can%20be%20combined%20with%20Peru." data-href-es="https://wa.me/51982521128?text=Hola%20Francisco%2C%20busco%20un%20viaje%20privado%20y%20a%20medida%20a%20las%20Cataratas%20del%20Iguaz%C3%BA.%20Puede%20combinarse%20con%20Per%C3%BA." href="https://wa.me/51982521128?text=Hello%20Francisco%2C%20I%20would%20like%20a%20private%2C%20tailor-made%20trip%20to%20Iguaz%C3%BA%20Falls.%20It%20can%20be%20combined%20with%20Peru.">Ask on WhatsApp</a>
-          <a class="exp-link" href="#contact" onclick="var s=document.getElementById('fp-dest'); if(s) s.value='Iguazú Falls';" data-en="Request a quote" data-es="Pedir una cotización">Request a quote</a>
-        </div>
-      </article>
-      <article class="beyond-card" id="buenos-aires">
-        <img src="/images/buenos-aires.webp?v=20261011b" width="1600" height="1066" alt="Elevated view of the Obelisco and Avenida 9 de Julio at dusk." data-alt-en="Elevated view of the Obelisco and Avenida 9 de Julio at dusk." data-alt-es="Vista elevada del Obelisco y la Avenida 9 de Julio al atardecer." loading="lazy" decoding="async">
-        <p class="beyond-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:20181210_OBELISCO_VISTA_IMG_6525.jpg">Enrico Fantoni / Subse Contenidos / GCBA</a>, <a href="https://creativecommons.org/licenses/by/2.5/ar/">CC BY 2.5 AR</a></p>
-        <h3 class="beyond-name">Buenos Aires</h3>
-        <p class="beyond-place">Argentina</p>
-        <p class="beyond-desc" data-en="An elevated view of the Obelisco and Avenida 9 de Julio at dusk." data-es="Una vista elevada del Obelisco y la Avenida 9 de Julio al atardecer.">An elevated view of the Obelisco and Avenida 9 de Julio at dusk.</p>
-        <div class="beyond-actions">
-          <a class="exp-link" data-en="Ask on WhatsApp" data-es="Escribir por WhatsApp" data-href-en="https://wa.me/51982521128?text=Hello%20Francisco%2C%20I%20would%20like%20a%20private%2C%20tailor-made%20trip%20to%20Buenos%20Aires.%20It%20can%20be%20combined%20with%20Peru." data-href-es="https://wa.me/51982521128?text=Hola%20Francisco%2C%20busco%20un%20viaje%20privado%20y%20a%20medida%20a%20Buenos%20Aires.%20Puede%20combinarse%20con%20Per%C3%BA." href="https://wa.me/51982521128?text=Hello%20Francisco%2C%20I%20would%20like%20a%20private%2C%20tailor-made%20trip%20to%20Buenos%20Aires.%20It%20can%20be%20combined%20with%20Peru.">Ask on WhatsApp</a>
-          <a class="exp-link" href="#contact" onclick="var s=document.getElementById('fp-dest'); if(s) s.value='Buenos Aires';" data-en="Request a quote" data-es="Pedir una cotización">Request a quote</a>
-        </div>
-      </article>
-      <article class="beyond-card" id="rio">
-        <img src="/images/rio.webp?v=20261012" width="1400" height="856" alt="Sugarloaf Mountain over the bay of Rio de Janeiro at sunset." data-alt-en="Sugarloaf Mountain over the bay of Rio de Janeiro at sunset." data-alt-es="El Pan de Azúcar sobre la bahía de Río de Janeiro al atardecer." loading="lazy" decoding="async">
-        <p class="beyond-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Rio_de_Janeiro_skyline_and_Sugarloaf_Mountain_at_sunset,_Brazil_3.jpg">Wilfredor</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></p>
-        <h3 class="beyond-name">Rio de Janeiro</h3>
-        <p class="beyond-place" data-en="Brazil" data-es="Brasil">Brazil</p>
-        <p class="beyond-desc" data-en="Sugarloaf over the bay, at the hour the city turns gold." data-es="El Pan de Azúcar sobre la bahía, a la hora en que la ciudad se vuelve oro.">Sugarloaf over the bay, at the hour the city turns gold.</p>
-        <div class="beyond-actions">
-          <a class="exp-link" data-en="Ask on WhatsApp" data-es="Escribir por WhatsApp" data-href-en="https://wa.me/51982521128?text=Hello%20Francisco%2C%20I%20would%20like%20a%20private%2C%20tailor-made%20trip%20to%20Rio%20de%20Janeiro.%20It%20can%20be%20combined%20with%20Peru." data-href-es="https://wa.me/51982521128?text=Hola%20Francisco%2C%20busco%20un%20viaje%20privado%20y%20a%20medida%20a%20R%C3%ADo%20de%20Janeiro.%20Puede%20combinarse%20con%20Per%C3%BA." href="https://wa.me/51982521128?text=Hello%20Francisco%2C%20I%20would%20like%20a%20private%2C%20tailor-made%20trip%20to%20Rio%20de%20Janeiro.%20It%20can%20be%20combined%20with%20Peru.">Ask on WhatsApp</a>
-          <a class="exp-link" href="#contact" onclick="var s=document.getElementById('fp-dest'); if(s) s.value='Rio de Janeiro';" data-en="Request a quote" data-es="Pedir una cotización">Request a quote</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="container">
@@ -587,11 +539,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
             <option>Amazon</option>
             <option>Full Peru</option>
             <option>Custom Route</option>
-            <optgroup label="Beyond Peru" data-label-en="Beyond Peru" data-label-es="Otros destinos">
-              <option>Iguazú Falls</option>
-              <option>Buenos Aires</option>
-              <option>Rio de Janeiro</option>
-            </optgroup>
           </select>
         </div>
         <div class="field" style="margin-bottom:1rem">
@@ -643,12 +590,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
       </ul>
     </div>
     <div>
-      <p class="footer-col-title" data-en="Beyond Peru" data-es="Otros destinos">Beyond Peru</p>
-      <ul class="footer-links">
-        <li><a href="#iguazu">Iguazú</a></li>
-        <li><a href="#buenos-aires">Buenos Aires</a></li>
-        <li><a href="#rio">Rio de Janeiro</a></li>
-      </ul>
+      <p class="footer-col-title footer-beyond"><a href="/beyond-peru/" data-en="Beyond Peru / Otros destinos" data-es="Beyond Peru / Otros destinos">Beyond Peru / Otros destinos</a></p>
     </div>
     <div>
       <p class="footer-col-title" data-en="Experiences" data-es="Experiencias">Experiences</p>
@@ -663,6 +605,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
         <li><a href="/peru-family-private-tour/" data-en="Family tour" data-es="Viaje en familia">Family tour</a></li>
         <li><a href="/es/viaje-de-lujo-a-peru-a-medida/">Español</a></li>
         <li><a href="/zh/" hreflang="zh-Hans">中文</a></li>
+        <li><a href="/ja/" hreflang="ja">日本語</a></li>
       </ul>
     </div>
     <div>
