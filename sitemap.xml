@@ -343,4 +343,48 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://travizperu.com/ja/christmas-new-year-machu-picchu/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/christmas-new-year-machu-picchu/"/>
   </url>
+  <url>
+    <loc>https://travizperu.com/groups/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/groups/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/grupos/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://travizperu.com/zh/groups/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://travizperu.com/ja/groups/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/groups/"/>
+  </url>
+  <url>
+    <loc>https://travizperu.com/es/grupos/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/groups/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/grupos/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://travizperu.com/zh/groups/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://travizperu.com/ja/groups/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/groups/"/>
+  </url>
+  <url>
+    <loc>https://travizperu.com/zh/groups/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/groups/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/grupos/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://travizperu.com/zh/groups/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://travizperu.com/ja/groups/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/groups/"/>
+  </url>
+  <url>
+    <loc>https://travizperu.com/ja/groups/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/groups/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/grupos/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://travizperu.com/zh/groups/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://travizperu.com/ja/groups/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/groups/"/>
+  </url>
 </urlset>
