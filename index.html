@@ -235,7 +235,10 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   nav.scrolled{padding:.7rem 1.2rem}
   .nav-cta{display:none}
   .nav-links{gap:0}
-  .nav-links li:not(:first-child){display:none}
+  .nav-links li:not(:first-child):not(.nav-grp){display:none}
+  nav{flex-wrap:wrap;row-gap:.45rem}
+  .nav-links{order:3;width:100%;gap:1.4rem;font-size:.8rem}
+  .nav-links li{white-space:nowrap}
   section{padding:4rem 1.2rem}
   #trust{padding:1rem 1.2rem}
   .trust-inner{gap:1.5rem;justify-content:flex-start}
@@ -262,7 +265,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     <li><a href="#destinations" data-en="Destinations" data-es="Destinos">Destinations</a></li>
     <li><a href="/beyond-peru/" data-en="Beyond Peru / Otros destinos" data-es="Beyond Peru / Otros destinos">Beyond Peru / Otros destinos</a></li>
     <li><a href="#experiences" data-en="Experiences" data-es="Experiencias">Experiences</a></li>
-    <li><a href="/groups/" data-href-en="/groups/" data-href-es="/es/grupos/" data-en="Groups &amp; Events" data-es="Grupos y Eventos">Groups &amp; Events</a></li>
+    <li class="nav-grp"><a href="/groups/" data-href-en="/groups/" data-href-es="/es/grupos/" data-en="Groups &amp; Events" data-es="Grupos y Eventos">Groups &amp; Events</a></li>
     <li><a href="#testimonials" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
     <li><a href="/blog/">Blog</a></li>
     <li><a href="/gear/" data-en="Travel Gear" data-es="Equipo de viaje">Travel Gear</a></li>

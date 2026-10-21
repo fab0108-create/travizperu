@@ -232,7 +232,10 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   nav.scrolled{padding:.7rem 1.2rem}
   .nav-cta{display:none}
   .nav-links{gap:0}
-  .nav-links li:not(:first-child){display:none}
+  .nav-links li:not(:first-child):not(.nav-grp){display:none}
+  nav{flex-wrap:wrap;row-gap:.45rem}
+  .nav-links{order:3;width:100%;gap:1.4rem;font-size:.8rem}
+  .nav-links li{white-space:nowrap}
   section{padding:4rem 1.2rem}
   #trust{padding:1rem 1.2rem}
   .trust-inner{gap:1.5rem;justify-content:flex-start}
@@ -289,7 +292,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     <li><a href="/zh/#destinations">目的地</a></li>
     <li><a href="/zh/beyond-peru/">秘鲁之外</a></li>
     <li><a href="/zh/#experiences">体验</a></li>
-    <li><a href="/zh/groups/" aria-current="page">会议与团体</a></li>
+    <li class="nav-grp"><a href="/zh/groups/" aria-current="page">会议与团体</a></li>
     <li><a href="/zh/#testimonials">旅客的话</a></li>
     <li><a href="/blog/">Blog</a></li>
     <li><a href="/gear/">旅行装备</a></li>
