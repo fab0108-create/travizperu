@@ -251,6 +251,30 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
   .footer-bottom{flex-direction:column;gap:.4rem;text-align:center}
 }
 </style>
+<style id="groups-css">
+#groups{padding:0;background:#111}
+.grp-hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.grp-hero img.grp-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.grp-hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,8,5,.15) 0%,rgba(10,8,5,.45) 45%,rgba(10,8,5,.88) 100%)}
+.grp-inner{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:6rem 1.5rem 4rem;width:100%}
+.grp-label{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#E6C76A;margin-bottom:.8rem;font-weight:600}
+.grp-title{font-family:var(--font-serif,Georgia,serif);font-weight:400;font-size:clamp(2rem,5vw,3.8rem);line-height:1.08;max-width:760px;margin-bottom:1.1rem;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.grp-title em{color:#E6C76A}
+.grp-lead{font-size:1.08rem;line-height:1.7;max-width:640px;color:rgba(255,255,255,.92);margin-bottom:1.4rem}
+.grp-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.55rem 2rem;max-width:860px;margin:0 0 1.8rem;padding:0}
+.grp-list li{font-size:.95rem;line-height:1.5;color:rgba(255,255,255,.9);padding-left:1.1rem;position:relative}
+.grp-list li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;background:#E6C76A;border-radius:50%}
+.grp-btns{display:flex;flex-wrap:wrap;gap:.8rem}
+.grp-btn{display:inline-block;font-weight:600;font-size:.9rem;padding:.85rem 1.7rem;border-radius:2px;background:#fff;color:#1a1a1a;text-decoration:none}
+.grp-btn.wa{background:#25D366;color:#fff}
+.grp-credit{position:absolute;right:.8rem;bottom:.5rem;z-index:2;font-size:.68rem;color:rgba(255,255,255,.7)}
+.grp-credit a{color:rgba(255,255,255,.8)}
+.grp-cta{background:#1a1712;color:#fff;text-align:center;padding:4.5rem 1.5rem}
+.grp-cta h3{font-family:var(--font-serif,Georgia,serif);font-weight:400;font-size:clamp(1.6rem,3.4vw,2.5rem);margin-bottom:.8rem}
+.grp-cta p{max-width:620px;margin:0 auto 1.6rem;color:rgba(255,255,255,.82);line-height:1.7}
+.grp-cta .grp-btns{justify-content:center}
+@media(max-width:700px){.grp-hero{min-height:auto}.grp-inner{padding:5rem 1.2rem 3.2rem}.grp-lead{font-size:1rem}}
+</style>
 </head>
 <body>
 
@@ -262,6 +286,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
     <li><a href="#destinations" data-en="Destinations" data-es="Destinos">Destinations</a></li>
     <li><a href="/beyond-peru/" data-en="Beyond Peru / Otros destinos" data-es="Beyond Peru / Otros destinos">Beyond Peru / Otros destinos</a></li>
     <li><a href="#experiences" data-en="Experiences" data-es="Experiencias">Experiences</a></li>
+    <li><a href="#groups" data-en="Events &amp; Groups" data-es="Eventos y grupos">Events &amp; Groups</a></li>
     <li><a href="#testimonials" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
     <li><a href="/blog/">Blog</a></li>
     <li><a href="/gear/" data-en="Travel Gear" data-es="Equipo de viaje">Travel Gear</a></li>
@@ -443,6 +468,37 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:4rem 3rem 2rem}
 </section>
 
 <!-- TESTIMONIALS -->
+<!-- GROUPS: EVENTS & STUDENT TRIPS -->
+<section id="groups">
+  <div class="grp-hero">
+    <img class="grp-bg" src="/images/cusco-plaza.webp?v=20261020" width="1600" height="1066" alt="Plaza de Armas in Cusco at dusk, cathedral lit." data-alt-en="Plaza de Armas in Cusco at dusk, cathedral lit." data-alt-es="La Plaza de Armas del Cusco al atardecer, con la catedral iluminada." loading="lazy" decoding="async">
+    <div class="grp-inner">
+      <p class="grp-label" data-en="Events, congresses &amp; incentives" data-es="Eventos, congresos e incentivos">Events, congresses &amp; incentives</p>
+      <h2 class="grp-title" data-en="Gatherings that end <em>above the clouds</em>" data-es="Encuentros que terminan <em>sobre las nubes</em>">Gatherings that end <em>above the clouds</em></h2>
+      <p class="grp-lead" data-en="Your congress in Lima, your gala under the lights of Cusco, and the morning after, Machu Picchu. We plan the whole journey around your group, privately and to measure." data-es="Tu congreso en Lima, tu cena de gala bajo las luces del Cusco y, a la mañana siguiente, Machu Picchu. Organizamos el viaje entero alrededor de tu grupo, privado y a medida.">Your congress in Lima, your gala under the lights of Cusco, and the morning after, Machu Picchu. We plan the whole journey around your group, privately and to measure.</p>
+      <ul class="grp-list"><li data-en="Venues in Lima and Cusco, matched to your program" data-es="Sedes en Lima y Cusco, según tu programa">Venues in Lima and Cusco, matched to your program</li><li data-en="Airport transfers and on-the-ground logistics" data-es="Traslados desde el aeropuerto y logística en destino">Airport transfers and on-the-ground logistics</li><li data-en="Bilingual guides for every group" data-es="Guías bilingües para cada grupo">Bilingual guides for every group</li><li data-en="Gala dinners in colonial and contemporary settings" data-es="Cenas de gala en espacios coloniales y contemporáneos">Gala dinners in colonial and contemporary settings</li><li data-en="Post-congress tours to Machu Picchu and the Sacred Valley" data-es="Tours post-congreso a Machu Picchu y el Valle Sagrado">Post-congress tours to Machu Picchu and the Sacred Valley</li></ul>
+      <div class="grp-btns"><a href="#contact" class="grp-btn" data-en="Request a group quote" data-es="Solicitar cotización grupal">Request a group quote</a><a href="https://wa.me/51982521128" class="grp-btn wa">WhatsApp +51 982 521 128</a></div>
+    </div>
+    <p class="grp-credit" data-en="Photo: <a href=&quot;https://commons.wikimedia.org/wiki/File:Lascar_Cuzco_at_dusk_(Cuzco)_(4578174340).jpg&quot;>Jorge Láscar</a> / Wikimedia Commons, <a href=&quot;https://creativecommons.org/licenses/by/2.0&quot;>CC BY 2.0</a>" data-es="Foto: <a href=&quot;https://commons.wikimedia.org/wiki/File:Lascar_Cuzco_at_dusk_(Cuzco)_(4578174340).jpg&quot;>Jorge Láscar</a> / Wikimedia Commons, <a href=&quot;https://creativecommons.org/licenses/by/2.0&quot;>CC BY 2.0</a>">Photo: <a href="https://commons.wikimedia.org/wiki/File:Lascar_Cuzco_at_dusk_(Cuzco)_(4578174340).jpg">Jorge Láscar</a> / Wikimedia Commons, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></p>
+  </div>
+  <div class="grp-hero">
+    <img class="grp-bg" src="/images/rainbow-mountain.webp?v=20261020" width="1600" height="1066" alt="Rainbow Mountain, Vinicunca, red and gold stripes under a blue sky." data-alt-en="Rainbow Mountain, Vinicunca, red and gold stripes under a blue sky." data-alt-es="La Montaña de Colores, Vinicunca, franjas rojas y doradas bajo el cielo azul." loading="lazy" decoding="async">
+    <div class="grp-inner">
+      <p class="grp-label" data-en="Student &amp; educational trips" data-es="Viajes estudiantiles y educativos">Student &amp; educational trips</p>
+      <h2 class="grp-title" data-en="A classroom carved <em>into the Andes</em>" data-es="Un aula tallada <em>en los Andes</em>">A classroom carved <em>into the Andes</em></h2>
+      <p class="grp-lead" data-en="For universities and schools: Inca history walked step by step, Lima told through its streets and its kitchens, the Sacred Valley as a living lesson." data-es="Para universidades y colegios: la historia inca recorrida paso a paso, Lima contada por sus calles y su cocina, el Valle Sagrado como una lección viva.">For universities and schools: Inca history walked step by step, Lima told through its streets and its kitchens, the Sacred Valley as a living lesson.</p>
+      <ul class="grp-list"><li data-en="Educational itineraries: Machu Picchu, Sacred Valley, Lima history and gastronomy" data-es="Itinerarios educativos: Machu Picchu, Valle Sagrado, historia y gastronomía de Lima">Educational itineraries: Machu Picchu, Sacred Valley, Lima history and gastronomy</li><li data-en="Safety-first planning with your teachers" data-es="Planificación con la seguridad primero, junto a los docentes">Safety-first planning with your teachers</li><li data-en="Professional guides throughout the trip" data-es="Guías profesionales durante todo el viaje">Professional guides throughout the trip</li><li data-en="Coordination of travel insurance for the group" data-es="Coordinación del seguro de viaje del grupo">Coordination of travel insurance for the group</li></ul>
+      <div class="grp-btns"><a href="#contact" class="grp-btn" data-en="Request a group quote" data-es="Solicitar cotización grupal">Request a group quote</a><a href="https://wa.me/51982521128" class="grp-btn wa">WhatsApp +51 982 521 128</a></div>
+    </div>
+    <p class="grp-credit" data-en="Photo: <a href=&quot;https://commons.wikimedia.org/wiki/File:View_of_the_Rainbow_mountain.jpg&quot;>Brian Jeffery Beggerly</a> / Wikimedia Commons, <a href=&quot;https://creativecommons.org/licenses/by/2.0&quot;>CC BY 2.0</a>" data-es="Foto: <a href=&quot;https://commons.wikimedia.org/wiki/File:View_of_the_Rainbow_mountain.jpg&quot;>Brian Jeffery Beggerly</a> / Wikimedia Commons, <a href=&quot;https://creativecommons.org/licenses/by/2.0&quot;>CC BY 2.0</a>">Photo: <a href="https://commons.wikimedia.org/wiki/File:View_of_the_Rainbow_mountain.jpg">Brian Jeffery Beggerly</a> / Wikimedia Commons, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></p>
+  </div>
+  <div class="grp-cta">
+    <h3 data-en="Planning a group?" data-es="¿Organizas un grupo?">Planning a group?</h3>
+    <p data-en="Tell us dates, group size and purpose. We reply with a tailor-made group proposal. APOTUR member, code AP030-11." data-es="Cuéntanos fechas, tamaño del grupo y objetivo. Te respondemos con una propuesta grupal a medida. Miembro de APOTUR, código AP030-11.">Tell us dates, group size and purpose. We reply with a tailor-made group proposal. APOTUR member, code AP030-11.</p>
+    <div class="grp-btns"><a href="#contact" class="grp-btn" data-en="Request a group quote" data-es="Solicitar cotización grupal">Request a group quote</a><a href="https://wa.me/51982521128" class="grp-btn wa">WhatsApp +51 982 521 128</a></div>
+  </div>
+</section>
+
 <section id="testimonials">
   <div class="container">
     <p class="section-label" data-en="Testimonials" data-es="Testimonios">Testimonials</p>
