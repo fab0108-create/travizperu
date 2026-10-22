@@ -215,7 +215,7 @@ function sendInquiry() {
   if (dest && dest !== '行き先を選んでください') text += '\n行き先：' + dest;
   if (travelers && travelers !== '選んでください') text += '\n人数：' + travelers;
   text += '\n\nメッセージ：' + msg;
-  fetch('https://formsubmit.co/ajax/fab0108@gmail.com', {
+  fetch('https://formsubmit.co/ajax/travizperu@gmail.com', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({

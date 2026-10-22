@@ -215,7 +215,7 @@ function sendInquiry() {
   if (dest && dest !== '请选择目的地') text += '\n目的地：' + dest;
   if (travelers && travelers !== '请选择') text += '\n人数：' + travelers;
   text += '\n\n留言：' + msg;
-  fetch('https://formsubmit.co/ajax/fab0108@gmail.com', {
+  fetch('https://formsubmit.co/ajax/travizperu@gmail.com', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({
