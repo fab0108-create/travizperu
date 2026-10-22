@@ -242,7 +242,7 @@ function sendInquiry() {
   if (dest && dest !== 'Select destination...') text += "\nDestination: " + dest;
   if (travelers && travelers !== 'Select...') text += "\nTravelers: " + travelers;
   text += "\n\nMessage: " + msg;
-  fetch('https://formsubmit.co/ajax/fab0108@gmail.com', {
+  fetch('https://formsubmit.co/ajax/travizperu@gmail.com', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({
