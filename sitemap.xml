@@ -31,6 +31,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/beyond-peru/"/>
   </url>
   <url>
+    <loc>https://travizperu.com/costa-rica/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/costa-rica/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/costa-rica/"/>
+  </url>
+  <url>
     <loc>https://travizperu.com/machu-picchu/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
