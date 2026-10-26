@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Express Quote | Cotiza al instante – TravizPeru</title><link rel="canonical" href="https://travizperu.com/express-quote/"><meta name="description" content="Express Quote – instant price for private Sacred Valley &amp; Machu Picchu trips. Cotiza al instante.">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root{--cream:#FAF8F3;--ink:#1A1A1A;--mid:#6B6B6B;--border:#E2DDD6;--gold:#8B6914;--gold-bg:#F5EFE0}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,system-ui,sans-serif}
+.w{max-width:720px;margin:auto;padding:40px 20px}h1{font-family:'Libre Baskerville',Georgia,serif;margin:0}
+.sub{color:var(--gold);font-weight:600;margin:.3em 0 1.5em}label{display:block;margin:14px 0 4px;font-weight:500}
+select,input{width:100%;padding:10px;border:1px solid var(--border);border-radius:6px;font:inherit;box-sizing:border-box;background:#fff}
+.res{margin-top:24px;padding:20px;background:var(--gold-bg);border-radius:8px}.big{font-family:'Libre Baskerville',serif;font-size:1.8em}
+.note{color:var(--mid);font-size:.9em}.btn{display:inline-block;margin:10px 8px 0 0;padding:12px 18px;border-radius:6px;background:var(--gold);color:#fff;text-decoration:none;border:0;font:inherit;cursor:pointer}
+.lang{float:right}</style></head><body><div class="w">
+<button class="lang" onclick="setL(L=='en'?'es':'en')" id="lb">ES</button>
+<p class="note"><a href="/">← TravizPeru</a></p><h1>Express Quote</h1><p class="sub" data-t="sub"></p>
+<label data-t="prog"></label><select id="p"><option value="hsv" data-t="hsv"></option><option value="esv" data-t="esv"></option><option value="other" data-t="other"></option></select>
+<label data-t="cat"></label><select id="k"><option value="comfort">Comfort</option><option value="standard">Standard</option><option value="superior" selected>Superior</option><option value="first">First class</option><option value="luxury">Luxury</option></select>
+<label data-t="trav"></label><select id="n"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9+</option></select>
+<label data-t="date"></label><input id="d" type="month" min="2026-01" max="2027-12" value="2026-12">
+<label data-t="contact"></label><input id="c" placeholder="email / WhatsApp">
+<div class="res" id="r"></div>
+<p class="note" data-t="legal"></p></div>
+<form id="f" action="https://formsubmit.co/travizperu@gmail.com" method="POST" style="display:none"><input type="hidden" name="_subject" value="Express Quote – travizperu.com"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://travizperu.com/express-quote/?sent=1"><textarea name="quote" id="fq"></textarea><input name="contact" id="fc"></form>
+<script>
+// Solo precios finales por persona en USD, servicio privado.
+const P={"hsv":{"2026-12":{"comfort":{"1":1285,"2":813,"3t":697,"3s":[837,701],"4":645,"6":596,"8":583},"standard":{"1":1346,"2":831,"3t":703,"3s":[898,720],"4":663,"6":615,"8":602},"superior":{"1":1429,"2":867,"3t":772,"3s":[981,755],"4":700,"6":651,"8":637},"first":{"1":1562,"2":965,"3t":831,"3s":[1114,854],"4":797,"6":749,"8":736},"luxury":{"1":2328,"2":1329,"3t":1186,"3s":[1833,1205],"4":1143,"6":1093,"8":1082}},"2027":{"comfort":{"1":1322,"2":831,"3t":702,"3s":[869,718],"4":661,"6":611,"8":598},"standard":{"2":859},"superior":{"2":898},"first":{"2":994},"luxury":{"1":2323,"2":1334,"3t":1206,"3s":[1869,1221],"4":1164,"6":1114,"8":1101}}},"esv":{"2026-12":{"comfort":{"1":1669,"2":1021,"3t":866,"3s":[1072,871],"4":796,"6":743,"8":716},"standard":{"2":1044},"superior":{"2":1090},"first":{"2":1216},"luxury":{"1":2839,"2":1600,"3t":1431,"3s":[2195,1439],"4":1358,"6":1302,"8":1279}},"2027":{"comfort":{"1":1713,"2":1043,"3t":869,"3s":[1103,890],"4":813,"6":759,"8":731},"standard":{"2":1078},"superior":{"2":1128},"first":{"2":1253},"luxury":{"1":2844,"2":1613,"3t":1487,"3s":[2234,1459],"4":1382,"6":1328,"8":1300}}}};
+const T={en:{sub:"Instant price for your private Peru trip",prog:"Program",hsv:"Historic Sacred Valley 6D/5N – arrive in Cusco, straight to the Sacred Valley (Urubamba 2 nights, Cusco 3)",esv:"Eternal Sacred Valley 8D/7N – Lima 2 nights, Sacred Valley (Urubamba) 2, Cusco 3",other:"Other program (e.g. Peru Express, Special Peru, Magic of the Sacred Valley) – custom",cat:"Hotel category",trav:"Adults",occ:{"1":"single room","2":"double room","3t":"triple room","3s":"1 single + 1 double","4":"2 double rooms","6":"3 double rooms","8":"4 double rooms"},ad:"adults",or:"or",date:"Travel month",contact:"Email or WhatsApp",pp:"per person",tot:"Group total:",ref:"2027 reference rate.",
+ask:"We quote this combination tailor-made. Send us your details and we reply within 2 hours.",otherask:"We build the version with the Sacred Valley first (better for altitude). Ask us and we reply within 2 hours.",wa:"Confirm on WhatsApp",send:"Send request",
+legal:"Private services. Reference price in USD, subject to availability; we confirm within 2 hours. Flights NOT included (international or Lima–Cusco). Machu Picchu tickets subject to confirmation."},
+es:{sub:"Cotiza al instante tu viaje privado a Perú",prog:"Programa",hsv:"Historic Sacred Valley 6D/5N – llegada a Cusco y directo al Valle Sagrado (Urubamba 2 noches, Cusco 3)",esv:"Eternal Sacred Valley 8D/7N – Lima 2 noches, Valle Sagrado (Urubamba) 2, Cusco 3",other:"Otro programa (p. ej. Peru Express, Special Peru, Magic of the Sacred Valley) – a medida",cat:"Categoría de hotel",trav:"Adultos",occ:{"1":"habitación single","2":"habitación doble","3t":"habitación triple","3s":"1 single + 1 doble","4":"2 habitaciones dobles","6":"3 habitaciones dobles","8":"4 habitaciones dobles"},ad:"adultos",or:"o",date:"Mes de viaje",contact:"Email o WhatsApp",pp:"por persona",tot:"Total del grupo:",ref:"Tarifa referencial 2027.",
+ask:"Esta combinación la cotizamos a medida. Envíanos tus datos y respondemos en 2 horas.",otherask:"Armamos la variante con Valle Sagrado primero (mejor para la altura). Consúltanos y respondemos en 2 horas.",wa:"Confirmar por WhatsApp",send:"Enviar solicitud",
+legal:"Servicios privados. Precio referencial en USD, sujeto a disponibilidad; confirmamos en 2 horas. NO incluye vuelos (internacionales ni Lima–Cusco). Entradas a Machu Picchu sujetas a confirmación."}};
+let L=(navigator.language||'en').startsWith('es')?'es':'en';const $=i=>document.getElementById(i);
+function setL(l){L=l;document.documentElement.lang=l;$('lb').textContent=l=='en'?'ES':'EN';document.querySelectorAll('[data-t]').forEach(e=>e.textContent=T[l][e.dataset.t]);calc()}
+function opt(t,o,pp,n){const each=Array.isArray(pp)?pp:null,tot=each?each[0]+2*each[1]:pp*n,f=x=>'US$'+x.toLocaleString('en-US');
+ const pps=each?f(each[0])+' (single) + '+f(each[1])+' (×2)':f(pp)+' <small>'+t.pp+'</small>';
+ return {h:'<div><b>'+t.occ[o]+'</b></div><div class="big">'+pps+'</div><div>'+t.tot+' '+f(tot)+'</div>',s:t.occ[o]+': '+(each?f(each[0])+' + 2×'+f(each[1]):f(pp)+' '+t.pp)+', total '+f(tot)};}
+function calc(){const t=T[L],p=$('p').value,k=$('k').value,n=+$('n').value,d=$('d').value;let per=null,ref=false,h='',txt;
+ if(p!='other'&&d){if(d=='2026-12')per='2026-12';else if(d.startsWith('2027')){per='2027';ref=!(d=='2027-03'||d=='2027-07')}}
+ const prog=p=='other'?t.other:t[p],kn=$('k').selectedOptions[0].text,base='Express Quote: '+prog+' | '+kn+' | '+(n==9?'9+':n)+' '+t.ad+' | '+(d||'-');
+ const c=per?P[p][per][k]:null,keys=n==3?['3t','3s']:[String(n)],ok=c&&keys.filter(x=>c[x]!=null);
+ if(ok&&ok.length){const r=ok.map(o=>opt(t,o,c[o],n));h=r.map(x=>x.h).join('<p class="note">'+t.or+'</p>')+(ref?'<div class="note">'+t.ref+'</div>':'');txt=base+' | '+r.map(x=>x.s).join(' / ')+(ref?' – '+t.ref:'');}
+ else{h='<p>'+(p=='other'?t.otherask:t.ask)+'</p>';txt=base;}
+ h+='<a class="btn" target="_blank" href="https://wa.me/51982521128?text='+encodeURIComponent(txt)+'">'+t.wa+'</a><button class="btn" onclick="sub()">'+t.send+'</button>';
+ // PAGO CON TARJETA: pendiente de proveedor. Añadir aquí el botón cuando exista el enlace, p. ej.:
+ // h+='<a class="btn" href="ENLACE_DE_PAGO">'+t.pay+'</a>';
+ $('r').innerHTML=h;$('fq').value=txt}
+function sub(){$('fc').value=$('c').value;$('f').submit()}
+['p','k','n','d'].forEach(i=>$(i).addEventListener('change',calc));setL(L);
+</script></body></html>
