@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/beyond-peru/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/beyond-peru/"/>
@@ -32,13 +32,13 @@
   </url>
   <url>
     <loc>https://travizperu.com/costa-rica/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/costa-rica/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/costa-rica/"/>
   </url>
   <url>
     <loc>https://travizperu.com/machu-picchu/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/machu-picchu/"/>
@@ -65,7 +65,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/sacred-valley/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/sacred-valley/"/>
@@ -85,21 +85,23 @@
   </url>
   <url>
     <loc>https://travizperu.com/private-machu-picchu-tour/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://travizperu.com/luxury-private-tours-peru/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://travizperu.com/tailor-made-peru-itinerary-10-days/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/tailor-made-peru-itinerary-10-days/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/tailor-made-peru-itinerary-10-days/"/>
   </url>
   <url>
     <loc>https://travizperu.com/peru-honeymoon/</loc>
@@ -109,9 +111,11 @@
   </url>
   <url>
     <loc>https://travizperu.com/peru-family-private-tour/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/peru-family-private-tour/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/peru-family-private-tour/"/>
   </url>
   <url>
     <loc>https://travizperu.com/es/tour-privado-machu-picchu/</loc>
@@ -133,33 +137,43 @@
   </url>
   <url>
     <loc>https://travizperu.com/blog/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/"/>
   </url>
   <url>
     <loc>https://travizperu.com/blog/machu-picchu-train-guide/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/machu-picchu-train-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/machu-picchu-train-guide/"/>
   </url>
   <url>
     <loc>https://travizperu.com/blog/machu-picchu-tickets-new-system-2026/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/machu-picchu-tickets-new-system-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/machu-picchu-tickets-new-system-2026/"/>
   </url>
   <url>
     <loc>https://travizperu.com/blog/is-peru-safe-to-visit-2026/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/is-peru-safe-to-visit-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/is-peru-safe-to-visit-2026/"/>
   </url>
   <url>
     <loc>https://travizperu.com/blog/how-many-days-in-peru/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/how-many-days-in-peru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/how-many-days-in-peru/"/>
   </url>
   <url>
     <loc>https://travizperu.com/photo-credits/</loc>
@@ -169,7 +183,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/gear/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -181,7 +195,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/zh/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/"/>
@@ -191,7 +205,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/zh/about/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/about/"/>
@@ -201,7 +215,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/zh/beyond-peru/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/beyond-peru/"/>
@@ -211,7 +225,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/zh/machu-picchu/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/machu-picchu/"/>
@@ -221,7 +235,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/zh/lima/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/lima/"/>
@@ -231,7 +245,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/zh/sacred-valley/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/sacred-valley/"/>
@@ -241,7 +255,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/zh/lake-titicaca/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/lake-titicaca/"/>
@@ -251,7 +265,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/ja/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/"/>
@@ -261,7 +275,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/ja/about/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/about/"/>
@@ -271,7 +285,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/ja/beyond-peru/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/beyond-peru/"/>
@@ -281,7 +295,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/ja/machu-picchu/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/machu-picchu/"/>
@@ -291,7 +305,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/ja/lima/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/lima/"/>
@@ -301,7 +315,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/ja/sacred-valley/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/sacred-valley/"/>
@@ -311,7 +325,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/ja/lake-titicaca/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/lake-titicaca/"/>
@@ -331,7 +345,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/zh/christmas-new-year-machu-picchu/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/christmas-new-year-machu-picchu/"/>
@@ -341,7 +355,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/ja/christmas-new-year-machu-picchu/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/christmas-new-year-machu-picchu/"/>
@@ -351,7 +365,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/groups/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/groups/"/>
@@ -362,7 +376,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/es/grupos/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/groups/"/>
@@ -373,7 +387,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/zh/groups/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/groups/"/>
@@ -384,7 +398,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/ja/groups/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/groups/"/>
@@ -395,27 +409,40 @@
   </url>
 <url>
 <loc>https://travizperu.com/tours/andean-classic/</loc>
+    <lastmod>2026-10-27</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/tours/andean-classic/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/tours/andean-classic/"/>
 </url>
 <url>
 <loc>https://travizperu.com/tours/complete-peru/</loc>
+    <lastmod>2026-10-27</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/tours/complete-peru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/tours/complete-peru/"/>
 </url>
 <url>
 <loc>https://travizperu.com/tours/grand-expedition/</loc>
+    <lastmod>2026-10-27</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/tours/grand-expedition/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/tours/grand-expedition/"/>
 </url>
   <url>
     <loc>https://travizperu.com/blog/peru-itinerary-10-days/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/peru-itinerary-10-days/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/peru-itinerary-10-days/"/>
   </url>
   <url>
     <loc>https://travizperu.com/express-quote/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/express-quote/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/express-quote/"/>
   </url>
 </urlset>

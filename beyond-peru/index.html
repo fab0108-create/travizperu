@@ -25,7 +25,95 @@
 <meta name="twitter:description" content="Private, tailor-made journeys to Iguazú Falls, Buenos Aires, and Rio de Janeiro.">
 <meta name="twitter:image" content="https://travizperu.com/images/iguazu.webp?v=20261012">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"Beyond Peru / Otros destinos","url":"https://travizperu.com/beyond-peru/","isPartOf":{"@type":"WebSite","name":"TravizPeru","url":"https://travizperu.com/"},"description":"Private, tailor-made journeys to Iguazú Falls, Buenos Aires, and Rio de Janeiro."}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TravelAgency",
+      "@id": "https://travizperu.com/#organization",
+      "name": "TravizPeru",
+      "url": "https://travizperu.com/",
+      "email": "travizperu@gmail.com",
+      "telephone": "+51982521128",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lima",
+        "addressCountry": "PE"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://travizperu.com/beyond-peru/#webpage",
+      "url": "https://travizperu.com/beyond-peru/",
+      "name": "Beyond Peru",
+      "description": "Private, tailor-made journeys to Iguazú Falls, Buenos Aires, and Rio de Janeiro. On their own, or added before or after Peru.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://travizperu.com/#website"
+      },
+      "about": {
+        "@id": "https://travizperu.com/beyond-peru/#trip"
+      },
+      "publisher": {
+        "@id": "https://travizperu.com/#organization"
+      }
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "https://travizperu.com/beyond-peru/#trip",
+      "name": "Beyond Peru",
+      "description": "Private, tailor-made journeys to Iguazú Falls, Buenos Aires, and Rio de Janeiro. On their own, or added before or after Peru.",
+      "url": "https://travizperu.com/beyond-peru/",
+      "image": "https://travizperu.com/images/iguazu.webp?v=20261012",
+      "inLanguage": "en",
+      "touristType": "Private travelers",
+      "provider": {
+        "@id": "https://travizperu.com/#organization"
+      },
+      "itinerary": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "TouristDestination",
+              "name": "Iguazú Falls",
+              "url": "https://travizperu.com/beyond-peru/#iguazu"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "TouristDestination",
+              "name": "Buenos Aires",
+              "url": "https://travizperu.com/beyond-peru/#buenos-aires"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "TouristDestination",
+              "name": "Rio de Janeiro",
+              "url": "https://travizperu.com/beyond-peru/#rio"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "TouristDestination",
+              "name": "Costa Rica",
+              "url": "https://travizperu.com/costa-rica/"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
