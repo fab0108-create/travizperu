@@ -18,53 +18,118 @@
 <meta property="og:image:height" content="1067">
 <meta property="og:locale" content="es_PE">
 <meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tour Privado a Machu Picchu a Medida | TravizPeru">
+<meta name="twitter:description" content="Tour privado a Machu Picchu con guía propio, ingreso oficial con horario y trenes reservados. Armado en Lima por Francisco Arriz Barrantes, APOTUR AP030-11.">
+<meta name="twitter:image" content="https://travizperu.com/images/machu-picchu.webp?v=20261012">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "TouristTrip",
-  "name": "Tour privado a Machu Picchu",
-  "description": "Tour privado a Machu Picchu con guía propio, ingreso oficial con horario y trenes reservados. Armado en Lima por Francisco Arriz Barrantes, APOTUR AP030-11.",
-  "url": "https://travizperu.com/es/tour-privado-machu-picchu/",
-  "image": "https://travizperu.com/images/machu-picchu.webp?v=20261012",
-  "inLanguage": "es",
-  "touristType": "Private travelers",
-  "provider": {
-    "@type": "TravelAgency",
-    "name": "TravizPeru",
-    "url": "https://travizperu.com/",
-    "telephone": "+51982521128",
-    "email": "travizperu@gmail.com",
-    "identifier": "APOTUR AP030-11",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Lima",
-      "addressCountry": "PE"
-    }
-  },
-  "itinerary": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "TouristDestination",
-          "name": "Machu Picchu",
-          "url": "https://travizperu.com/machu-picchu/"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "TouristDestination",
-          "name": "Valle Sagrado",
-          "url": "https://travizperu.com/sacred-valley/"
-        }
+  "@graph": [
+    {
+      "@type": "TravelAgency",
+      "@id": "https://travizperu.com/#organization",
+      "name": "TravizPeru",
+      "url": "https://travizperu.com/",
+      "telephone": "+51982521128",
+      "email": "travizperu@gmail.com",
+      "identifier": "APOTUR AP030-11",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lima",
+        "addressCountry": "PE"
       }
-    ]
-  }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://travizperu.com/es/tour-privado-machu-picchu/#webpage",
+      "url": "https://travizperu.com/es/tour-privado-machu-picchu/",
+      "name": "Tour privado a Machu Picchu, a tu ritmo",
+      "description": "Tour privado a Machu Picchu con guía propio, ingreso oficial con horario y trenes reservados. Armado en Lima por Francisco Arriz Barrantes, APOTUR AP030-11.",
+      "inLanguage": "es",
+      "dateModified": "2026-10-28",
+      "image": "https://travizperu.com/images/machu-picchu.webp?v=20261012",
+      "isPartOf": {
+        "@id": "https://travizperu.com/#website"
+      },
+      "publisher": {
+        "@id": "https://travizperu.com/#organization"
+      },
+      "about": {
+        "@id": "https://travizperu.com/es/tour-privado-machu-picchu/#trip"
+      },
+      "mainEntity": {
+        "@id": "https://travizperu.com/es/tour-privado-machu-picchu/#trip"
+      }
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "https://travizperu.com/es/tour-privado-machu-picchu/#trip",
+      "name": "Tour privado a Machu Picchu",
+      "description": "Tour privado a Machu Picchu con guía propio, ingreso oficial con horario y trenes reservados. Armado en Lima por Francisco Arriz Barrantes, APOTUR AP030-11.",
+      "url": "https://travizperu.com/es/tour-privado-machu-picchu/",
+      "image": "https://travizperu.com/images/machu-picchu.webp?v=20261012",
+      "inLanguage": "es",
+      "touristType": "Private travelers",
+      "provider": {
+        "@id": "https://travizperu.com/#organization"
+      },
+      "itinerary": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "TouristDestination",
+              "name": "Machu Picchu",
+              "url": "https://travizperu.com/machu-picchu/"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "TouristDestination",
+              "name": "Valle Sagrado",
+              "url": "https://travizperu.com/sacred-valley/"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://travizperu.com/es/tour-privado-machu-picchu/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo se compran las entradas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Por el sistema oficial del Ministerio de Cultura; las gestionamos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué tren?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PeruRail o Inca Rail según horario."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El Camino Inca abre todo el año?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No necesariamente; en 2026 cerró febrero (SERNANP)."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 <style>
@@ -112,7 +177,9 @@ article li { margin-bottom: 0.9rem; color: rgba(250,248,244,0.88); font-weight: 
 article strong { color: var(--white); font-weight: 600; }
 article a { color: var(--gold-light); }
 .byline { font-family: var(--font-ui); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 2.5rem; }
-.sources { font-family: var(--font-ui); font-size: 0.75rem; color: var(--gray); margin-top: 2rem; }
+.sources { font-family: var(--font-ui); font-size: 0.75rem; color: var(--gray); margin-top: 2rem; line-height: 1.6; }
+.sources a { color: var(--gold); word-break: break-word; }
+.sources li { margin-bottom: 0.7rem; }
 .plan-card { background: var(--dark2); border: 1px solid rgba(201,168,76,0.2); padding: 1.6rem 1.8rem; margin-bottom: 1.2rem; }
 .plan-card .plan-days { font-family: var(--font-ui); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
 .plan-card .plan-name { font-family: var(--font-display); font-size: 1.25rem; color: var(--white); margin-bottom: 0.5rem; }
@@ -182,6 +249,27 @@ footer a { color: var(--gold); text-decoration: none; }
 <h2>Para quién es, y con cuánta anticipación</h2>
 <p>Parejas, familias, amigos, o alguien que viaja solo y no quiere un grupo. Si van con niños, mira primero el <a href="https://travizperu.com/peru-family-private-tour/">viaje en familia</a> (en inglés; lo armamos en español por WhatsApp) antes de sumar un permiso de montaña. Si el viaje es una luna de miel, la forma completa está en <a href="https://travizperu.com/es/luna-de-miel-en-peru/">luna de miel en Perú</a>.</p>
 <p>El ingreso se reserva con dos a cuatro meses. En junio, julio y agosto, antes. El calendario y el tope diario los explico en <a href="https://travizperu.com/blog/how-many-days-in-peru/">cuántos días hacen falta en Perú</a> (en inglés). Si el circuito que querías ya no está, te lo digo en la propuesta. No lo escondo.</p>
+
+<h2>Entradas oficiales</h2>
+<p>Las entradas se compran por adelantado en el sistema oficial del Ministerio de Cultura, <a href="https://tuboleto.cultura.pe/">tuboleto.cultura.pe</a>. Hay cupos y dependen de la disponibilidad. En un viaje privado las gestionamos dentro de esa disponibilidad. El sistema de 2026 está explicado, en inglés, en <a href="https://travizperu.com/blog/machu-picchu-tickets-new-system-2026/">las entradas a Machu Picchu</a>.</p>
+
+<h2>Trenes</h2>
+<p><a href="https://www.perurail.com/">PeruRail</a> sale de Ollantaytambo, Poroy y Urubamba, y tiene un servicio bimodal desde Cusco (estación de Wanchaq). <a href="https://incarail.com/es">Inca Rail</a> sale de Ollantaytambo y tiene un servicio bimodal, en bus, desde la avenida El Sol, en Cusco. El tren se elige según el horario. El estado de la línea está en <a href="https://travizperu.com/machu-picchu-train-status/">estado de los trenes a Machu Picchu</a>. Una guía de la ruta, en inglés, es <a href="https://travizperu.com/blog/machu-picchu-train-guide/">Machu Picchu train guide</a>.</p>
+
+<h2>Altitud</h2>
+<p>Cusco está a 3.399 msnm. Machu Picchu está a 2.430 m, según <a href="https://whc.unesco.org/en/list/274/">UNESCO</a>. El mal de altura es posible desde unos 2.400 m, según una <a href="https://scr.sunarp.gob.pe/cusco/">fuente estatal peruana</a>. Conviene consultar al médico antes del viaje. El entorno del viaje incluye el <a href="https://travizperu.com/sacred-valley/">Valle Sagrado</a> y la página de <a href="https://travizperu.com/machu-picchu/">Machu Picchu</a>.</p>
+
+<h2>Camino Inca</h2>
+<p>En 2026, el <a href="https://www.gob.pe/institucion/sernanp/noticias/1340984-comunicado-red-de-caminos-inka-suspension-temporal-por-conservacion-y-mantenimiento-anual">SERNANP</a> cerró la Red de Caminos Inka durante todo febrero por el mantenimiento anual. El comunicado cubre las rutas 1, 2, 3, 5 y 6, con reapertura el 1 de marzo de 2026. Ese cierre es el de 2026: confirma las fechas oficiales cada año. No lo damos por hecho para 2027. El mismo comunicado está recordado en <a href="https://travizperu.com/es/el-nino/">El Niño y tu viaje a Perú</a>.</p>
+
+<h2>Preguntas frecuentes</h2>
+<h3>¿Cómo se compran las entradas?</h3>
+<p>Por el sistema oficial del Ministerio de Cultura; las gestionamos.</p>
+<h3>¿Qué tren?</h3>
+<p>PeruRail o Inca Rail según horario.</p>
+<h3>¿El Camino Inca abre todo el año?</h3>
+<p>No necesariamente; en 2026 cerró febrero (SERNANP).</p>
+
 <p>No hay tarifa publicada. La cotización sale de tus fechas, el tren y el hotel. La envío en pocas horas. WhatsApp: +51 982 521 128. En inglés, la misma página es el <a href="https://travizperu.com/private-machu-picchu-tour/">private Machu Picchu tour</a>.</p>
 
 <div class="cta-box">
@@ -192,7 +280,16 @@ footer a { color: var(--gold); text-decoration: none; }
 </div>
 </div>
 
-<p class="sources">Fuentes: Ministerio de Cultura del Perú, Resolución Ministerial N.° 334-2026-MC · Horarios públicos de PeruRail e Inca Rail en la línea Ollantaytambo–Aguas Calientes.</p>
+<ul class="sources">
+<li>Ministerio de Cultura del Perú, Resolución Ministerial N.° 334-2026-MC. Horarios públicos de PeruRail e Inca Rail en la línea Ollantaytambo–Aguas Calientes.</li>
+<li>Entradas oficiales: <a href="https://tuboleto.cultura.pe/">https://tuboleto.cultura.pe/</a></li>
+<li>PeruRail: <a href="https://www.perurail.com/">https://www.perurail.com/</a> · <a href="https://www.perurail.com/train-services/">servicios</a></li>
+<li>Inca Rail: <a href="https://incarail.com/es">https://incarail.com/es</a> · <a href="https://incarail.com/en/stations-ticket-offices-machu-picchu">estaciones</a></li>
+<li>UNESCO, Machu Picchu, 2.430 m: <a href="https://whc.unesco.org/en/list/274/">https://whc.unesco.org/en/list/274/</a></li>
+<li>PROMPERÚ, Guía práctica Cusco (Cusco, 3.399 msnm): <a href="https://cdn.www.gob.pe/uploads/document/file/5250066/4721561-cusco_gppv_espanol.pdf">https://cdn.www.gob.pe/uploads/document/file/5250066/4721561-cusco_gppv_espanol.pdf</a></li>
+<li>SUNARP Cusco, mal de altura desde unos 2.400 m: <a href="https://scr.sunarp.gob.pe/cusco/">https://scr.sunarp.gob.pe/cusco/</a></li>
+<li>SERNANP, cierre de febrero de 2026 de la Red de Caminos Inka: <a href="https://www.gob.pe/institucion/sernanp/noticias/1340984-comunicado-red-de-caminos-inka-suspension-temporal-por-conservacion-y-mantenimiento-anual">https://www.gob.pe/institucion/sernanp/noticias/1340984-comunicado-red-de-caminos-inka-suspension-temporal-por-conservacion-y-mantenimiento-anual</a></li>
+</ul>
 
 </article>
 
