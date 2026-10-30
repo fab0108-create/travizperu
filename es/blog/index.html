@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de viaje a Perú y blog | TravizPeru</title>
+<meta name="description" content="Guías prácticas para planificar un viaje a Perú: seguridad, itinerarios, entradas a Machu Picchu y más, de un especialista en Lima con más de 22 años de experiencia.">
+<link rel="canonical" href="https://travizperu.com/es/blog/">
+<link rel="alternate" hreflang="en" href="https://travizperu.com/blog/">
+<link rel="alternate" hreflang="es" href="https://travizperu.com/es/blog/">
+<link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Guía de viaje a Perú y blog | TravizPeru">
+<meta property="og:description" content="Guías prácticas de Francisco Arriz Barrantes, especialista en Perú desde Lima.">
+<meta property="og:url" content="https://travizperu.com/es/blog/">
+<meta property="og:image" content="https://travizperu.com/images/machu-picchu.webp?v=20261012">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1067">
+<meta property="og:locale" content="es_PE">
+<meta property="og:locale:alternate" content="en_US">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --black: #0A0A0A;
+  --dark: #111111;
+  --dark2: #1A1A1A;
+  --white: #FAF8F4;
+  --gray: #888880;
+  --font-display: 'Cinzel', serif;
+  --font-body: 'Cormorant Garamond', serif;
+  --font-ui: 'Jost', sans-serif;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--black); color: var(--white); font-family: var(--font-body); font-size: 19px; line-height: 1.7; }
+
+nav { display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 4rem; border-bottom: 1px solid rgba(201,168,76,0.15); background: rgba(10,10,10,0.96); }
+.logo { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.12em; color: var(--gold); text-decoration: none; }
+.logo span { color: var(--white); }
+.back-link { font-family: var(--font-ui); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(250,248,244,0.7); text-decoration: none; }
+.back-link:hover { color: var(--gold); }
+
+.hero { position: relative; height: 62vh; min-height: 340px; max-height: 720px; display: flex; align-items: flex-end; padding: 3rem 4rem; overflow: hidden; }
+.hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 50%; z-index: 0; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,0.16) 0%, rgba(10,10,10,0.55) 100%); z-index: 1; pointer-events: none; }
+.hero-copy { position: relative; z-index: 2; max-width: 760px; }
+.hero-eyebrow { font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
+.hero h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 600; line-height: 1.15; }
+.hero p { margin-top: 1.2rem; font-size: 1.2rem; color: rgba(250,248,244,0.88); font-weight: 300; max-width: 640px; }
+.photo-credit { position: relative; z-index: 2; font-family: var(--font-ui); font-size: 0.68rem; letter-spacing: 0.03em; color: rgba(250,248,244,0.5); padding: 0.55rem 4rem 0; }
+.photo-credit a { color: var(--gold); text-decoration: none; }
+
+.post-list { max-width: 900px; margin: 0 auto; padding: 1rem 4rem 6rem; display: flex; flex-direction: column; gap: 1.5px; }
+.post-card { display: block; background: var(--dark2); border: 1px solid rgba(201,168,76,0.12); padding: 2rem 2.2rem; text-decoration: none; transition: all 0.3s; }
+.post-card:hover { border-color: rgba(201,168,76,0.4); background: rgba(201,168,76,0.05); }
+.post-tag { font-family: var(--font-ui); font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; display: block; }
+.post-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--white); margin-bottom: 0.6rem; }
+.post-desc { color: rgba(250,248,244,0.75); font-weight: 300; font-size: 1.02rem; }
+
+.list-label { font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin: 1.6rem 0 0.2rem; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 0.7rem 1rem; justify-content: center; max-width: 920px; margin: 0 auto 1rem; }
+.foot-links a { color: var(--gold); text-decoration: none; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; }
+footer { border-top: 1px solid rgba(201,168,76,0.1); padding: 2.5rem 4rem; text-align: center; font-family: var(--font-ui); font-size: 0.7rem; letter-spacing: 0.1em; color: rgba(136,136,128,0.5); }
+footer a { color: var(--gold); text-decoration: none; }
+
+@media (max-width: 700px) {
+  nav { padding: 1rem 1.5rem; }
+  .hero { padding: 2rem 1.5rem; }
+  .photo-credit { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .post-list { padding: 1rem 1.5rem 4rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="https://travizperu.com/" class="logo">Traviz<span>Peru</span></a>
+<span style="display:flex;gap:1.6rem;align-items:center"><a href="/blog/" class="back-link" hreflang="en" lang="en">English</a><a href="https://travizperu.com/" class="back-link">← Volver a TravizPeru</a></span>
+</nav>
+
+<div class="hero">
+<img class="hero-photo" src="/images/machu-picchu.webp?v=20261012" width="1600" height="1067" alt="Machu Picchu al amanecer: la ciudadela y el Huayna Picchu, sin gente a la vista." fetchpriority="high" decoding="async">
+<div class="hero-copy">
+<span class="hero-eyebrow">Guía de viaje a Perú</span>
+<h1>Lo que conviene saber antes de viajar</h1>
+<p>Guías prácticas de Francisco Arriz Barrantes, con más de 22 años diseñando viajes privados por Perú.</p>
+</div>
+</div>
+<p class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Machu_Picchu,_Peru.jpg">Pedro Szekely</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>. Redimensionada para esta página.</p>
+
+<div class="post-list">
+<p class="list-label">Guías</p>
+<a class="post-card" href="/es/blog/machu-picchu-para-adultos-mayores/">
+<span class="post-tag">Blog · 29 de octubre de 2026</span>
+<p class="post-title">Machu Picchu para mayores: una visita tranquila y gradual</p>
+<p class="post-desc">¿Machu Picchu después de los 60? Altura gradual, Valle Sagrado primero, trenes, bus, escaleras y circuitos oficiales, explicado con calma y en privado.</p>
+</a>
+<a class="post-card" href="/es/blog/peru-con-nietos/">
+<span class="post-tag">Blog · 29 de octubre de 2026</span>
+<p class="post-title">Perú con nietos: cómo planificar un viaje de tres generaciones</p>
+<p class="post-desc">Viajar a Perú con abuelos, padres y nietos: altura en niños, ritmo, trenes, circuitos de Machu Picchu, tardes en Lima y días en el Valle Sagrado.</p>
+</a>
+<a class="post-card" href="/es/blog/el-nino-viaje-peru-2026/">
+<span class="post-tag">Blog · 27 de octubre de 2026</span>
+<p class="post-title">¿El Niño es un riesgo para tu viaje a Perú?</p>
+<p class="post-desc">Resumen de los pronósticos oficiales de ENFEN, SENAMHI y NOAA sobre El Niño 2026–2027 en Perú: qué regiones se verían más afectadas y cómo planificar Cusco, Machu Picchu y Lima.</p>
+</a>
+
+<p class="list-label">Viajes privados</p>
+<a class="post-card" href="/es/tour-privado-machu-picchu/">
+<span class="post-tag">Machu Picchu</span>
+<p class="post-title">Tour privado a Machu Picchu</p>
+<p class="post-desc">Guía propio, ingreso con horario y trenes reservados. Un tour privado a la ciudadela, armado desde Lima.</p>
+</a>
+<a class="post-card" href="/es/viaje-de-lujo-a-peru-a-medida/">
+<span class="post-tag">Perú</span>
+<p class="post-title">Viaje de lujo a Perú a medida</p>
+<p class="post-desc">Qué significa viajar en privado con TravizPeru, y cómo empezamos un itinerario de 5, 10 o 15 días. Precio a consultar.</p>
+</a>
+<a class="post-card" href="/es/luna-de-miel-en-peru/">
+<span class="post-tag">En pareja</span>
+<p class="post-title">Luna de miel en Perú</p>
+<p class="post-desc">Un viaje en privado para dos: Lima, el Valle Sagrado y Machu Picchu, al ritmo que ustedes elijan.</p>
+</a>
+
+<p class="list-label">En inglés</p>
+<a class="post-card" href="/blog/">
+<span class="post-tag">English · Blog</span>
+<p class="post-title">Peru Travel Guide &amp; Blog</p>
+<p class="post-desc">The English guides: trains, tickets, safety, itineraries and the same two articles in English.</p>
+</a>
+</div>
+
+<footer>
+<div class="foot-links">
+<a href="https://travizperu.com/machu-picchu/">Machu Picchu</a>
+<a href="https://travizperu.com/lima/">Lima</a>
+<a href="https://travizperu.com/sacred-valley/">Valle Sagrado</a>
+<a href="https://travizperu.com/lake-titicaca/">Lago Titicaca</a>
+<a href="https://travizperu.com/es/tour-privado-machu-picchu/">Tour privado</a>
+<a href="https://travizperu.com/es/viaje-de-lujo-a-peru-a-medida/">Viaje de lujo</a>
+<a href="https://travizperu.com/es/luna-de-miel-en-peru/">Luna de miel</a>
+<a href="https://travizperu.com/blog/">English</a>
+</div>
+<span>&copy; 2026 TravizPeru · Francisco Arriz Barrantes · APOTUR AP030-11 · <a href="/photo-credits/">Créditos de fotos</a> · <a href="https://travizperu.com/">travizperu.com</a></span>
+</footer>
+
+</body>
+</html>
