@@ -10,10 +10,12 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,system-
 select,input{width:100%;padding:10px;border:1px solid var(--border);border-radius:6px;font:inherit;box-sizing:border-box;background:#fff}
 .res{margin-top:24px;padding:20px;background:var(--gold-bg);border-radius:8px}.big{font-family:'Libre Baskerville',serif;font-size:1.8em}
 .note{color:var(--mid);font-size:.9em}.btn{display:inline-block;margin:10px 8px 0 0;padding:12px 18px;border-radius:6px;background:var(--gold);color:#fff;text-decoration:none;border:0;font:inherit;cursor:pointer}
-.lang{float:right}</style></head><body><div class="w">
+.lang{float:right}.det{margin-top:12px;border:1px solid var(--border);border-radius:8px;background:#fff;padding:10px 14px}.det summary{font-weight:600;cursor:pointer}.det .ph{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:10px 0 2px;align-items:start}.det .ph figure{margin:0}.det .ph img{width:100%;height:auto;display:block;border-radius:6px}.det .ph figcaption{color:var(--mid);font-size:.75em;line-height:1.35;margin-top:4px}.det p{margin:.65em 0;line-height:1.45}#dother{margin-top:12px}</style></head><body><div class="w">
 <button class="lang" onclick="setL(L=='en'?'es':'en')" id="lb">ES</button>
 <p class="note"><a href="/">← TravizPeru</a></p><h1>Express Quote</h1><p class="sub" data-t="sub"></p>
 <label data-t="prog"></label><select id="p"><option value="hsv" data-t="hsv"></option><option value="esv" data-t="esv"></option><option value="other" data-t="other"></option></select>
+<details id="det" class="det"><summary data-t="dsum">Tour details / Detalles del tour</summary><div id="dbody"></div></details>
+<p class="note" id="dother" hidden></p>
 <label data-t="cat"></label><select id="k"><option value="comfort">Comfort</option><option value="standard">Standard</option><option value="superior" selected>Superior</option><option value="first">First class</option><option value="luxury">Luxury</option></select>
 <label data-t="trav"></label><select id="n"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9+</option></select>
 <label data-t="date"></label><input id="d" type="month" min="2026-01" max="2027-12" value="2026-12">
@@ -26,12 +28,133 @@ select,input{width:100%;padding:10px;border:1px solid var(--border);border-radiu
 const P={"hsv":{"2026-12":{"comfort":{"1":1285,"2":813,"3t":697,"3s":[837,701],"4":645,"6":596,"8":583},"standard":{"1":1346,"2":831,"3t":703,"3s":[898,720],"4":663,"6":615,"8":602},"superior":{"1":1429,"2":867,"3t":772,"3s":[981,755],"4":700,"6":651,"8":637},"first":{"1":1562,"2":965,"3t":831,"3s":[1114,854],"4":797,"6":749,"8":736},"luxury":{"1":2328,"2":1329,"3t":1186,"3s":[1833,1205],"4":1143,"6":1093,"8":1082}},"2027":{"comfort":{"1":1322,"2":831,"3t":702,"3s":[869,718],"4":661,"6":611,"8":598},"standard":{"2":859},"superior":{"2":898},"first":{"2":994},"luxury":{"1":2323,"2":1334,"3t":1206,"3s":[1869,1221],"4":1164,"6":1114,"8":1101}}},"esv":{"2026-12":{"comfort":{"1":1669,"2":1021,"3t":866,"3s":[1072,871],"4":796,"6":743,"8":716},"standard":{"2":1044},"superior":{"2":1090},"first":{"2":1216},"luxury":{"1":2839,"2":1600,"3t":1431,"3s":[2195,1439],"4":1358,"6":1302,"8":1279}},"2027":{"comfort":{"1":1713,"2":1043,"3t":869,"3s":[1103,890],"4":813,"6":759,"8":731},"standard":{"2":1078},"superior":{"2":1128},"first":{"2":1253},"luxury":{"1":2844,"2":1613,"3t":1487,"3s":[2234,1459],"4":1382,"6":1328,"8":1300}}}};
 const T={en:{sub:"Instant price for your private Peru trip",prog:"Program",hsv:"Historic Sacred Valley 6D/5N – arrive in Cusco, straight to the Sacred Valley (Urubamba 2 nights, Cusco 3)",esv:"Eternal Sacred Valley 8D/7N – Lima 2 nights, Sacred Valley (Urubamba) 2, Cusco 3",other:"Other program (e.g. Peru Express, Special Peru, Magic of the Sacred Valley) – custom",cat:"Hotel category",trav:"Adults",occ:{"1":"single room","2":"double room","3t":"triple room","3s":"1 single + 1 double","4":"2 double rooms","6":"3 double rooms","8":"4 double rooms"},ad:"adults",or:"or",date:"Travel month",contact:"Email or WhatsApp",pp:"per person",tot:"Group total:",card:"Total if paying by card (+5%):",ref:"2027 reference rate.",
 ask:"We quote this combination tailor-made. Send us your details and we reply within a few hours.",otherask:"We build the version with the Sacred Valley first (better for altitude). Ask us and we reply within a few hours.",wa:"Confirm on WhatsApp",send:"Send request",pay:"Pay by card (+5%)",paynote:"In the payment link, enter exactly the total if paying by card (+5%) shown above. That amount includes the 5% processing surcharge.",
-legal:"Private services. Reference price in USD, subject to availability; we confirm within a few hours. Flights NOT included (international or Lima–Cusco). Machu Picchu tickets subject to confirmation."},
+legal:"Private services. Reference price in USD, subject to availability; we confirm within a few hours. Flights NOT included (international or Lima–Cusco). Machu Picchu tickets subject to confirmation.",dsum:"Tour details"},
 es:{sub:"Cotiza al instante tu viaje privado a Perú",prog:"Programa",hsv:"Historic Sacred Valley 6D/5N – llegada a Cusco y directo al Valle Sagrado (Urubamba 2 noches, Cusco 3)",esv:"Eternal Sacred Valley 8D/7N – Lima 2 noches, Valle Sagrado (Urubamba) 2, Cusco 3",other:"Otro programa (p. ej. Peru Express, Special Peru, Magic of the Sacred Valley) – a medida",cat:"Categoría de hotel",trav:"Adultos",occ:{"1":"habitación single","2":"habitación doble","3t":"habitación triple","3s":"1 single + 1 doble","4":"2 habitaciones dobles","6":"3 habitaciones dobles","8":"4 habitaciones dobles"},ad:"adultos",or:"o",date:"Mes de viaje",contact:"Email o WhatsApp",pp:"por persona",tot:"Total del grupo:",card:"Total pagando con tarjeta (+5%):",ref:"Tarifa referencial 2027.",
 ask:"Esta combinación la cotizamos a medida. Envíanos tus datos y respondemos en pocas horas.",otherask:"Armamos la variante con Valle Sagrado primero (mejor para la altura). Consúltanos y respondemos en pocas horas.",wa:"Confirmar por WhatsApp",send:"Enviar solicitud",pay:"Pagar con tarjeta (+5%)",paynote:"En el enlace de pago, ingresa exactamente el total pagando con tarjeta (+5%) que aparece arriba. Ese monto incluye el recargo del 5% por procesamiento.",
-legal:"Servicios privados. Precio referencial en USD, sujeto a disponibilidad; confirmamos en pocas horas. NO incluye vuelos (internacionales ni Lima–Cusco). Entradas a Machu Picchu sujetas a confirmación."}};
+legal:"Servicios privados. Precio referencial en USD, sujeto a disponibilidad; confirmamos en pocas horas. NO incluye vuelos (internacionales ni Lima–Cusco). Entradas a Machu Picchu sujetas a confirmación.",dsum:"Detalles del tour"}};
+const D={en:{
+hsv:`<div class="ph">
+<figure>
+<img src="/images/sacred-valley-card.webp" width="800" height="532" loading="lazy" alt="Stone terraces at Ollantaytambo in the Sacred Valley, with the town below the ruins.">
+<figcaption>Photo: Jorge Láscar, CC BY 2.0 · <a href="/photo-credits/">Photo credits</a>
+</figcaption>
+</figure>
+<figure>
+<img src="/images/machu-picchu-card.webp" width="800" height="534" loading="lazy" alt="Machu Picchu at dawn: the citadel and Huayna Picchu fill the view, with no one in sight.">
+<figcaption>Photo: Pedro Szekely, CC BY-SA 2.0 · <a href="/photo-credits/">Photo credits</a>
+</figcaption>
+</figure>
+<figure>
+<img src="/images/cusco-plaza-card.webp" width="800" height="420" loading="lazy" alt="The domes of Cusco Cathedral above the rooftops, with the mountains behind.">
+<figcaption>Photo: Woldylen, CC BY-SA 4.0 · <a href="/photo-credits/">Photo credits</a>
+</figcaption>
+</figure>
+</div>
+<p>
+<strong>Route in order:</strong> Sacred Valley (Urubamba) 2 nights, then Cusco 3 nights. Machu Picchu is visited by train from the Sacred Valley during your stay. The exact daily plan is confirmed in your quote.</p>
+<p>
+<strong>Included:</strong> private services; hotels in the category you choose. Machu Picchu entrance and train are arranged for your trip, subject to availability; details in your quote.</p>
+<p>
+<strong>Not included:</strong> international and Lima–Cusco flights. Meals, tips, travel insurance and anything not listed above are confirmed in your quote.</p>
+<p>
+<strong>Altitude:</strong> sleeps first at 2,871 m (Urubamba), then 3,399 m (Cusco); Machu Picchu is lower, about 2,430 m. Starting low follows CDC advice to ascend gradually. Talk to your doctor before any high-altitude trip. <a href="/blog/peru-altitude-sickness-luxury-trip/">Altitude guide</a>
+</p>
+<p>
+<strong>Best time:</strong> driest May–September; May and September are quieter than June–August. Rainy season roughly December–March (wettest Jan–Feb); Machu Picchu stays open all year. <a href="/blog/best-time-to-visit-peru/">Best time to visit</a>
+</p>`,
+esv:`<div class="ph">
+<figure>
+<img src="/images/lima-card.webp" width="800" height="600" loading="lazy" alt="The Costa Verde cliffs and the Pacific at Miraflores, Lima.">
+<figcaption>Photo: Maurice Chédel, public domain · <a href="/photo-credits/">Photo credits</a>
+</figcaption>
+</figure>
+<figure>
+<img src="/images/sacred-valley-card.webp" width="800" height="532" loading="lazy" alt="Stone terraces at Ollantaytambo in the Sacred Valley, with the town below the ruins.">
+<figcaption>Photo: Jorge Láscar, CC BY 2.0 · <a href="/photo-credits/">Photo credits</a>
+</figcaption>
+</figure>
+<figure>
+<img src="/images/machu-picchu-card.webp" width="800" height="534" loading="lazy" alt="Machu Picchu at dawn: the citadel and Huayna Picchu fill the view, with no one in sight.">
+<figcaption>Photo: Pedro Szekely, CC BY-SA 2.0 · <a href="/photo-credits/">Photo credits</a>
+</figcaption>
+</figure>
+</div>
+<p>
+<strong>Route in order:</strong> Lima 2 nights, then Sacred Valley (Urubamba) 2 nights, then Cusco 3 nights. Machu Picchu is visited by train from the Sacred Valley during your stay. The exact daily plan is confirmed in your quote.</p>
+<p>
+<strong>Included:</strong> private services; hotels in the category you choose. Machu Picchu entrance and train are arranged for your trip, subject to availability; details in your quote.</p>
+<p>
+<strong>Not included:</strong> international and Lima–Cusco flights. Meals, tips, travel insurance and anything not listed above are confirmed in your quote.</p>
+<p>
+<strong>Altitude:</strong> Lima is at sea level and has almost no rain. You sleep at 2,871 m (Urubamba), then 3,399 m (Cusco); Machu Picchu is lower, about 2,430 m. Starting low follows CDC advice to ascend gradually. Talk to your doctor before any high-altitude trip. <a href="/blog/peru-altitude-sickness-luxury-trip/">Altitude guide</a>
+</p>
+<p>
+<strong>Best time:</strong> driest May–September; May and September are quieter than June–August. Rainy season roughly December–March (wettest Jan–Feb); Machu Picchu stays open all year. Lima is sunny December–April and grey but rarely wet June–September. <a href="/blog/best-time-to-visit-peru/">Best time to visit</a>
+</p>`,
+other:"Tailor-made: we build it with the Sacred Valley first, for an easier start at altitude."
+},es:{
+hsv:`<div class="ph">
+<figure>
+<img src="/images/sacred-valley-card.webp" width="800" height="532" loading="lazy" alt="Terrazas de piedra en Ollantaytambo, en el Valle Sagrado, con el pueblo bajo las ruinas.">
+<figcaption>Foto: Jorge Láscar, CC BY 2.0 · <a href="/photo-credits/">Créditos de fotos</a>
+</figcaption>
+</figure>
+<figure>
+<img src="/images/machu-picchu-card.webp" width="800" height="534" loading="lazy" alt="Machu Picchu al amanecer: la ciudadela y el Huayna Picchu llenan la vista, sin personas.">
+<figcaption>Foto: Pedro Szekely, CC BY-SA 2.0 · <a href="/photo-credits/">Créditos de fotos</a>
+</figcaption>
+</figure>
+<figure>
+<img src="/images/cusco-plaza-card.webp" width="800" height="420" loading="lazy" alt="Las cúpulas de la catedral del Cusco sobre los techos, con las montañas detrás.">
+<figcaption>Foto: Woldylen, CC BY-SA 4.0 · <a href="/photo-credits/">Créditos de fotos</a>
+</figcaption>
+</figure>
+</div>
+<p>
+<strong>Ruta en orden:</strong> Valle Sagrado (Urubamba) 2 noches y luego Cusco 3 noches. Machu Picchu se visita en tren desde el Valle Sagrado durante tu estancia. El plan diario exacto se confirma en tu cotización.</p>
+<p>
+<strong>Incluye:</strong> servicios privados; hoteles de la categoría elegida. La entrada a Machu Picchu y el tren se gestionan para tu viaje, sujetos a disponibilidad; el detalle va en tu cotización.</p>
+<p>
+<strong>No incluye:</strong> vuelos internacionales ni Lima–Cusco. Comidas, propinas, seguro de viaje y todo lo no indicado arriba se confirman en tu cotización.</p>
+<p>
+<strong>Altitud:</strong> primero duermes a 2.871 m (Urubamba), luego a 3.399 m (Cusco); Machu Picchu es más bajo, unos 2.430 m. Empezar abajo sigue la recomendación del CDC de subir gradualmente. Consulta a tu médico antes de viajar en altura. <a href="/blog/peru-altitude-sickness-luxury-trip/">Guía de altura</a>
+</p>
+<p>
+<strong>Mejor época:</strong> lo más seco es mayo–septiembre; mayo y septiembre con menos gente que junio–agosto. Lluvias aprox. diciembre–marzo (más fuertes ene–feb); Machu Picchu abre todo el año. <a href="/blog/best-time-to-visit-peru/">Mejor época</a>
+</p>`,
+esv:`<div class="ph">
+<figure>
+<img src="/images/lima-card.webp" width="800" height="600" loading="lazy" alt="Los acantilados de la Costa Verde y el Pacífico en Miraflores, Lima.">
+<figcaption>Foto: Maurice Chédel, dominio público · <a href="/photo-credits/">Créditos de fotos</a>
+</figcaption>
+</figure>
+<figure>
+<img src="/images/sacred-valley-card.webp" width="800" height="532" loading="lazy" alt="Terrazas de piedra en Ollantaytambo, en el Valle Sagrado, con el pueblo bajo las ruinas.">
+<figcaption>Foto: Jorge Láscar, CC BY 2.0 · <a href="/photo-credits/">Créditos de fotos</a>
+</figcaption>
+</figure>
+<figure>
+<img src="/images/machu-picchu-card.webp" width="800" height="534" loading="lazy" alt="Machu Picchu al amanecer: la ciudadela y el Huayna Picchu llenan la vista, sin personas.">
+<figcaption>Foto: Pedro Szekely, CC BY-SA 2.0 · <a href="/photo-credits/">Créditos de fotos</a>
+</figcaption>
+</figure>
+</div>
+<p>
+<strong>Ruta en orden:</strong> Lima 2 noches, luego Valle Sagrado (Urubamba) 2 noches y luego Cusco 3 noches. Machu Picchu se visita en tren desde el Valle Sagrado durante tu estancia. El plan diario exacto se confirma en tu cotización.</p>
+<p>
+<strong>Incluye:</strong> servicios privados; hoteles de la categoría elegida. La entrada a Machu Picchu y el tren se gestionan para tu viaje, sujetos a disponibilidad; el detalle va en tu cotización.</p>
+<p>
+<strong>No incluye:</strong> vuelos internacionales ni Lima–Cusco. Comidas, propinas, seguro de viaje y todo lo no indicado arriba se confirman en tu cotización.</p>
+<p>
+<strong>Altitud:</strong> Lima está al nivel del mar y casi no llueve. Duermes a 2.871 m (Urubamba) y luego a 3.399 m (Cusco); Machu Picchu es más bajo, unos 2.430 m. Empezar abajo sigue la recomendación del CDC de subir gradualmente. Consulta a tu médico antes de viajar en altura. <a href="/blog/peru-altitude-sickness-luxury-trip/">Guía de altura</a>
+</p>
+<p>
+<strong>Mejor época:</strong> lo más seco es mayo–septiembre; mayo y septiembre con menos gente que junio–agosto. Lluvias aprox. diciembre–marzo (más fuertes ene–feb); Machu Picchu abre todo el año. Lima soleada diciembre–abril y gris pero casi sin lluvia junio–septiembre. <a href="/blog/best-time-to-visit-peru/">Mejor época</a>
+</p>`,
+other:"A medida: lo armamos con el Valle Sagrado primero, para empezar mejor con la altura."}};
+function det(){const v=$('p').value,box=$('det'),note=$('dother');if(v=='other'){box.hidden=true;box.open=false;note.hidden=false;note.textContent=D[L].other;$('dbody').innerHTML=''}else{box.hidden=false;note.hidden=true;$('dbody').innerHTML=D[L][v]}}
 let L=(navigator.language||'en').startsWith('es')?'es':'en';const $=i=>document.getElementById(i);
-function setL(l){L=l;document.documentElement.lang=l;$('lb').textContent=l=='en'?'ES':'EN';document.querySelectorAll('[data-t]').forEach(e=>e.textContent=T[l][e.dataset.t]);calc()}
+function setL(l){L=l;document.documentElement.lang=l;$('lb').textContent=l=='en'?'ES':'EN';document.querySelectorAll('[data-t]').forEach(e=>e.textContent=T[l][e.dataset.t]);calc();det()}
 function opt(t,o,pp,n){const each=Array.isArray(pp)?pp:null,tot=each?each[0]+2*each[1]:pp*n,card=Math.round(tot*105)/100,f=x=>'US$'+x.toLocaleString('en-US'),fc=x=>'US$'+x.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
  const pps=each?f(each[0])+' (single) + '+f(each[1])+' (×2)':f(pp)+' <small>'+t.pp+'</small>';
  return {h:'<div><b>'+t.occ[o]+'</b></div><div class="big">'+pps+'</div><div>'+t.tot+' '+f(tot)+'</div><div>'+t.card+' '+fc(card)+'</div>',s:t.occ[o]+': '+(each?f(each[0])+' + 2×'+f(each[1]):f(pp)+' '+t.pp)+', total '+f(tot)};}
@@ -45,5 +168,5 @@ function calc(){const t=T[L],p=$('p').value,k=$('k').value,n=+$('n').value,d=$('
  h+='<a class="btn" target="_blank" rel="noopener noreferrer" href="https://express.culqi.com/pago/8B4B5E9294">'+t.pay+'</a><div class="note">'+t.paynote+'</div>';
  $('r').innerHTML=h;$('fq').value=txt}
 function sub(){$('fc').value=$('c').value;$('f').submit()}
-['p','k','n','d'].forEach(i=>$(i).addEventListener('change',calc));setL(L);
+['p','k','n','d'].forEach(i=>$(i).addEventListener('change',calc));$('p').addEventListener('change',det);setL(L);
 </script></body></html>
