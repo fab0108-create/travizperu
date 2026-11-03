@@ -155,7 +155,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/blog/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/"/>
@@ -164,12 +164,30 @@
   </url>
   <url>
     <loc>https://travizperu.com/es/blog/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://travizperu.com/blog/pope-leo-peru-visit-november-2026-travel-tips/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/pope-leo-peru-visit-november-2026-travel-tips/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/blog/visita-papa-leon-peru-noviembre-2026-consejos-viaje/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/pope-leo-peru-visit-november-2026-travel-tips/"/>
+  </url>
+  <url>
+    <loc>https://travizperu.com/es/blog/visita-papa-leon-peru-noviembre-2026-consejos-viaje/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/pope-leo-peru-visit-november-2026-travel-tips/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/blog/visita-papa-leon-peru-noviembre-2026-consejos-viaje/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/pope-leo-peru-visit-november-2026-travel-tips/"/>
   </url>
   <url>
     <loc>https://travizperu.com/blog/machu-picchu-train-guide/</loc>
