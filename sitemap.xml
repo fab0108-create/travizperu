@@ -161,7 +161,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/blog/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/"/>
@@ -170,12 +170,30 @@
   </url>
   <url>
     <loc>https://travizperu.com/es/blog/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://travizperu.com/blog/machu-picchu-december-january-rainy-season/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/machu-picchu-december-january-rainy-season/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/blog/machu-picchu-diciembre-enero-temporada-de-lluvias/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/machu-picchu-december-january-rainy-season/"/>
+  </url>
+  <url>
+    <loc>https://travizperu.com/es/blog/machu-picchu-diciembre-enero-temporada-de-lluvias/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/machu-picchu-december-january-rainy-season/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/blog/machu-picchu-diciembre-enero-temporada-de-lluvias/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/machu-picchu-december-january-rainy-season/"/>
   </url>
   <url>
     <loc>https://travizperu.com/blog/pope-leo-peru-visit-november-2026-travel-tips/</loc>
