@@ -178,6 +178,60 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/"/>
   </url>
   <url>
+    <loc>https://travizperu.com/blog/machu-picchu-in-2027/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/machu-picchu-in-2027/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/blog/machu-picchu-en-2027/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/machu-picchu-in-2027/"/>
+  </url>
+  <url>
+    <loc>https://travizperu.com/es/blog/machu-picchu-en-2027/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/machu-picchu-in-2027/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/blog/machu-picchu-en-2027/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/machu-picchu-in-2027/"/>
+  </url>
+  <url>
+    <loc>https://travizperu.com/blog/is-peru-good-for-a-honeymoon/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/is-peru-good-for-a-honeymoon/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/blog/es-peru-bueno-para-luna-de-miel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/is-peru-good-for-a-honeymoon/"/>
+  </url>
+  <url>
+    <loc>https://travizperu.com/es/blog/es-peru-bueno-para-luna-de-miel/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/is-peru-good-for-a-honeymoon/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/blog/es-peru-bueno-para-luna-de-miel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/is-peru-good-for-a-honeymoon/"/>
+  </url>
+  <url>
+    <loc>https://travizperu.com/blog/peru-and-argentina-itinerary/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/peru-and-argentina-itinerary/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/blog/peru-y-argentina-itinerario/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/peru-and-argentina-itinerary/"/>
+  </url>
+  <url>
+    <loc>https://travizperu.com/es/blog/peru-y-argentina-itinerario/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/peru-and-argentina-itinerary/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/blog/peru-y-argentina-itinerario/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/peru-and-argentina-itinerary/"/>
+  </url>
+  <url>
     <loc>https://travizperu.com/blog/peru-and-galapagos-itinerary/</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
