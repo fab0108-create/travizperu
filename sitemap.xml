@@ -161,7 +161,7 @@
   </url>
   <url>
     <loc>https://travizperu.com/blog/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/"/>
@@ -170,12 +170,30 @@
   </url>
   <url>
     <loc>https://travizperu.com/es/blog/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://travizperu.com/blog/sacred-valley-or-cusco-first/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/sacred-valley-or-cusco-first/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/blog/valle-sagrado-o-cusco-primero/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/sacred-valley-or-cusco-first/"/>
+  </url>
+  <url>
+    <loc>https://travizperu.com/es/blog/valle-sagrado-o-cusco-primero/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://travizperu.com/blog/sacred-valley-or-cusco-first/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://travizperu.com/es/blog/valle-sagrado-o-cusco-primero/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://travizperu.com/blog/sacred-valley-or-cusco-first/"/>
   </url>
   <url>
     <loc>https://travizperu.com/blog/machu-picchu-in-2027/</loc>
